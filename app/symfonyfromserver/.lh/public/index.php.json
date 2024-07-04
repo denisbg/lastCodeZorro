@@ -1,0 +1,22 @@
+{
+    "sourceFile": "public/index.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1707163726577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1707163745391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n use Symfony\\Component\\Dotenv\\Dotenv;\n use Symfony\\Component\\ErrorHandler\\Debug;\n use Symfony\\Component\\HttpFoundation\\Request;\n \n-require dirname(__DIR__) . '\\vendor\\autoload.php';\n+require dirname(__DIR__) . '/vendor/autoload.php';\n \n (new Dotenv())->bootEnv(dirname(__DIR__) . '/.env');\n \n if ($_SERVER['APP_DEBUG']) {\n"
+                }
+            ],
+            "date": 1707163726577,
+            "name": "Commit-0",
+            "content": "<?php\n\nuse App\\Kernel;\nuse Symfony\\Component\\Dotenv\\Dotenv;\nuse Symfony\\Component\\ErrorHandler\\Debug;\nuse Symfony\\Component\\HttpFoundation\\Request;\n\nrequire dirname(__DIR__) . '\\vendor\\autoload.php';\n\n(new Dotenv())->bootEnv(dirname(__DIR__) . '/.env');\n\nif ($_SERVER['APP_DEBUG']) {\n    umask(0000);\n\n    Debug::enable();\n}\n\n$kernel = new Kernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']);\n$request = Request::createFromGlobals();\n$response = $kernel->handle($request);\n$response->send();\n$kernel->terminate($request, $response);\n"
+        }
+    ]
+}

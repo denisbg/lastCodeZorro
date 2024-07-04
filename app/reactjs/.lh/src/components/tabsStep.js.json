@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/tabsStep.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1716462089138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1716462480019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { BlocTabStep } from \"../assets/styles/componentStyles\";\r\n import { useMediaQuery } from \"react-responsive\";\r\n \r\n export default function TabsStep({ menu = [], tabs = [], activeIndex }) {\r\n-  const isTabletOrMobile = useMediaQuery({ query: \"(max-width: 793px)\" });\r\n+  const isTabletOrMobile = useMediaQuery({ query: \"(max-width: 593px)\" });\r\n   let j = 0;\r\n   return (\r\n     <BlocTabStep>\r\n       <div className=\"bloc-nav-step\">\r\n"
+                },
+                {
+                    "date": 1718095001473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { BlocTabStep } from \"../assets/styles/componentStyles\";\r\n import { useMediaQuery } from \"react-responsive\";\r\n \r\n export default function TabsStep({ menu = [], tabs = [], activeIndex }) {\r\n-  const isTabletOrMobile = useMediaQuery({ query: \"(max-width: 593px)\" });\r\n+  const isTabletOrMobile = useMediaQuery({ query: \"(max-width: 013px)\" });\r\n   let j = 0;\r\n   return (\r\n     <BlocTabStep>\r\n       <div className=\"bloc-nav-step\">\r\n"
+                }
+            ],
+            "date": 1716462089138,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\r\nimport { BlocTabStep } from \"../assets/styles/componentStyles\";\r\nimport { useMediaQuery } from \"react-responsive\";\r\n\r\nexport default function TabsStep({ menu = [], tabs = [], activeIndex }) {\r\n  const isTabletOrMobile = useMediaQuery({ query: \"(max-width: 793px)\" });\r\n  let j = 0;\r\n  return (\r\n    <BlocTabStep>\r\n      <div className=\"bloc-nav-step\">\r\n        {isTabletOrMobile ? (\r\n          <div className=\"nav-step-mobile\">\r\n            <p className=\"titre-step-mobile\">\r\n              <span className=\"number-step\">{activeIndex + 1}</span>\r\n\r\n              {menu.map((v, i) => (\r\n                <>{activeIndex === i ? <span>{v.title}</span> : null}</>\r\n              ))}\r\n            </p>\r\n            <div className=\"range-step\">\r\n              {menu.map((v, i) => (\r\n                <div\r\n                  className={`${\r\n                    activeIndex > i\r\n                      ? \"active \"\r\n                      : activeIndex === i && i === menu.length - 1\r\n                      ? \"active \"\r\n                      : activeIndex === i\r\n                      ? \"encour \"\r\n                      : \"\"\r\n                  }`}\r\n                  style={{\r\n                    width: \"100%\",\r\n                  }}\r\n                ></div>\r\n              ))}\r\n            </div>\r\n          </div>\r\n        ) : (\r\n          <ul className=\"nav-step\">\r\n            {menu.map((v, i) => (\r\n              <li\r\n                className={`item-nav-step ${activeIndex >= i ? \"active \" : \"\"}`}\r\n                key={v.key}\r\n              >\r\n                <span className=\"number-step\">{++j}</span>\r\n                {v.title}\r\n              </li>\r\n            ))}\r\n          </ul>\r\n        )}\r\n      </div>\r\n\r\n      <div className=\"content-detail-step\">\r\n        {menu[activeIndex] && tabs[menu[activeIndex].key]\r\n          ? tabs[menu[activeIndex].key]\r\n          : null}\r\n      </div>\r\n    </BlocTabStep>\r\n  );\r\n}\r\n"
+        }
+    ]
+}

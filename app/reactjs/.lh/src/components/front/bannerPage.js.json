@@ -1,0 +1,886 @@
+{
+    "sourceFile": "src/components/front/bannerPage.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 217,
+            "patches": [
+                {
+                    "date": 1708340444952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1710237495048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n       style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n     >\r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n-          <h1 className=\"title-banner-cat\">{universe.name}</h1>\r\n+          <h1 className=\"title-banner-cat\">{universe.name} Hello </h1>\r\n         </div>\r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n"
+                },
+                {
+                    "date": 1710237562295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,11 @@\n       style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n     >\r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n-          <h1 className=\"title-banner-cat\">{universe.name} Hello </h1>\r\n-        </div>\r\n+          <h1 className=\"title-banner-cat\">{universe.name} </h1>\r\n+          <h1>universe.image</h1>\r\n+                  </div>\r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n           <span>Retour à la page d'accueil</span>\r\n"
+                },
+                {
+                    "date": 1710237583628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     >\r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n           <h1 className=\"title-banner-cat\">{universe.name} </h1>\r\n-          <h1>universe.image</h1>\r\n+          <h1>{universe.image}</h1>\r\n                   </div>\r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n"
+                },
+                {
+                    "date": 1710250149647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n           <h1 className=\"title-banner-cat\">{universe.name} </h1>\r\n           <h1>{universe.image}</h1>\r\n+          <h1>path image{getPathImage(universe.image)}</h1>\r\n                   </div>\r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n"
+                },
+                {
+                    "date": 1710250335794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     <PageBanner className=\"banner-page-universe\"\r\n       style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n     >\r\n       <Container>\r\n-        <div className=\"bloc-title-banner\">\r\n+        <div className=\"bloc-title-banner\"    style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}>\r\n           <h1 className=\"title-banner-cat\">{universe.name} </h1>\r\n           <h1>{universe.image}</h1>\r\n           <h1>path image{getPathImage(universe.image)}</h1>\r\n                   </div>\r\n"
+                },
+                {
+                    "date": 1710250526924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n       style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n     >\r\n       <Container>\r\n         <div className=\"bloc-title-banner\"    style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}>\r\n+          <img src={{getPathImage(${universe.image})}}/>\r\n           <h1 className=\"title-banner-cat\">{universe.name} </h1>\r\n           <h1>{universe.image}</h1>\r\n           <h1>path image{getPathImage(universe.image)}</h1>\r\n                   </div>\r\n"
+                },
+                {
+                    "date": 1710250722828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,31 @@\n+import React from \"react\";\r\n+import { Container } from \"react-bootstrap\";\r\n+import noImage from \"../../assets/images/noImage.png\";\r\n+import { BackStyle, PageBanner } from \"../../assets/styles/frontGlobalStyle\";\r\n+import { BackIcon } from \"../../assets/styles/icons\";\r\n+import ROUTES from \"../../config/routes\";\r\n+import * as vars from \"../../vars\";\r\n+\r\n+export default function BannerPage({ universe }) {\r\n+  const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n+\r\n+  return (\r\n+    <PageBanner className=\"banner-page-universe\"\r\n+      style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n+    >\r\n+      <Container>\r\n+        <div className=\"bloc-title-banner\"    style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}>\r\n+          <img src={getPathImage}/>\r\n+          <h1 className=\"title-banner-cat\">{universe.name} </h1>\r\n+          <h1>{universe.image}</h1>\r\n+          <h1>path image{getPathImage(universe.image)}</h1>\r\n+                  </div>\r\n+\r\n+        <BackStyle to={ROUTES.HOME.url}>\r\n+          <BackIcon />\r\n+          <span>Retour à la page d'accueil</span>\r\n+        </BackStyle>\r\n+      </Container>\r\n+    </PageBanner>\r\n+  );\r\n+}\r\n"
+                },
+                {
+                    "date": 1710250847852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n       style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n     >\r\n       <Container>\r\n         <div className=\"bloc-title-banner\"    style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}>\r\n-          <img src={getPathImage}/>\r\n+          <img src={getPathImage(universe.image)}/>\r\n           <h1 className=\"title-banner-cat\">{universe.name} </h1>\r\n           <h1>{universe.image}</h1>\r\n           <h1>path image{getPathImage(universe.image)}</h1>\r\n                   </div>\r\n@@ -28,35 +28,4 @@\n       </Container>\r\n     </PageBanner>\r\n   );\r\n }\r\n-import React from \"react\";\r\n-import { Container } from \"react-bootstrap\";\r\n-import noImage from \"../../assets/images/noImage.png\";\r\n-import { BackStyle, PageBanner } from \"../../assets/styles/frontGlobalStyle\";\r\n-import { BackIcon } from \"../../assets/styles/icons\";\r\n-import ROUTES from \"../../config/routes\";\r\n-import * as vars from \"../../vars\";\r\n-\r\n-export default function BannerPage({ universe }) {\r\n-  const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n-\r\n-  return (\r\n-    <PageBanner className=\"banner-page-universe\"\r\n-      style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n-    >\r\n-      <Container>\r\n-        <div className=\"bloc-title-banner\"    style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}>\r\n-          <img src={{getPathImage(${universe.image})}}/>\r\n-          <h1 className=\"title-banner-cat\">{universe.name} </h1>\r\n-          <h1>{universe.image}</h1>\r\n-          <h1>path image{getPathImage(universe.image)}</h1>\r\n-                  </div>\r\n-\r\n-        <BackStyle to={ROUTES.HOME.url}>\r\n-          <BackIcon />\r\n-          <span>Retour à la page d'accueil</span>\r\n-        </BackStyle>\r\n-      </Container>\r\n-    </PageBanner>\r\n-  );\r\n-}\r\n"
+                },
+                {
+                    "date": 1710250893838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     <PageBanner className=\"banner-page-universe\"\r\n       style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n     >\r\n       <Container>\r\n-        <div className=\"bloc-title-banner\"    style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}>\r\n+        <div className=\"bloc-title-banner\"    style={{ backgroundImage: getPathImage(universe.image)}}>\r\n           <img src={getPathImage(universe.image)}/>\r\n           <h1 className=\"title-banner-cat\">{universe.name} </h1>\r\n           <h1>{universe.image}</h1>\r\n           <h1>path image{getPathImage(universe.image)}</h1>\r\n"
+                },
+                {
+                    "date": 1710250908458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,8 @@\n       style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n     >\r\n       <Container>\r\n         <div className=\"bloc-title-banner\"    style={{ backgroundImage: getPathImage(universe.image)}}>\r\n-          <img src={getPathImage(universe.image)}/>\r\n           <h1 className=\"title-banner-cat\">{universe.name} </h1>\r\n           <h1>{universe.image}</h1>\r\n           <h1>path image{getPathImage(universe.image)}</h1>\r\n                   </div>\r\n"
+                },
+                {
+                    "date": 1710250956852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,10 @@\n     <PageBanner className=\"banner-page-universe\"\r\n       style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n     >\r\n       <Container>\r\n-        <div className=\"bloc-title-banner\"    style={{ backgroundImage: getPathImage(universe.image)}}>\r\n+        <div className=\"bloc-title-banner\"    style={{ backgroundImage: url(getPathImage(universe.image)}}>\r\n+          <img src={getPathImage(universe.image)}/>\r\n           <h1 className=\"title-banner-cat\">{universe.name} </h1>\r\n           <h1>{universe.image}</h1>\r\n           <h1>path image{getPathImage(universe.image)}</h1>\r\n                   </div>\r\n"
+                },
+                {
+                    "date": 1710251077401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,11 +11,12 @@\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\"\r\n       style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n+    \r\n     >\r\n       <Container>\r\n-        <div className=\"bloc-title-banner\"    style={{ backgroundImage: url(getPathImage(universe.image)}}>\r\n+        <div className=\"bloc-title-banner\">\r\n           <img src={getPathImage(universe.image)}/>\r\n           <h1 className=\"title-banner-cat\">{universe.name} </h1>\r\n           <h1>{universe.image}</h1>\r\n           <h1>path image{getPathImage(universe.image)}</h1>\r\n"
+                },
+                {
+                    "date": 1710251087670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     \r\n     >\r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n-          <img src={getPathImage(universe.image)}/>\r\n+      \r\n           <h1 className=\"title-banner-cat\">{universe.name} </h1>\r\n           <h1>{universe.image}</h1>\r\n           <h1>path image{getPathImage(universe.image)}</h1>\r\n                   </div>\r\n"
+                },
+                {
+                    "date": 1710251355709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,17 +7,17 @@\n import * as vars from \"../../vars\";\r\n \r\n export default function BannerPage({ universe }) {\r\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n-\r\n+  let image = getPathImage(universe.image);\r\n   return (\r\n     <PageBanner className=\"banner-page-universe\"\r\n-      style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n+      style={{ backgroundImage:image }}\r\n     \r\n     >\r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n-      \r\n+          <img src={getPathImage(universe.image)}/>\r\n           <h1 className=\"title-banner-cat\">{universe.name} </h1>\r\n           <h1>{universe.image}</h1>\r\n           <h1>path image{getPathImage(universe.image)}</h1>\r\n                   </div>\r\n"
+                },
+                {
+                    "date": 1710251367490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     \r\n     >\r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n-          <img src={getPathImage(universe.image)}/>\r\n+          \r\n           <h1 className=\"title-banner-cat\">{universe.name} </h1>\r\n           <h1>{universe.image}</h1>\r\n           <h1>path image{getPathImage(universe.image)}</h1>\r\n                   </div>\r\n"
+                },
+                {
+                    "date": 1710251397750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n       style={{ backgroundImage:image }}\r\n     \r\n     >\r\n       <Container>\r\n-        <div className=\"bloc-title-banner\">\r\n+        <div className=\"bloc-title-banner\" backgroundImage=>\r\n           \r\n           <h1 className=\"title-banner-cat\">{universe.name} </h1>\r\n           <h1>{universe.image}</h1>\r\n           <h1>path image{getPathImage(universe.image)}</h1>\r\n"
+                },
+                {
+                    "date": 1710251437682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+import React from \"react\";\r\n+import { Container } from \"react-bootstrap\";\r\n+import noImage from \"../../assets/images/noImage.png\";\r\n+import { BackStyle, PageBanner } from \"../../assets/styles/frontGlobalStyle\";\r\n+import { BackIcon } from \"../../assets/styles/icons\";\r\n+import ROUTES from \"../../config/routes\";\r\n+import * as vars from \"../../vars\";\r\n+\r\n+export default function BannerPage({ universe }) {\r\n+  const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n+\r\n+  return (\r\n+    <PageBanner className=\"banner-page-universe\"\r\n+      style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n+    \r\n+    >\r\n+      <Container>\r\n+        <div className=\"bloc-title-banner\">\r\n+          \r\n+          <h1 className=\"title-banner-cat\">{universe.name} </h1>\r\n+          <h1>{universe.image}</h1>\r\n+          <h1>path image{getPathImage(universe.image)}</h1>\r\n+                  </div>\r\n+\r\n+        <BackStyle to={ROUTES.HOME.url}>\r\n+          <BackIcon />\r\n+          <span>Retour à la page d'accueil</span>\r\n+        </BackStyle>\r\n+      </Container>\r\n+    </PageBanner>\r\n+  );\r\n+}\r\n"
+                },
+                {
+                    "date": 1710251506972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,42 +17,9 @@\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n           \r\n           <h1 className=\"title-banner-cat\">{universe.name} </h1>\r\n-          <h1>{universe.image}</h1>\r\n-          <h1>path image{getPathImage(universe.image)}</h1>\r\n-                  </div>\r\n-\r\n-        <BackStyle to={ROUTES.HOME.url}>\r\n-          <BackIcon />\r\n-          <span>Retour à la page d'accueil</span>\r\n-        </BackStyle>\r\n-      </Container>\r\n-    </PageBanner>\r\n-  );\r\n-}\r\n-import React from \"react\";\r\n-import { Container } from \"react-bootstrap\";\r\n-import noImage from \"../../assets/images/noImage.png\";\r\n-import { BackStyle, PageBanner } from \"../../assets/styles/frontGlobalStyle\";\r\n-import { BackIcon } from \"../../assets/styles/icons\";\r\n-import ROUTES from \"../../config/routes\";\r\n-import * as vars from \"../../vars\";\r\n-\r\n-export default function BannerPage({ universe }) {\r\n-  const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n-  let image = getPathImage(universe.image);\r\n-  return (\r\n-    <PageBanner className=\"banner-page-universe\"\r\n-      style={{ backgroundImage:image }}\r\n     \r\n-    >\r\n-      <Container>\r\n-        <div className=\"bloc-title-banner\" backgroundImage=>\r\n-          \r\n-          <h1 className=\"title-banner-cat\">{universe.name} </h1>\r\n-          <h1>{universe.image}</h1>\r\n-          <h1>path image{getPathImage(universe.image)}</h1>\r\n                   </div>\r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n"
+                },
+                {
+                    "date": 1710251666702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,16 +11,13 @@\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\"\r\n       style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n-    \r\n     >\r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n-          \r\n           <h1 className=\"title-banner-cat\">{universe.name} </h1>\r\n-    \r\n-                  </div>\r\n+        </div>\r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n           <span>Retour à la page d'accueil</span>\r\n"
+                },
+                {
+                    "date": 1710590775693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         </div>\r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n-          <span>Retour à la page d'accueil</span>\r\n+          <spa style=\"color:#000000\">Retour à la page d'accueil</span>\r\n         </BackStyle>\r\n       </Container>\r\n     </PageBanner>\r\n   );\r\n"
+                },
+                {
+                    "date": 1710590781374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         </div>\r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n-          <spa style=\"color:#000000\">Retour à la page d'accueil</span>\r\n+          <span style=\"color:#000000\">Retour à la page d'accueil</span>\r\n         </BackStyle>\r\n       </Container>\r\n     </PageBanner>\r\n   );\r\n"
+                },
+                {
+                    "date": 1710590822038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         </div>\r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n-          <span style=\"color:#000000\">Retour à la page d'accueil</span>\r\n+          <span style={{color:'#000000'}}>Retour à la page d'accueil</span>\r\n         </BackStyle>\r\n       </Container>\r\n     </PageBanner>\r\n   );\r\n"
+                },
+                {
+                    "date": 1712666638851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n import * as vars from \"../../vars\";\r\n \r\n export default function BannerPage({ universe }) {\r\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n-\r\n+ console.log (\"STEP BP :1:01 \");\r\n   return (\r\n     <PageBanner className=\"banner-page-universe\"\r\n       style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n     >\r\n"
+                },
+                {
+                    "date": 1712666698805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n import * as vars from \"../../vars\";\r\n \r\n export default function BannerPage({ universe }) {\r\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n- console.log (\"STEP BP :1:01 \");\r\n+ console.log (\"STEP BP :1:01 \",universe.image);\r\n   return (\r\n     <PageBanner className=\"banner-page-universe\"\r\n       style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n     >\r\n"
+                },
+                {
+                    "date": 1712666728508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n import * as vars from \"../../vars\";\r\n \r\n export default function BannerPage({ universe }) {\r\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n- console.log (\"STEP BP :1:01 \",universe.image);\r\n+ console.log (\"STEP BP :1:01 \",universe.image, universe.name);\r\n   return (\r\n     <PageBanner className=\"banner-page-universe\"\r\n       style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n     >\r\n"
+                },
+                {
+                    "date": 1712667156985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n import * as vars from \"../../vars\";\r\n \r\n export default function BannerPage({ universe }) {\r\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n- console.log (\"STEP BP :1:01 \",universe.image, universe.name);\r\n+ console.log (\"STEP BP :1:01 \",universe.image, universe.name,getPathImage(universe.image));\r\n   return (\r\n     <PageBanner className=\"banner-page-universe\"\r\n       style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n     >\r\n"
+                },
+                {
+                    "date": 1712667407550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,10 @@\n     <PageBanner className=\"banner-page-universe\"\r\n       style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n     >\r\n       <Container>\r\n-        <div className=\"bloc-title-banner\">\r\n-          <h1 className=\"title-banner-cat\">{universe.name} </h1>\r\n+        <div className=\"bloc-title-banner\" >\r\n+          <h1 className=\"title-banner-cat\" style={{color:black}}>{universe.name} </h1>\r\n         </div>\r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n"
+                },
+                {
+                    "date": 1712667412937,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n       style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n     >\r\n       <Container>\r\n         <div className=\"bloc-title-banner\" >\r\n-          <h1 className=\"title-banner-cat\" style={{color:black}}>{universe.name} </h1>\r\n+          <h1 className=\"title-banner-cat\" style={{color:'black'}}>{universe.name} </h1>\r\n         </div>\r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n"
+                },
+                {
+                    "date": 1712667431995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n       style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n     >\r\n       <Container>\r\n         <div className=\"bloc-title-banner\" >\r\n-          <h1 className=\"title-banner-cat\" style={{color:'black'}}>{universe.name} </h1>\r\n+          <h1 className=\"title-banner-cat\" style={{color:'#ffffff'}}>{universe.name} </h1>\r\n         </div>\r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n"
+                },
+                {
+                    "date": 1712667444541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n       style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n     >\r\n       <Container>\r\n         <div className=\"bloc-title-banner\" >\r\n-          <h1 className=\"title-banner-cat\" style={{color:'#ffffff'}}>{universe.name} </h1>\r\n+          <h1 className=\"title-banner-cat\" style={{color:'#000000'}}>{universe.name} </h1>\r\n         </div>\r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n"
+                },
+                {
+                    "date": 1712667486789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n       style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n     >\r\n       <Container>\r\n         <div className=\"bloc-title-banner\" >\r\n-          <h1 className=\"title-banner-cat\" style={{color:'#000000'}}>{universe.name} </h1>\r\n+          <h1 className=\"title-banner-cat\" style={{color:'#444444'}}>{universe.name} </h1>\r\n         </div>\r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n"
+                },
+                {
+                    "date": 1712667590773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,13 +7,16 @@\n import * as vars from \"../../vars\";\r\n \r\n export default function BannerPage({ universe }) {\r\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n+  const imagebg = getPathImage(universe.image);\r\n  console.log (\"STEP BP :1:01 \",universe.image, universe.name,getPathImage(universe.image));\r\n+\r\n   return (\r\n     <PageBanner className=\"banner-page-universe\"\r\n       style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n     >\r\n+      <img src = {{getPathImage(universe.image)}} \r\n       <Container>\r\n         <div className=\"bloc-title-banner\" >\r\n           <h1 className=\"title-banner-cat\" style={{color:'#444444'}}>{universe.name} </h1>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1712667610759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\"\r\n       style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n     >\r\n-      <img src = {{getPathImage(universe.image)}} \r\n+      <img src = {{imagebg}}></img> \r\n       <Container>\r\n         <div className=\"bloc-title-banner\" >\r\n           <h1 className=\"title-banner-cat\" style={{color:'#444444'}}>{universe.name} </h1>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1712667635678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n import * as vars from \"../../vars\";\r\n \r\n export default function BannerPage({ universe }) {\r\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n-  const imagebg = getPathImage(universe.image);\r\n+  let  imagebg = getPathImage(universe.image);\r\n  console.log (\"STEP BP :1:01 \",universe.image, universe.name,getPathImage(universe.image));\r\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\"\r\n"
+                },
+                {
+                    "date": 1712667648571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\"\r\n       style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n     >\r\n-      <img src = {{imagebg}}></img> \r\n+      <img src = {imagebg}></img> \r\n       <Container>\r\n         <div className=\"bloc-title-banner\" >\r\n           <h1 className=\"title-banner-cat\" style={{color:'#444444'}}>{universe.name} </h1>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1712667693402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n  console.log (\"STEP BP :1:01 \",universe.image, universe.name,getPathImage(universe.image));\r\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\"\r\n-      style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n+      style={{ backgroundImage: `url(${imagebg})` }}\r\n     >\r\n       <img src = {imagebg}></img> \r\n       <Container>\r\n         <div className=\"bloc-title-banner\" >\r\n"
+                },
+                {
+                    "date": 1712667718975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n  console.log (\"STEP BP :1:01 \",universe.image, universe.name,getPathImage(universe.image));\r\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\"\r\n-      style={{ backgroundImage: `url(${imagebg})` }}\r\n+      style={{ backgroundImage: {imagebg} }}\r\n     >\r\n       <img src = {imagebg}></img> \r\n       <Container>\r\n         <div className=\"bloc-title-banner\" >\r\n"
+                },
+                {
+                    "date": 1712667767569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,10 @@\n  console.log (\"STEP BP :1:01 \",universe.image, universe.name,getPathImage(universe.image));\r\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\"\r\n-      style={{ backgroundImage: {imagebg} }}\r\n+\r\n+      style={{ backgroundImage: `url(${imagebg}` }}\r\n     >\r\n       <img src = {imagebg}></img> \r\n       <Container>\r\n         <div className=\"bloc-title-banner\" >\r\n"
+                },
+                {
+                    "date": 1712667789063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     <PageBanner className=\"banner-page-universe\"\r\n \r\n       style={{ backgroundImage: `url(${imagebg}` }}\r\n     >\r\n-      <img src = {imagebg}></img> \r\n+      \r\n       <Container>\r\n         <div className=\"bloc-title-banner\" >\r\n           <h1 className=\"title-banner-cat\" style={{color:'#444444'}}>{universe.name} </h1>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1712668477558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,12 +13,12 @@\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\"\r\n \r\n-      style={{ backgroundImage: `url(${imagebg}` }}\r\n+      \r\n     >\r\n       \r\n-      <Container>\r\n+      <Container style={{ backgroundImage: `url(${imagebg}` }}>\r\n         <div className=\"bloc-title-banner\" >\r\n           <h1 className=\"title-banner-cat\" style={{color:'#444444'}}>{universe.name} </h1>\r\n         </div>\r\n \r\n"
+                },
+                {
+                    "date": 1712668529275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n \r\n       \r\n     >\r\n       \r\n-      <Container style={{ backgroundImage: `url(${imagebg}` }}>\r\n+      <Container style={{ backgroundImage: {imagebg} }}>\r\n         <div className=\"bloc-title-banner\" >\r\n           <h1 className=\"title-banner-cat\" style={{color:'#444444'}}>{universe.name} </h1>\r\n         </div>\r\n \r\n"
+                },
+                {
+                    "date": 1712668591110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,14 +11,12 @@\n   let  imagebg = getPathImage(universe.image);\r\n  console.log (\"STEP BP :1:01 \",universe.image, universe.name,getPathImage(universe.image));\r\n \r\n   return (\r\n-    <PageBanner className=\"banner-page-universe\"\r\n-\r\n+    <PageBanner className=\"banner-page-universe\" >\r\n       \r\n-    >\r\n-      \r\n-      <Container style={{ backgroundImage: {imagebg} }}>\r\n+      <Container>\r\n+        <img src={{imagebg}}\r\n         <div className=\"bloc-title-banner\" >\r\n           <h1 className=\"title-banner-cat\" style={{color:'#444444'}}>{universe.name} </h1>\r\n         </div>\r\n \r\n"
+                },
+                {
+                    "date": 1712668628372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-        <img src={{imagebg}}\r\n+        <img src={imagebg}></img>\r\n         <div className=\"bloc-title-banner\" >\r\n           <h1 className=\"title-banner-cat\" style={{color:'#444444'}}>{universe.name} </h1>\r\n         </div>\r\n \r\n"
+                },
+                {
+                    "date": 1712668694537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,12 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-        <img src={imagebg}></img>\r\n+      <div class=\"item-slider-banner\">\r\n+      <img src={imagebg}></img>\r\n+      </div>\r\n+        \r\n         <div className=\"bloc-title-banner\" >\r\n           <h1 className=\"title-banner-cat\" style={{color:'#444444'}}>{universe.name} </h1>\r\n         </div>\r\n \r\n"
+                },
+                {
+                    "date": 1712668725523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,13 +16,14 @@\n       \r\n       <Container>\r\n       <div class=\"item-slider-banner\">\r\n       <img src={imagebg}></img>\r\n+      <div className=\"bloc-title-banner\" >\r\n+          <h1 className=\"title-banner-cat\" style={{color:'#444444'}}>{universe.name} </h1>\r\n+        </div>\r\n       </div>\r\n         \r\n-        <div className=\"bloc-title-banner\" >\r\n-          <h1 className=\"title-banner-cat\" style={{color:'#444444'}}>{universe.name} </h1>\r\n-        </div>\r\n+      \r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n           <span style={{color:'#000000'}}>Retour à la page d'accueil</span>\r\n"
+                },
+                {
+                    "date": 1712668755528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,11 +14,12 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n+      <div className=\"bloc-title-banner\" >\r\n       <div class=\"item-slider-banner\">\r\n       <img src={imagebg}></img>\r\n-      <div className=\"bloc-title-banner\" >\r\n+     \r\n           <h1 className=\"title-banner-cat\" style={{color:'#444444'}}>{universe.name} </h1>\r\n         </div>\r\n       </div>\r\n         \r\n"
+                },
+                {
+                    "date": 1712668800387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n       <div className=\"bloc-title-banner\" >\r\n       <div class=\"item-slider-banner\">\r\n       <img src={imagebg}></img>\r\n      \r\n-          <h1 className=\"title-banner-cat\" style={{color:'#444444'}}>{universe.name} </h1>\r\n+          <h1 className=\"title-banner-cat\" style={{color:'#444444', marginTop:\"-20%\"}}>{universe.name} </h1>\r\n         </div>\r\n       </div>\r\n         \r\n       \r\n"
+                },
+                {
+                    "date": 1712668827575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n       <div className=\"bloc-title-banner\" >\r\n       <div class=\"item-slider-banner\">\r\n       <img src={imagebg}></img>\r\n      \r\n-          <h1 className=\"title-banner-cat\" style={{color:'#444444', marginTop:\"-20%\"}}>{universe.name} </h1>\r\n+          <h1 className=\"title-banner-cat\" style={{color:'#444444', paddingTop:\"-20%\"}}>{universe.name} </h1>\r\n         </div>\r\n       </div>\r\n         \r\n       \r\n"
+                },
+                {
+                    "date": 1712668838579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n       <div className=\"bloc-title-banner\" >\r\n       <div class=\"item-slider-banner\">\r\n       <img src={imagebg}></img>\r\n      \r\n-          <h1 className=\"title-banner-cat\" style={{color:'#444444', paddingTop:\"-20%\"}}>{universe.name} </h1>\r\n+          <h1 className=\"title-banner-cat\" style={{color:'#444444', paddingTop:\"-50%\"}}>{universe.name} </h1>\r\n         </div>\r\n       </div>\r\n         \r\n       \r\n"
+                },
+                {
+                    "date": 1712668897005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,12 +15,13 @@\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\" >\r\n+      <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"10%\"}}>{universe.name} </h1>\r\n       <div class=\"item-slider-banner\">\r\n       <img src={imagebg}></img>\r\n      \r\n-          <h1 className=\"title-banner-cat\" style={{color:'#444444', paddingTop:\"-50%\"}}>{universe.name} </h1>\r\n+          \r\n         </div>\r\n       </div>\r\n         \r\n       \r\n"
+                },
+                {
+                    "date": 1712668918117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n       <Container>\r\n       <div className=\"bloc-title-banner\" >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"10%\"}}>{universe.name} </h1>\r\n       <div class=\"item-slider-banner\">\r\n-      <img src={imagebg}></img>\r\n+      <img src={imagebg}>{universe.name}</img>\r\n      \r\n           \r\n         </div>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1712668941299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n       <Container>\r\n       <div className=\"bloc-title-banner\" >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"10%\"}}>{universe.name} </h1>\r\n       <div class=\"item-slider-banner\">\r\n-      <img src={imagebg}>{universe.name}</img>\r\n+      <img src={imagebg}></img>\r\n      \r\n           \r\n         </div>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1712668957408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\" >\r\n-      <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"10%\"}}>{universe.name} </h1>\r\n+      <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"50%\"}}>{universe.name} </h1>\r\n       <div class=\"item-slider-banner\">\r\n       <img src={imagebg}></img>\r\n      \r\n           \r\n"
+                },
+                {
+                    "date": 1712668974016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,12 +12,12 @@\n  console.log (\"STEP BP :1:01 \",universe.image, universe.name,getPathImage(universe.image));\r\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n-      \r\n+       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name} </h1>\r\n       <Container>\r\n       <div className=\"bloc-title-banner\" >\r\n-      <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"50%\"}}>{universe.name} </h1>\r\n+     \r\n       <div class=\"item-slider-banner\">\r\n       <img src={imagebg}></img>\r\n      \r\n           \r\n"
+                },
+                {
+                    "date": 1712668984718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n  console.log (\"STEP BP :1:01 \",universe.image, universe.name,getPathImage(universe.image));\r\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n-       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name} </h1>\r\n+       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"15%\"}}>{universe.name} </h1>\r\n       <Container>\r\n       <div className=\"bloc-title-banner\" >\r\n      \r\n       <div class=\"item-slider-banner\">\r\n"
+                },
+                {
+                    "date": 1712669060698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,12 +12,12 @@\n  console.log (\"STEP BP :1:01 \",universe.image, universe.name,getPathImage(universe.image));\r\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n-       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"15%\"}}>{universe.name} </h1>\r\n+      \r\n       <Container>\r\n-      <div className=\"bloc-title-banner\" >\r\n-     \r\n+      <div className=\"bloc-title-banner\" style={{background=imagebg}} >\r\n+      <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name} </h1>\r\n       <div class=\"item-slider-banner\">\r\n       <img src={imagebg}></img>\r\n      \r\n           \r\n"
+                },
+                {
+                    "date": 1712669083482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-      <div className=\"bloc-title-banner\" style={{background=imagebg}} >\r\n+      <div className=\"bloc-title-banner\" style={{background:${imagebg}}} >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name} </h1>\r\n       <div class=\"item-slider-banner\">\r\n       <img src={imagebg}></img>\r\n      \r\n"
+                },
+                {
+                    "date": 1712669151705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-      <div className=\"bloc-title-banner\" style={{background:${imagebg}}} >\r\n+      <div className=\"bloc-title-banner\" style={{background: `${endPoints.USER}}} >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name} </h1>\r\n       <div class=\"item-slider-banner\">\r\n       <img src={imagebg}></img>\r\n      \r\n"
+                },
+                {
+                    "date": 1712669165119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-      <div className=\"bloc-title-banner\" style={{background: `${endPoints.USER}}} >\r\n+      <div className=\"bloc-title-banner\" style={{background: `${endPoints.USER}'}} >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name} </h1>\r\n       <div class=\"item-slider-banner\">\r\n       <img src={imagebg}></img>\r\n      \r\n"
+                },
+                {
+                    "date": 1712669180014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-      <div className=\"bloc-title-banner\" style={{background: `${endPoints.USER}'}} >\r\n+      <div className=\"bloc-title-banner\" style={{background: `${endPoints.USER}`}} >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name} </h1>\r\n       <div class=\"item-slider-banner\">\r\n       <img src={imagebg}></img>\r\n      \r\n"
+                },
+                {
+                    "date": 1712669194491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-      <div className=\"bloc-title-banner\" style={{background: `${endPoints.USER}`}} >\r\n+      <div className=\"bloc-title-banner\" style={{background: `${imagebg}`}} >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name} </h1>\r\n       <div class=\"item-slider-banner\">\r\n       <img src={imagebg}></img>\r\n      \r\n"
+                },
+                {
+                    "date": 1712669202305,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n       <Container>\r\n       <div className=\"bloc-title-banner\" style={{background: `${imagebg}`}} >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name} </h1>\r\n       <div class=\"item-slider-banner\">\r\n-      <img src={imagebg}></img>\r\n+  \r\n      \r\n           \r\n         </div>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1712669218957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-      <div className=\"bloc-title-banner\" style={{background: `${imagebg}`}} >\r\n+      <div style={{background: `${imagebg}`}} >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name} </h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n      \r\n"
+                },
+                {
+                    "date": 1712669247709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-      <div style={{background: `${imagebg}`}} >\r\n+      <div  style={{background: `${imagebg}`}} >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name} </h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n      \r\n"
+                },
+                {
+                    "date": 1712669274825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,10 @@\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n-      <Container>\r\n-      <div  style={{background: `${imagebg}`}} >\r\n+      <Container  style={{background: `${imagebg}`}}> \r\n+      <div className=\"bloc-title-banner\" >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name} </h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n      \r\n"
+                },
+                {
+                    "date": 1712669394213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,13 +16,9 @@\n       \r\n       <Container  style={{background: `${imagebg}`}}> \r\n       <div className=\"bloc-title-banner\" >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name} </h1>\r\n-      <div class=\"item-slider-banner\">\r\n-  \r\n-     \r\n-          \r\n-        </div>\r\n+    \r\n       </div>\r\n         \r\n       \r\n \r\n"
+                },
+                {
+                    "date": 1712669430776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,12 +13,16 @@\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n-      <Container  style={{background: `${imagebg}`}}> \r\n-      <div className=\"bloc-title-banner\" >\r\n+      <Container>\r\n+      <div className=\"bloc-title-banner\" style={{background: `${imagebg}`}} >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name} </h1>\r\n-    \r\n+      <div class=\"item-slider-banner\">\r\n+  \r\n+     \r\n+          \r\n+        </div>\r\n       </div>\r\n         \r\n       \r\n \r\n"
+                },
+                {
+                    "date": 1715348576268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\" style={{background: `${imagebg}`}} >\r\n-      <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name} </h1>\r\n+      <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name} blublu</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n      \r\n           \r\n"
+                },
+                {
+                    "date": 1715348641046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\" style={{background: `${imagebg}`}} >\r\n-      <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name} blublu</h1>\r\n+      <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n      \r\n           \r\n"
+                },
+                {
+                    "date": 1715348974208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\" style={{background: `${imagebg}`}} >\r\n-      <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n+      <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}hhh</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n      \r\n           \r\n"
+                },
+                {
+                    "date": 1715349073526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \r\n export default function BannerPage({ universe }) {\r\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n   let  imagebg = getPathImage(universe.image);\r\n- console.log (\"STEP BP :1:01 \",universe.image, universe.name,getPathImage(universe.image));\r\n+ console.log (\"STEP BP :1:01 \",universe.image, universe.name,getPathImage(universe.image),imagebg);\r\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n"
+                },
+                {
+                    "date": 1715349331045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \r\n export default function BannerPage({ universe }) {\r\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n   let  imagebg = getPathImage(universe.image);\r\n- console.log (\"STEP BP :1:01 \",universe.image, universe.name,getPathImage(universe.image),imagebg);\r\n+ console.log (\"STEP BP :1:01 \",universe.image, universe.name,imagebg);\r\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n"
+                },
+                {
+                    "date": 1715349379646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-      <div className=\"bloc-title-banner\" style={{background: `${imagebg}`}} >\r\n+      <div className=\"bloc-title-banner\" style={{background: {imagebg}}} >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}hhh</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n      \r\n"
+                },
+                {
+                    "date": 1715349395486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \r\n export default function BannerPage({ universe }) {\r\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n   let  imagebg = getPathImage(universe.image);\r\n- console.log (\"STEP BP :1:01 \",universe.image, universe.name,imagebg);\r\n+ console.log (\"STEP BP :1:01 \",universe.image, imagebg);\r\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n"
+                },
+                {
+                    "date": 1715349499116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,11 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-      <div className=\"bloc-title-banner\" style={{background: {imagebg}}} >\r\n-      <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}hhh</h1>\r\n+      <div className=\"bloc-title-banner\"\r\n+      style={{ backgroundImage: `url(${imagebg})` }} >\r\n+      <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n      \r\n           \r\n"
+                },
+                {
+                    "date": 1715349588204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-      <div className=\"bloc-title-banner\"\r\n-      style={{ backgroundImage: `url(${imagebg})` }} >\r\n+      <div className=\"bloc-title-banner\"   style={{ backgroundImage: `url(${imagebg})` }} >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n      \r\n"
+                },
+                {
+                    "date": 1715349690427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,11 @@\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\"   style={{ backgroundImage: `url(${imagebg})` }} >\r\n+      <div style={{ backgroundImage: `url(${imagebg})` }}>\r\n+      Hello World\r\n+    </div>\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n      \r\n"
+                },
+                {
+                    "date": 1715349714977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\"   style={{ backgroundImage: `url(${imagebg})` }} >\r\n-      <div style={{ backgroundImage: `url(${imagebg})` }}>\r\n+      <div style={{ backgroundImage: `url(${})` }}>\r\n       Hello World\r\n     </div>\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n"
+                },
+                {
+                    "date": 1715349735830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\"   style={{ backgroundImage: `url(${imagebg})` }} >\r\n-      <div style={{ backgroundImage: `url(${})` }}>\r\n+      <div style={{ backgroundImage: `url(${'/media/6613de7e9a3f4_Capture d'écran 2023-12-09 222704.png'})` }}>\r\n       Hello World\r\n     </div>\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n"
+                },
+                {
+                    "date": 1715349746143,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\"   style={{ backgroundImage: `url(${imagebg})` }} >\r\n-      <div style={{ backgroundImage: `url(${'/media/6613de7e9a3f4_Capture d'écran 2023-12-09 222704.png'})` }}>\r\n+      <div style={{ backgroundImage: `url(${'/media/6613de7e9a3f4_Capture décran 2023-12-09 222704.png'})` }}>\r\n       Hello World\r\n     </div>\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n"
+                },
+                {
+                    "date": 1715349836168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,18 +8,16 @@\n \r\n export default function BannerPage({ universe }) {\r\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n   let  imagebg = getPathImage(universe.image);\r\n- console.log (\"STEP BP :1:01 \",universe.image, imagebg);\r\n+ console.log (\"STEP BP :1:01 \",universe.image, imagebg,  vars.pathImage);\r\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\"   style={{ backgroundImage: `url(${imagebg})` }} >\r\n-      <div style={{ backgroundImage: `url(${'/media/6613de7e9a3f4_Capture décran 2023-12-09 222704.png'})` }}>\r\n-      Hello World\r\n-    </div>\r\n+   \r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n      \r\n"
+                },
+                {
+                    "date": 1715349864146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \r\n export default function BannerPage({ universe }) {\r\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n   let  imagebg = getPathImage(universe.image);\r\n- console.log (\"STEP BP :1:01 \",universe.image, imagebg,  vars.pathImage);\r\n+ console.log (\"STEP BP :1:01 \",universe.image, imagebg,  vars.pathImage + image );\r\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n"
+                },
+                {
+                    "date": 1715349878673,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \r\n export default function BannerPage({ universe }) {\r\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n   let  imagebg = getPathImage(universe.image);\r\n- console.log (\"STEP BP :1:01 \",universe.image, imagebg,  vars.pathImage + image );\r\n+ console.log (\"STEP BP :1:01 \",universe.image, imagebg,  vars.pathImage + universe.image );\r\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n"
+                },
+                {
+                    "date": 1715349992713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-      <div className=\"bloc-title-banner\"   style={{ backgroundImage: `url(${imagebg})` }} >\r\n+      <div className=\"bloc-title-banner\"   style={{ backgroundImage: `url(${ vars.pathImage + universe.image})` }} >\r\n    \r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n"
+                },
+                {
+                    "date": 1715350010051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-      <div className=\"bloc-title-banner\"   style={{ backgroundImage: `url(${ vars.pathImage + universe.image})` }} >\r\n+      <div style={{ backgroundImage: `url(${ vars.pathImage + universe.image})` }} >\r\n    \r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n"
+                },
+                {
+                    "date": 1715350029957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-      <div style={{ backgroundImage: `url(${ vars.pathImage + universe.image})` }} >\r\n+      <div style={{ background: `url(${ vars.pathImage + universe.image})` }} >\r\n    \r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n"
+                },
+                {
+                    "date": 1715350066157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-      <div style={{ background: `url(${ vars.pathImage + universe.image})` }} >\r\n+      <div style={{ background: `${ vars.pathImage + universe.image}` }} >\r\n    \r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n"
+                },
+                {
+                    "date": 1715350099831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-      <div style={{ background: `${ vars.pathImage + universe.image}` }} >\r\n+      <div style={{ background: ${ ...vars.pathImage + universe.image} }} >\r\n    \r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n"
+                },
+                {
+                    "date": 1715350111940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-      <div style={{ background: ${ ...vars.pathImage + universe.image} }} >\r\n+      <div style={{ background: ...vars.pathImage + universe.image}} >\r\n    \r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n"
+                },
+                {
+                    "date": 1715350214365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,16 +8,15 @@\n \r\n export default function BannerPage({ universe }) {\r\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n   let  imagebg = getPathImage(universe.image);\r\n- console.log (\"STEP BP :1:01 \",universe.image, imagebg,  vars.pathImage + universe.image );\r\n+ console.log (\"STEP BP :1:01 \",universe.image, imagebg);\r\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-      <div style={{ background: ...vars.pathImage + universe.image}} >\r\n-   \r\n+      <div className=\"bloc-title-banner\" style={{background: {imagebg}}} >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n      \r\n"
+                },
+                {
+                    "date": 1715350300152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n+        <img src={imagebg}></img>\r\n       <div className=\"bloc-title-banner\" style={{background: {imagebg}}} >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n"
+                },
+                {
+                    "date": 1715350350594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-        <img src={imagebg}></img>\r\n+        <img className=\"bloc-title-banner\" src={imagebg}></img>\r\n       <div className=\"bloc-title-banner\" style={{background: {imagebg}}} >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n"
+                },
+                {
+                    "date": 1715350625891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-        <img className=\"bloc-title-banner\" src={imagebg}></img>\r\n+        <img className=\"bloc-title-banner\" src={imagebg}>   <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1></img>\r\n       <div className=\"bloc-title-banner\" style={{background: {imagebg}}} >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n"
+                },
+                {
+                    "date": 1715350698078,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,10 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-        <img className=\"bloc-title-banner\" src={imagebg}>   <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1></img>\r\n+      <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n+        <img className=\"bloc-title-banner\" src={imagebg}> {universe.name} </img>\r\n       <div className=\"bloc-title-banner\" style={{background: {imagebg}}} >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n"
+                },
+                {
+                    "date": 1715350711116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n-        <img className=\"bloc-title-banner\" src={imagebg}> {universe.name} </img>\r\n+        <img className=\"bloc-title-banner\" </img>\r\n       <div className=\"bloc-title-banner\" style={{background: {imagebg}}} >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n"
+                },
+                {
+                    "date": 1715350749249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-      <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n-        <img className=\"bloc-title-banner\" </img>\r\n+        <img className=\"bloc-title-banner\" src={imagebg}>   <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1></img>\r\n       <div className=\"bloc-title-banner\" style={{background: {imagebg}}} >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n"
+                },
+                {
+                    "date": 1715350771009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-        <img className=\"bloc-title-banner\" src={imagebg}>   <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1></img>\r\n+        <img className=\"bloc-title-banner\" src={imagebg}>  </img>\r\n       <div className=\"bloc-title-banner\" style={{background: {imagebg}}} >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n"
+                },
+                {
+                    "date": 1715351271917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,8 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-        <img className=\"bloc-title-banner\" src={imagebg}>  </img>\r\n       <div className=\"bloc-title-banner\" style={{background: {imagebg}}} >\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n"
+                },
+                {
+                    "date": 1715351786052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,16 +8,17 @@\n \r\n export default function BannerPage({ universe }) {\r\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n   let  imagebg = getPathImage(universe.image);\r\n- console.log (\"STEP BP :1:01 \",universe.image, imagebg);\r\n+ console.log (\"STEP BP :1:01 \",universe.image, universe.name,imagebg);\r\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\" style={{background: {imagebg}}} >\r\n-      <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n+      <img src=\"/media/cc0-images/grapefruit-slice-332-332.jpg\" />\r\n+      <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}hhh</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n      \r\n           \r\n"
+                },
+                {
+                    "date": 1715351820003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\" style={{background: {imagebg}}} >\r\n-      <img src=\"/media/cc0-images/grapefruit-slice-332-332.jpg\" />\r\n+      <img src=\"https://test.fingz.fr/media/61acdcc254dad_slider-univers-marroquinerie1.png\" />\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}hhh</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n      \r\n"
+                },
+                {
+                    "date": 1715351869499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\" style={{background: {imagebg}}} >\r\n-      <img src=\"https://test.fingz.fr/media/61acdcc254dad_slider-univers-marroquinerie1.png\" />\r\n+      <img src={{imagebg}} />\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}hhh</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n      \r\n"
+                },
+                {
+                    "date": 1715351946490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\" style={{background: {imagebg}}} >\r\n-      <img src={{imagebg}} />\r\n+      <img src={{getPathImage(universe.image)}} />\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}hhh</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n      \r\n"
+                },
+                {
+                    "date": 1715351958610,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\" style={{background: {imagebg}}} >\r\n-      <img src={{getPathImage(universe.image)}} />\r\n+      <img src={getPathImage(universe.image} />\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}hhh</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n      \r\n"
+                },
+                {
+                    "date": 1715351968065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\" style={{background: {imagebg}}} >\r\n-      <img src={getPathImage(universe.image} />\r\n+      <img src={getPathImage(universe.image)} />\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}hhh</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n      \r\n"
+                },
+                {
+                    "date": 1715352228398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,10 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-      <div className=\"bloc-title-banner\" style={{background: {imagebg}}} >\r\n-      <img src={getPathImage(universe.image)} />\r\n+      <div className=\"bloc-title-banner\" >\r\n+      <img src={getPathImage(universe.image)} /></>\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}hhh</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n      \r\n"
+                },
+                {
+                    "date": 1715352254757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,10 @@\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\" >\r\n-      <img src={getPathImage(universe.image)} /></>\r\n+      <img src={getPathImage(universe.image)} />\r\n+      </>\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}hhh</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n      \r\n"
+                },
+                {
+                    "date": 1715352277449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\" >\r\n       <img src={getPathImage(universe.image)} />\r\n-      </>\r\n+      </div>\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}hhh</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n      \r\n"
+                },
+                {
+                    "date": 1715352292548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n   \r\n      \r\n           \r\n         </div>\r\n-      </div>\r\n+     \r\n         \r\n       \r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n"
+                },
+                {
+                    "date": 1715352343828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n       <Container>\r\n       <div className=\"bloc-title-banner\" >\r\n       <img src={getPathImage(universe.image)} />\r\n       </div>\r\n-      <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}hhh</h1>\r\n+      <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n      \r\n           \r\n"
+                },
+                {
+                    "date": 1715352403714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,14 +15,14 @@\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\" >\r\n-      <img src={getPathImage(universe.image)} />\r\n+   \r\n       </div>\r\n       <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n       <div class=\"item-slider-banner\">\r\n   \r\n-     \r\n+      <img src={getPathImage(universe.image)} />\r\n           \r\n         </div>\r\n      \r\n         \r\n"
+                },
+                {
+                    "date": 1715352415466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n       <Container>\r\n       <div className=\"bloc-title-banner\" >\r\n    \r\n       </div>\r\n-      <h1 className=\"title-banner-cat\" style={{color:'#000000', paddingTop:\"%\"}}>{universe.name}</h1>\r\n+\r\n       <div class=\"item-slider-banner\">\r\n   \r\n       <img src={getPathImage(universe.image)} />\r\n           \r\n"
+                },
+                {
+                    "date": 1715352435011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       </div>\r\n \r\n       <div class=\"item-slider-banner\">\r\n   \r\n-      <img src={getPathImage(universe.image)} />\r\n+      <img src={getPathImage(universe.image)} >gfghfhghf</img>\r\n           \r\n         </div>\r\n      \r\n         \r\n"
+                },
+                {
+                    "date": 1715352497227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       </div>\r\n \r\n       <div class=\"item-slider-banner\">\r\n   \r\n-      <img src={getPathImage(universe.image)} >gfghfhghf</img>\r\n+      <img src={getPathImage(universe.image)} />\r\n           \r\n         </div>\r\n      \r\n         \r\n"
+                },
+                {
+                    "date": 1715352700936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,12 @@\n       <img src={getPathImage(universe.image)} />\r\n           \r\n         </div>\r\n      \r\n-        \r\n+        <figure>\r\n+  <figcaption>Dog</figcaption>\r\n+  <img src={getPathImage(universe.image)} alt=\"The Bread Dog\" width=\"300\" height=\"300\">\r\n+</figure>\r\n       \r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n"
+                },
+                {
+                    "date": 1715352737288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n         </div>\r\n      \r\n         <figure>\r\n   <figcaption>Dog</figcaption>\r\n-  <img src={getPathImage(universe.image)} alt=\"The Bread Dog\" width=\"300\" height=\"300\">\r\n+  <img src={getPathImage(universe.image)} /> \r\n </figure>\r\n       \r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n"
+                },
+                {
+                    "date": 1715352762435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,9 @@\n    \r\n       </div>\r\n \r\n       <div class=\"item-slider-banner\">\r\n-  \r\n-      <img src={getPathImage(universe.image)} />\r\n+\r\n           \r\n         </div>\r\n      \r\n         <figure>\r\n"
+                },
+                {
+                    "date": 1715352826174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,26 @@\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n   let  imagebg = getPathImage(universe.image);\r\n  console.log (\"STEP BP :1:01 \",universe.image, universe.name,imagebg);\r\n \r\n+ <style>\r\n+        p {\r\n+            background-image: url(\r\n+\"https://media.geeksforgeeks.org/wp-content/uploads/20231218222854/1.png\");\r\n+            background-repeat: repeat;\r\n+            -webkit-background-clip: text;\r\n+            -webkit-text-fill-color: transparent;\r\n+            margin-top: 200px;\r\n+            font-size: 120px;\r\n+            text-align: center;\r\n+            font-weight: bold;\r\n+            text-transform: uppercase;\r\n+            font-family: 'Steelfish Rg', 'helvetica neue', \r\n+                            helvetica, arial, sans-serif;\r\n+            font-weight: 800;\r\n+            -webkit-font-smoothing: antialiased;\r\n+        }\r\n+    </style>\r\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n"
+                },
+                {
+                    "date": 1715352838609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n  console.log (\"STEP BP :1:01 \",universe.image, universe.name,imagebg);\r\n \r\n  <style>\r\n         p {\r\n-            background-image: url(\r\n+            backgroundImage: url(\r\n \"https://media.geeksforgeeks.org/wp-content/uploads/20231218222854/1.png\");\r\n             background-repeat: repeat;\r\n             -webkit-background-clip: text;\r\n             -webkit-text-fill-color: transparent;\r\n"
+                },
+                {
+                    "date": 1715352916925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,26 +10,9 @@\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n   let  imagebg = getPathImage(universe.image);\r\n  console.log (\"STEP BP :1:01 \",universe.image, universe.name,imagebg);\r\n \r\n- <style>\r\n-        p {\r\n-            backgroundImage: url(\r\n-\"https://media.geeksforgeeks.org/wp-content/uploads/20231218222854/1.png\");\r\n-            background-repeat: repeat;\r\n-            -webkit-background-clip: text;\r\n-            -webkit-text-fill-color: transparent;\r\n-            margin-top: 200px;\r\n-            font-size: 120px;\r\n-            text-align: center;\r\n-            font-weight: bold;\r\n-            text-transform: uppercase;\r\n-            font-family: 'Steelfish Rg', 'helvetica neue', \r\n-                            helvetica, arial, sans-serif;\r\n-            font-weight: 800;\r\n-            -webkit-font-smoothing: antialiased;\r\n-        }\r\n-    </style>\r\n+ \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n@@ -45,8 +28,11 @@\n         <figure>\r\n   <figcaption>Dog</figcaption>\r\n   <img src={getPathImage(universe.image)} /> \r\n </figure>\r\n+<div style={{ backgroundImage: `url(${imagebg})` }}>\r\n+      Hello World\r\n+    </div>\r\n       \r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n"
+                },
+                {
+                    "date": 1715352971726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,10 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n       \r\n       <Container>\r\n-      <div className=\"bloc-title-banner\" >\r\n-   \r\n+      <div className=\"bloc-title-banner\" style={{ backgroundImage: `url(${imagebg})` }}>\r\n+   ssdfsdfsdfsdf\r\n       </div>\r\n \r\n       <div class=\"item-slider-banner\">\r\n \r\n"
+                },
+                {
+                    "date": 1715352992275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,12 +12,12 @@\n  console.log (\"STEP BP :1:01 \",universe.image, universe.name,imagebg);\r\n \r\n  \r\n   return (\r\n-    <PageBanner className=\"banner-page-universe\" >\r\n+    <PageBanner className=\"banner-page-universe\"  style={{ backgroundImage: `url(${imagebg})` }}>\r\n       \r\n       <Container>\r\n-      <div className=\"bloc-title-banner\" style={{ backgroundImage: `url(${imagebg})` }}>\r\n+      <div className=\"bloc-title-banner\">\r\n    ssdfsdfsdfsdf\r\n       </div>\r\n \r\n       <div class=\"item-slider-banner\">\r\n"
+                },
+                {
+                    "date": 1715353003824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,13 +23,9 @@\n       <div class=\"item-slider-banner\">\r\n \r\n           \r\n         </div>\r\n-     \r\n-        <figure>\r\n-  <figcaption>Dog</figcaption>\r\n-  <img src={getPathImage(universe.image)} /> \r\n-</figure>\r\n+      \r\n <div style={{ backgroundImage: `url(${imagebg})` }}>\r\n       Hello World\r\n     </div>\r\n       \r\n"
+                },
+                {
+                    "date": 1715353046022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     <PageBanner className=\"banner-page-universe\"  style={{ backgroundImage: `url(${imagebg})` }}>\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\">\r\n-   ssdfsdfsdfsdf\r\n+     { universe.name}\r\n       </div>\r\n \r\n       <div class=\"item-slider-banner\">\r\n \r\n"
+                },
+                {
+                    "date": 1715353054239,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,11 +24,9 @@\n \r\n           \r\n         </div>\r\n       \r\n-<div style={{ backgroundImage: `url(${imagebg})` }}>\r\n-      Hello World\r\n-    </div>\r\n+ \r\n       \r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n"
+                },
+                {
+                    "date": 1715353075405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,14 +16,14 @@\n     <PageBanner className=\"banner-page-universe\"  style={{ backgroundImage: `url(${imagebg})` }}>\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\">\r\n-     { universe.name}\r\n+    \r\n       </div>\r\n \r\n       <div class=\"item-slider-banner\">\r\n \r\n-          \r\n+      { universe.name}\r\n         </div>\r\n       \r\n  \r\n       \r\n"
+                },
+                {
+                    "date": 1715353088221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,16 +16,16 @@\n     <PageBanner className=\"banner-page-universe\"  style={{ backgroundImage: `url(${imagebg})` }}>\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\">\r\n-    \r\n-      </div>\r\n+     { universe.name}\r\n+     \r\n \r\n       <div class=\"item-slider-banner\">\r\n \r\n-      { universe.name}\r\n+          \r\n         </div>\r\n-      \r\n+        </div>\r\n  \r\n       \r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n"
+                },
+                {
+                    "date": 1715353111329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,13 +16,13 @@\n     <PageBanner className=\"banner-page-universe\"  style={{ backgroundImage: `url(${imagebg})` }}>\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\">\r\n-     { universe.name}\r\n      \r\n+     \r\n \r\n       <div class=\"item-slider-banner\">\r\n-\r\n+      { universe.name}\r\n           \r\n         </div>\r\n         </div>\r\n  \r\n"
+                },
+                {
+                    "date": 1715353139041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,13 +16,13 @@\n     <PageBanner className=\"banner-page-universe\"  style={{ backgroundImage: `url(${imagebg})` }}>\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\">\r\n+     { universe.name}\r\n      \r\n-     \r\n \r\n       <div class=\"item-slider-banner\">\r\n-      { universe.name}\r\n+\r\n           \r\n         </div>\r\n         </div>\r\n  \r\n"
+                },
+                {
+                    "date": 1715353540971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,12 +9,13 @@\n export default function BannerPage({ universe }) {\r\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n   let  imagebg = getPathImage(universe.image);\r\n  console.log (\"STEP BP :1:01 \",universe.image, universe.name,imagebg);\r\n+  \r\n \r\n  \r\n   return (\r\n-    <PageBanner className=\"banner-page-universe\"  style={{ backgroundImage: `url(${imagebg})` }}>\r\n+    <PageBanner className=\"banner-page-universe\"  style={{ backgroundImage: url(${imagebg}) }}>\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\">\r\n      { universe.name}\r\n"
+                },
+                {
+                    "date": 1715353547515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   \r\n \r\n  \r\n   return (\r\n-    <PageBanner className=\"banner-page-universe\"  style={{ backgroundImage: url(${imagebg}) }}>\r\n+    <PageBanner className=\"banner-page-universe\"  style={{ backgroundImage: `url(${imagebg})` }}>\r\n       \r\n       <Container>\r\n       <div className=\"bloc-title-banner\">\r\n      { universe.name}\r\n"
+                },
+                {
+                    "date": 1715353644944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\"  style={{ backgroundImage: `url(${imagebg})` }}>\r\n       \r\n       <Container>\r\n+        <img src={$imagebg}></img>\r\n       <div className=\"bloc-title-banner\">\r\n      { universe.name}\r\n      \r\n \r\n"
+                },
+                {
+                    "date": 1715353671563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n import * as vars from \"../../vars\";\r\n \r\n export default function BannerPage({ universe }) {\r\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n-  let  imagebg = getPathImage(universe.image);\r\n+  const  imagebg = getPathImage(universe.image);\r\n  console.log (\"STEP BP :1:01 \",universe.image, universe.name,imagebg);\r\n   \r\n \r\n  \r\n"
+                },
+                {
+                    "date": 1715353686883,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n import * as vars from \"../../vars\";\r\n \r\n export default function BannerPage({ universe }) {\r\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n-  const  imagebg = getPathImage(universe.image);\r\n+  let  imagebg = getPathImage(universe.image);\r\n  console.log (\"STEP BP :1:01 \",universe.image, universe.name,imagebg);\r\n   \r\n \r\n  \r\n"
+                },
+                {
+                    "date": 1715353733949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\"  style={{ backgroundImage: `url(${imagebg})` }}>\r\n       \r\n       <Container>\r\n-        <img src={$imagebg}></img>\r\n+        <img src={imagebg}></img>\r\n       <div className=\"bloc-title-banner\">\r\n      { universe.name}\r\n      \r\n \r\n"
+                },
+                {
+                    "date": 1715353782105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,13 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\"  style={{ backgroundImage: `url(${imagebg})` }}>\r\n       \r\n       <Container>\r\n+\r\n+\r\n+      <div style={{ backgroundImage: `url(${imagebg})` }}>\r\n+      Hello World\r\n+    </div>\r\n         <img src={imagebg}></img>\r\n       <div className=\"bloc-title-banner\">\r\n      { universe.name}\r\n      \r\n"
+                },
+                {
+                    "date": 1715353806931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \r\n       <div style={{ backgroundImage: `url(${imagebg})` }}>\r\n       Hello World\r\n     </div>\r\n-        <img src={imagebg}></img>\r\n+    \r\n       <div className=\"bloc-title-banner\">\r\n      { universe.name}\r\n      \r\n \r\n"
+                },
+                {
+                    "date": 1715353816987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \r\n       <div style={{ backgroundImage: `url(${imagebg})` }}>\r\n       Hello World\r\n     </div>\r\n-    \r\n+        <img src={imagebg}></img>\r\n       <div className=\"bloc-title-banner\">\r\n      { universe.name}\r\n      \r\n \r\n"
+                },
+                {
+                    "date": 1715353849314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   \r\n \r\n  \r\n   return (\r\n-    <PageBanner className=\"banner-page-universe\"  style={{ backgroundImage: `url(${imagebg})` }}>\r\n+    <PageBanner className=\"banner-page-universe\"  style={{ backgroundImage:url(imagebg) }}>\r\n       \r\n       <Container>\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1715353864426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   \r\n \r\n  \r\n   return (\r\n-    <PageBanner className=\"banner-page-universe\"  style={{ backgroundImage:url(imagebg) }}>\r\n+    <PageBanner className=\"banner-page-universe\"  style={{ backgroundImage:imagebg }}>\r\n       \r\n       <Container>\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1715353886963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \r\n       <div style={{ backgroundImage: `url(${imagebg})` }}>\r\n       Hello World\r\n     </div>\r\n-        <img src={imagebg}></img>\r\n+ \r\n       <div className=\"bloc-title-banner\">\r\n      { universe.name}\r\n      \r\n \r\n"
+                },
+                {
+                    "date": 1715353897368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,12 +18,9 @@\n       \r\n       <Container>\r\n \r\n \r\n-      <div style={{ backgroundImage: `url(${imagebg})` }}>\r\n-      Hello World\r\n-    </div>\r\n- \r\n+        <img src={imagebg}></img>\r\n       <div className=\"bloc-title-banner\">\r\n      { universe.name}\r\n      \r\n \r\n"
+                },
+                {
+                    "date": 1715353908523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,11 @@\n       \r\n       <Container>\r\n \r\n \r\n-        <img src={imagebg}></img>\r\n+     \r\n       <div className=\"bloc-title-banner\">\r\n+      <img src={imagebg}></img>\r\n      { universe.name}\r\n      \r\n \r\n       <div class=\"item-slider-banner\">\r\n"
+                },
+                {
+                    "date": 1715353928430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,36 +7,29 @@\n import * as vars from \"../../vars\";\r\n \r\n export default function BannerPage({ universe }) {\r\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n-  let  imagebg = getPathImage(universe.image);\r\n- console.log (\"STEP BP :1:01 \",universe.image, universe.name,imagebg);\r\n-  \r\n+  let imagebg = getPathImage(universe.image);\r\n+  console.log(\"STEP BP :1:01 \", universe.image, universe.name, imagebg);\r\n \r\n- \r\n+\r\n+\r\n   return (\r\n-    <PageBanner className=\"banner-page-universe\"  style={{ backgroundImage:imagebg }}>\r\n-      \r\n+    <PageBanner className=\"banner-page-universe\" style={{ backgroundImage: imagebg }}>\r\n+\r\n       <Container>\r\n+        <div className=\"bloc-title-banner\">\r\n+          <img src={imagebg}></img>\r\n+          {universe.name}\r\n+          <div class=\"item-slider-banner\">\r\n+          </div>\r\n+        </div>\r\n \r\n \r\n-     \r\n-      <div className=\"bloc-title-banner\">\r\n-      <img src={imagebg}></img>\r\n-     { universe.name}\r\n-     \r\n \r\n-      <div class=\"item-slider-banner\">\r\n-\r\n-          \r\n-        </div>\r\n-        </div>\r\n- \r\n-      \r\n-\r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n-          <span style={{color:'#000000'}}>Retour à la page d'accueil</span>\r\n+          <span style={{ color: '#000000' }}>Retour à la page d'accueil</span>\r\n         </BackStyle>\r\n       </Container>\r\n     </PageBanner>\r\n   );\r\n"
+                },
+                {
+                    "date": 1715354030398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     <PageBanner className=\"banner-page-universe\" style={{ backgroundImage: imagebg }}>\r\n \r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n-          <img src={imagebg}></img>\r\n+  \r\n           {universe.name}\r\n           <div class=\"item-slider-banner\">\r\n           </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1715354046836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,11 +17,12 @@\n     <PageBanner className=\"banner-page-universe\" style={{ backgroundImage: imagebg }}>\r\n \r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n-  \r\n+          <img src={imagebg}></img>\r\n+      \r\n+          <div class=\"item-slider-banner\">\r\n           {universe.name}\r\n-          <div class=\"item-slider-banner\">\r\n           </div>\r\n         </div>\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1715354056017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,9 @@\n     <PageBanner className=\"banner-page-universe\" style={{ backgroundImage: imagebg }}>\r\n \r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n-          <img src={imagebg}></img>\r\n-      \r\n+\r\n           <div class=\"item-slider-banner\">\r\n           {universe.name}\r\n           </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1715354117678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,11 +17,12 @@\n     <PageBanner className=\"banner-page-universe\" style={{ backgroundImage: imagebg }}>\r\n \r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n-\r\n+          <img src={imagebg}></img>\r\n+      \r\n           <div class=\"item-slider-banner\">\r\n-          {universe.name}\r\n+                {universe.name}\r\n           </div>\r\n         </div>\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1715354180182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,11 +17,12 @@\n     <PageBanner className=\"banner-page-universe\" style={{ backgroundImage: imagebg }}>\r\n \r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n-          <img src={imagebg}></img>\r\n+        \r\n       \r\n           <div class=\"item-slider-banner\">\r\n+          <img src={imagebg}></img>\r\n                 {universe.name}\r\n           </div>\r\n         </div>\r\n \r\n"
+                },
+                {
+                    "date": 1715354197036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n \r\n \r\n \r\n   return (\r\n-    <PageBanner className=\"banner-page-universe\" style={{ backgroundImage: imagebg }}>\r\n+    <PageBanner className=\"banner-page-universe\">\r\n \r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n         \r\n"
+                },
+                {
+                    "date": 1715354224705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\">\r\n \r\n       <Container>\r\n-        <div className=\"bloc-title-banner\">\r\n+        <div className=\"bloc-title-banner\"  style={{ backgroundImage: imagebg }}>\r\n         \r\n       \r\n           <div class=\"item-slider-banner\">\r\n           <img src={imagebg}></img>\r\n"
+                },
+                {
+                    "date": 1715354230401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         <div className=\"bloc-title-banner\"  style={{ backgroundImage: imagebg }}>\r\n         \r\n       \r\n           <div class=\"item-slider-banner\">\r\n-          <img src={imagebg}></img>\r\n+      \r\n                 {universe.name}\r\n           </div>\r\n         </div>\r\n \r\n"
+                },
+                {
+                    "date": 1715354239298,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         <div className=\"bloc-title-banner\"  style={{ backgroundImage: imagebg }}>\r\n         \r\n       \r\n           <div class=\"item-slider-banner\">\r\n-      \r\n+          <img src={imagebg}></img>\r\n                 {universe.name}\r\n           </div>\r\n         </div>\r\n \r\n"
+                },
+                {
+                    "date": 1715354356283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,10 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\">\r\n \r\n       <Container>\r\n-        <div className=\"bloc-title-banner\"  style={{ backgroundImage: imagebg }}>\r\n-        \r\n+        <div className=\"bloc-title-banner\"    style={{ backgroundImage: `url(${imagebg}` }}>\r\n+     \r\n       \r\n           <div class=\"item-slider-banner\">\r\n           <img src={imagebg}></img>\r\n                 {universe.name}\r\n"
+                },
+                {
+                    "date": 1715354363713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         <div className=\"bloc-title-banner\"    style={{ backgroundImage: `url(${imagebg}` }}>\r\n      \r\n       \r\n           <div class=\"item-slider-banner\">\r\n-          <img src={imagebg}></img>\r\n+      \r\n                 {universe.name}\r\n           </div>\r\n         </div>\r\n \r\n"
+                },
+                {
+                    "date": 1715354376840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,12 +13,12 @@\n \r\n \r\n \r\n   return (\r\n-    <PageBanner className=\"banner-page-universe\">\r\n+    <PageBanner className=\"banner-page-universe\" style={{ backgroundImage: `url(${imagebg}` }}>\r\n \r\n       <Container>\r\n-        <div className=\"bloc-title-banner\"    style={{ backgroundImage: `url(${imagebg}` }}>\r\n+        <div className=\"bloc-title-banner\"   >\r\n      \r\n       \r\n           <div class=\"item-slider-banner\">\r\n       \r\n"
+                },
+                {
+                    "date": 1715354411506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,11 @@\n \r\n \r\n \r\n   return (\r\n-    <PageBanner className=\"banner-page-universe\" style={{ backgroundImage: `url(${imagebg}` }}>\r\n+    <PageBanner className=\"banner-page-universe\">\r\n \r\n-      <Container>\r\n+      <Container  style={{ backgroundImage: `url(${imagebg}` }}>\r\n         <div className=\"bloc-title-banner\"   >\r\n      \r\n       \r\n           <div class=\"item-slider-banner\">\r\n"
+                },
+                {
+                    "date": 1715354452733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n      \r\n       \r\n           <div class=\"item-slider-banner\">\r\n       \r\n-                {universe.name}\r\n+                <h1>{universe.name}</h1>\r\n           </div>\r\n         </div>\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1715354486280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,11 @@\n \r\n \r\n \r\n   return (\r\n-    <PageBanner className=\"banner-page-universe\">\r\n+    <PageBanner className=\"banner-page-universe\"   style={{ backgroundImage: `url(${imagebg}` }}>\r\n \r\n-      <Container  style={{ backgroundImage: `url(${imagebg}` }}>\r\n+      <Container>\r\n         <div className=\"bloc-title-banner\"   >\r\n      \r\n       \r\n           <div class=\"item-slider-banner\">\r\n"
+                },
+                {
+                    "date": 1715354504141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,17 +13,17 @@\n \r\n \r\n \r\n   return (\r\n-    <PageBanner className=\"banner-page-universe\"   style={{ backgroundImage: `url(${imagebg}` }}>\r\n+    <PageBanner className=\"banner-page-universe\">\r\n \r\n       <Container>\r\n-        <div className=\"bloc-title-banner\"   >\r\n+        <div className=\"bloc-title-banner\"    style={{ backgroundImage: `url(${imagebg}` }}>\r\n      \r\n       \r\n           <div class=\"item-slider-banner\">\r\n       \r\n-                <h1>{universe.name}</h1>\r\n+                {universe.name}\r\n           </div>\r\n         </div>\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1715354534775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,17 +13,16 @@\n \r\n \r\n \r\n   return (\r\n-    <PageBanner className=\"banner-page-universe\">\r\n+    <PageBanner className=\"banner-page-universe\" style={{ backgroundImage: imagebg }}>\r\n \r\n       <Container>\r\n-        <div className=\"bloc-title-banner\"    style={{ backgroundImage: `url(${imagebg}` }}>\r\n-     \r\n+        <div className=\"bloc-title-banner\">\r\n+          <img src={imagebg}></img>\r\n       \r\n           <div class=\"item-slider-banner\">\r\n-      \r\n-                {universe.name}\r\n+            \r\n           </div>\r\n         </div>\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1715354637568,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,21 +13,21 @@\n \r\n \r\n \r\n   return (\r\n-    <PageBanner className=\"banner-page-universe\" style={{ backgroundImage: imagebg }}>\r\n+    <PageBanner className=\"banner-page-universe\" style={{ backgroundImage: `url(${imagebg}` }}>\r\n \r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n-          <img src={imagebg}></img>\r\n       \r\n           <div class=\"item-slider-banner\">\r\n             \r\n           </div>\r\n         </div>\r\n+     \r\n+    \r\n \r\n \r\n-\r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n           <span style={{ color: '#000000' }}>Retour à la page d'accueil</span>\r\n         </BackStyle>\r\n"
+                },
+                {
+                    "date": 1715354652123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,15 +17,15 @@\n     <PageBanner className=\"banner-page-universe\" style={{ backgroundImage: `url(${imagebg}` }}>\r\n \r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n+          <img src={imagebg}></img>\r\n       \r\n           <div class=\"item-slider-banner\">\r\n             \r\n           </div>\r\n         </div>\r\n-     \r\n-    \r\n+ v\r\n \r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n"
+                },
+                {
+                    "date": 1715354733425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   console.log(\"STEP BP :1:01 \", universe.image, universe.name, imagebg);\r\n \r\n \r\n \r\n-  return (\r\n+  return (<>\r\n     <PageBanner className=\"banner-page-universe\" style={{ backgroundImage: `url(${imagebg}` }}>\r\n \r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n@@ -23,15 +23,26 @@\n           <div class=\"item-slider-banner\">\r\n             \r\n           </div>\r\n         </div>\r\n- v\r\n+ \r\n \r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n           <span style={{ color: '#000000' }}>Retour à la page d'accueil</span>\r\n         </BackStyle>\r\n       </Container>\r\n     </PageBanner>\r\n+      <PageBanner\r\n+      className=\"default-banner\"\r\n+      style={{ backgroundImage: `url(${image}` }}\r\n+    >\r\n+      <Container>\r\n+        <div className=\"bloc-title-banner\">\r\n+          <h1 className=\"title-banner-cat\">{title}</h1>\r\n+        </div>\r\n+      </Container>\r\n+    </PageBanner>\r\n+    </>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1715354744571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n       </Container>\r\n     </PageBanner>\r\n       <PageBanner\r\n       className=\"default-banner\"\r\n-      style={{ backgroundImage: `url(${image}` }}\r\n+      style={{ backgroundImage: `url(${imagebg}` }}\r\n     >\r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n           <h1 className=\"title-banner-cat\">{title}</h1>\r\n"
+                },
+                {
+                    "date": 1715354761666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       style={{ backgroundImage: `url(${imagebg}` }}\r\n     >\r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n-          <h1 className=\"title-banner-cat\">{title}</h1>\r\n+          <h1 className=\"title-banner-cat\">{universe.name}</h1>\r\n         </div>\r\n       </Container>\r\n     </PageBanner>\r\n     </>\r\n"
+                },
+                {
+                    "date": 1715355324681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,8 +38,9 @@\n       style={{ backgroundImage: `url(${imagebg}` }}\r\n     >\r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n+          <img src={imagebg}></img>\r\n           <h1 className=\"title-banner-cat\">{universe.name}</h1>\r\n         </div>\r\n       </Container>\r\n     </PageBanner>\r\n"
+                },
+                {
+                    "date": 1715355405725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,11 +23,11 @@\n           <div class=\"item-slider-banner\">\r\n             \r\n           </div>\r\n         </div>\r\n- \r\n \r\n \r\n+\r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n           <span style={{ color: '#000000' }}>Retour à la page d'accueil</span>\r\n         </BackStyle>\r\n"
+                },
+                {
+                    "date": 1715587547778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       style={{ backgroundImage: `url(${imagebg}` }}\r\n     >\r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n-          <img src={imagebg}></img>\r\n+       \r\n           <h1 className=\"title-banner-cat\">{universe.name}</h1>\r\n         </div>\r\n       </Container>\r\n     </PageBanner>\r\n"
+                },
+                {
+                    "date": 1715587605778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     <PageBanner className=\"banner-page-universe\" style={{ backgroundImage: `url(${imagebg}` }}>\r\n \r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n-          <img src={imagebg}></img>\r\n+    \r\n       \r\n           <div class=\"item-slider-banner\">\r\n             \r\n           </div>\r\n@@ -32,18 +32,8 @@\n           <span style={{ color: '#000000' }}>Retour à la page d'accueil</span>\r\n         </BackStyle>\r\n       </Container>\r\n     </PageBanner>\r\n-      <PageBanner\r\n-      className=\"default-banner\"\r\n-      style={{ backgroundImage: `url(${imagebg}` }}\r\n-    >\r\n-      <Container>\r\n-        <div className=\"bloc-title-banner\">\r\n        \r\n-          <h1 className=\"title-banner-cat\">{universe.name}</h1>\r\n-        </div>\r\n-      </Container>\r\n-    </PageBanner>\r\n     </>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1715587626988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,27 +13,19 @@\n \r\n \r\n \r\n   return (<>\r\n-    <PageBanner className=\"banner-page-universe\" style={{ backgroundImage: `url(${imagebg}` }}>\r\n-\r\n+   \r\n+      <PageBanner\r\n+      className=\"default-banner\"\r\n+      style={{ backgroundImage: `url(${imagebg}` }}\r\n+    >\r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n-    \r\n-      \r\n-          <div class=\"item-slider-banner\">\r\n-            \r\n-          </div>\r\n+       \r\n+          <h1 className=\"title-banner-cat\">{universe.name}</h1>\r\n         </div>\r\n-\r\n-\r\n-\r\n-        <BackStyle to={ROUTES.HOME.url}>\r\n-          <BackIcon />\r\n-          <span style={{ color: '#000000' }}>Retour à la page d'accueil</span>\r\n-        </BackStyle>\r\n       </Container>\r\n     </PageBanner>\r\n-       \r\n     </>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1715587650346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,27 @@\n \r\n \r\n \r\n   return (<>\r\n-   \r\n+    <PageBanner className=\"banner-page-universe\" style={{ backgroundImage: `url(${imagebg}` }}>\r\n+\r\n+      <Container>\r\n+        <div className=\"bloc-title-banner\">\r\n+          <img src={imagebg}></img>\r\n+      \r\n+          <div class=\"item-slider-banner\">\r\n+            \r\n+          </div>\r\n+        </div>\r\n+\r\n+\r\n+\r\n+        <BackStyle to={ROUTES.HOME.url}>\r\n+          <BackIcon />\r\n+          <span style={{ color: '#000000' }}>Retour à la page d'accueil</span>\r\n+        </BackStyle>\r\n+      </Container>\r\n+    </PageBanner>\r\n       <PageBanner\r\n       className=\"default-banner\"\r\n       style={{ backgroundImage: `url(${imagebg}` }}\r\n     >\r\n"
+                },
+                {
+                    "date": 1715587684210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   console.log(\"STEP BP :1:01 \", universe.image, universe.name, imagebg);\r\n \r\n \r\n \r\n-  return (<>\r\n+  return (\r\n     <PageBanner className=\"banner-page-universe\" style={{ backgroundImage: `url(${imagebg}` }}>\r\n \r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n@@ -32,18 +32,8 @@\n           <span style={{ color: '#000000' }}>Retour à la page d'accueil</span>\r\n         </BackStyle>\r\n       </Container>\r\n     </PageBanner>\r\n-      <PageBanner\r\n-      className=\"default-banner\"\r\n-      style={{ backgroundImage: `url(${imagebg}` }}\r\n-    >\r\n-      <Container>\r\n-        <div className=\"bloc-title-banner\">\r\n-       \r\n-          <h1 className=\"title-banner-cat\">{universe.name}</h1>\r\n-        </div>\r\n-      </Container>\r\n-    </PageBanner>\r\n-    </>\r\n+  \r\n+     \r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1715587733212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,12 +13,12 @@\n \r\n \r\n \r\n   return (\r\n-    <PageBanner className=\"banner-page-universe\" style={{ backgroundImage: `url(${imagebg}` }}>\r\n+    <PageBanner className=\"banner-page-universe\" >\r\n \r\n       <Container>\r\n-        <div className=\"bloc-title-banner\">\r\n+        <div className=\"bloc-title-banner\" style={{ backgroundImage: `url(${imagebg}` }}>\r\n           <img src={imagebg}></img>\r\n       \r\n           <div class=\"item-slider-banner\">\r\n             \r\n"
+                },
+                {
+                    "date": 1715587769803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,10 @@\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n \r\n-      <Container>\r\n-        <div className=\"bloc-title-banner\" style={{ backgroundImage: `url(${imagebg}` }}>\r\n+      <Container style={{ backgroundImage: `url(${imagebg}` }}>\r\n+        <div className=\"bloc-title-banner\" >\r\n           <img src={imagebg}></img>\r\n       \r\n           <div class=\"item-slider-banner\">\r\n             \r\n"
+                },
+                {
+                    "date": 1715587803055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from \"react\";\r\n-import { Container } from \"react-bootstrap\";\r\n+import { Container, Row } from \"react-bootstrap\";\r\n import noImage from \"../../assets/images/noImage.png\";\r\n import { BackStyle, PageBanner } from \"../../assets/styles/frontGlobalStyle\";\r\n import { BackIcon } from \"../../assets/styles/icons\";\r\n import ROUTES from \"../../config/routes\";\r\n@@ -16,15 +16,15 @@\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n \r\n       <Container style={{ backgroundImage: `url(${imagebg}` }}>\r\n-        <div className=\"bloc-title-banner\" >\r\n+        <Row className=\"bloc-title-banner\" >\r\n           <img src={imagebg}></img>\r\n       \r\n           <div class=\"item-slider-banner\">\r\n             \r\n           </div>\r\n-        </div>\r\n+        </Row>\r\n \r\n \r\n \r\n         <BackStyle to={ROUTES.HOME.url}>\r\n"
+                },
+                {
+                    "date": 1715587835636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n \r\n       <Container style={{ backgroundImage: `url(${imagebg}` }}>\r\n         <Row className=\"bloc-title-banner\" >\r\n           <img src={imagebg}></img>\r\n-      \r\n+      {universe.name}\r\n           <div class=\"item-slider-banner\">\r\n             \r\n           </div>\r\n         </Row>\r\n"
+                },
+                {
+                    "date": 1715587861586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     <PageBanner className=\"banner-page-universe\" >\r\n \r\n       <Container style={{ backgroundImage: `url(${imagebg}` }}>\r\n         <Row className=\"bloc-title-banner\" >\r\n-          <img src={imagebg}></img>\r\n+        \r\n       {universe.name}\r\n           <div class=\"item-slider-banner\">\r\n             \r\n           </div>\r\n"
+                },
+                {
+                    "date": 1715587894408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,14 +15,15 @@\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n \r\n-      <Container style={{ backgroundImage: `url(${imagebg}` }}>\r\n+      <Container >\r\n         <Row className=\"bloc-title-banner\" >\r\n-        \r\n+   \r\n+          <div class=\"item-slider-banner\">\r\n+          style={{ backgroundImage: `url(${imagebg}` }}\r\n+               \r\n       {universe.name}\r\n-          <div class=\"item-slider-banner\">\r\n-            \r\n           </div>\r\n         </Row>\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1715587916946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,11 +18,10 @@\n \r\n       <Container >\r\n         <Row className=\"bloc-title-banner\" >\r\n    \r\n-          <div class=\"item-slider-banner\">\r\n-          style={{ backgroundImage: `url(${imagebg}` }}\r\n-               \r\n+          <div class=\"item-slider-banner\"\r\n+          style={{ backgroundImage: `url(${imagebg}` }}>\r\n       {universe.name}\r\n           </div>\r\n         </Row>\r\n \r\n"
+                },
+                {
+                    "date": 1715587963195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n       <Container >\r\n         <Row className=\"bloc-title-banner\" >\r\n    \r\n           <div class=\"item-slider-banner\"\r\n-          style={{ backgroundImage: `url(${imagebg}` }}>\r\n+          style={{ backgroundImage: `url(${imagebg}`, color:'#0000ff' }}>\r\n       {universe.name}\r\n           </div>\r\n         </Row>\r\n \r\n"
+                },
+                {
+                    "date": 1715588048825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n       <Container >\r\n         <Row className=\"bloc-title-banner\" >\r\n    \r\n           <div class=\"item-slider-banner\"\r\n-          style={{ backgroundImage: `url(${imagebg}`, color:'#0000ff' }}>\r\n+          style={{ backgroundImage: `url(${imagebg}`, color:'#495057' }}>\r\n       {universe.name}\r\n           </div>\r\n         </Row>\r\n \r\n"
+                },
+                {
+                    "date": 1715588099414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n       <Container >\r\n         <Row className=\"bloc-title-banner\" >\r\n    \r\n           <div class=\"item-slider-banner\"\r\n-          style={{ backgroundImage: `url(${imagebg}`, color:'#495057' }}>\r\n+          style={{ backgroundImage: `url(${imagebg}`, fontSize:'20', color:'#495057' }}>\r\n       {universe.name}\r\n           </div>\r\n         </Row>\r\n \r\n"
+                },
+                {
+                    "date": 1715588117394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n       <Container >\r\n         <Row className=\"bloc-title-banner\" >\r\n    \r\n           <div class=\"item-slider-banner\"\r\n-          style={{ backgroundImage: `url(${imagebg}`, fontSize:'20', color:'#495057' }}>\r\n+          style={{ backgroundImage: `url(${imagebg}`, fontSize:20, color:'#495057' }}>\r\n       {universe.name}\r\n           </div>\r\n         </Row>\r\n \r\n"
+                },
+                {
+                    "date": 1715588148058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n       <Container >\r\n         <Row className=\"bloc-title-banner\" >\r\n    \r\n           <div class=\"item-slider-banner\"\r\n-          style={{ backgroundImage: `url(${imagebg}`, fontSize:20, color:'#495057' }}>\r\n+          style={{ backgroundImage: `url(${imagebg}`, fontSize:40, color:'#495057' }}>\r\n       {universe.name}\r\n           </div>\r\n         </Row>\r\n \r\n"
+                },
+                {
+                    "date": 1715588184105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n       <Container >\r\n         <Row className=\"bloc-title-banner\" >\r\n    \r\n           <div class=\"item-slider-banner\"\r\n-          style={{ backgroundImage: `url(${imagebg}`, fontSize:40, color:'#495057' }}>\r\n+          style={{ backgroundImage: `url(${imagebg}`, fontSize:40,fontWeight=2,  color:'#495057' }}>\r\n       {universe.name}\r\n           </div>\r\n         </Row>\r\n \r\n"
+                },
+                {
+                    "date": 1715588189902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n       <Container >\r\n         <Row className=\"bloc-title-banner\" >\r\n    \r\n           <div class=\"item-slider-banner\"\r\n-          style={{ backgroundImage: `url(${imagebg}`, fontSize:40,fontWeight=2,  color:'#495057' }}>\r\n+          style={{ backgroundImage: `url(${imagebg}`, fontSize:40,fontWeight:2,  color:'#495057' }}>\r\n       {universe.name}\r\n           </div>\r\n         </Row>\r\n \r\n"
+                },
+                {
+                    "date": 1715588199665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n       <Container >\r\n         <Row className=\"bloc-title-banner\" >\r\n    \r\n           <div class=\"item-slider-banner\"\r\n-          style={{ backgroundImage: `url(${imagebg}`, fontSize:40,fontWeight:2,  color:'#495057' }}>\r\n+          style={{ backgroundImage: `url(${imagebg}`, fontSize:40,fontWeight:20,  color:'#495057' }}>\r\n       {universe.name}\r\n           </div>\r\n         </Row>\r\n \r\n"
+                },
+                {
+                    "date": 1715588225129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n       <Container >\r\n         <Row className=\"bloc-title-banner\" >\r\n    \r\n           <div class=\"item-slider-banner\"\r\n-          style={{ backgroundImage: `url(${imagebg}`, fontSize:40,fontWeight:20,  color:'#495057' }}>\r\n+          style={{ backgroundImage: `url(${imagebg}`, fontSize:40,fontWeight:700,  color:'#495057' }}>\r\n       {universe.name}\r\n           </div>\r\n         </Row>\r\n \r\n"
+                },
+                {
+                    "date": 1715588264432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n       <Container >\r\n         <Row className=\"bloc-title-banner\" >\r\n    \r\n           <div class=\"item-slider-banner\"\r\n-          style={{ backgroundImage: `url(${imagebg}`, fontSize:40,fontWeight:700,  color:'#495057' }}>\r\n+          style={{ backgroundImage: imagebg`, fontSize:40,fontWeight:700,  color:'#495057' }}>\r\n       {universe.name}\r\n           </div>\r\n         </Row>\r\n \r\n"
+                },
+                {
+                    "date": 1715588282659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n       <Container >\r\n         <Row className=\"bloc-title-banner\" >\r\n    \r\n           <div class=\"item-slider-banner\"\r\n-          style={{ backgroundImage: imagebg`, fontSize:40,fontWeight:700,  color:'#495057' }}>\r\n+          style={{ background: imagebg, fontSize:40,fontWeight:700,  color:'#495057' }}>\r\n       {universe.name}\r\n           </div>\r\n         </Row>\r\n \r\n"
+                },
+                {
+                    "date": 1715588431586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,11 @@\n     <PageBanner className=\"banner-page-universe\" >\r\n \r\n       <Container >\r\n         <Row className=\"bloc-title-banner\" >\r\n-   \r\n+        <div style={{ \r\n+      backgroundImage: `url(\"https://via.placeholder.com/500\")` \r\n+    }}>    {universe.name} </div>\r\n           <div class=\"item-slider-banner\"\r\n           style={{ background: imagebg, fontSize:40,fontWeight:700,  color:'#495057' }}>\r\n       {universe.name}\r\n           </div>\r\n"
+                },
+                {
+                    "date": 1715588490880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n \r\n       <Container >\r\n         <Row className=\"bloc-title-banner\" >\r\n         <div style={{ \r\n-      backgroundImage: `url(\"https://via.placeholder.com/500\")` \r\n+      backgroundImage: `url(\"https://test.fingz.fr/media/6613de7e9a3f4_Capture d'écran 2023-12-09 222704.png\")` \r\n     }}>    {universe.name} </div>\r\n           <div class=\"item-slider-banner\"\r\n           style={{ background: imagebg, fontSize:40,fontWeight:700,  color:'#495057' }}>\r\n       {universe.name}\r\n"
+                },
+                {
+                    "date": 1715588546313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,11 +17,11 @@\n     <PageBanner className=\"banner-page-universe\" >\r\n \r\n       <Container >\r\n         <Row className=\"bloc-title-banner\" >\r\n-        <div style={{ \r\n+        <Col style={{ \r\n       backgroundImage: `url(\"https://test.fingz.fr/media/6613de7e9a3f4_Capture d'écran 2023-12-09 222704.png\")` \r\n-    }}>    {universe.name} </div>\r\n+    }}>    {universe.name} </Col>\r\n           <div class=\"item-slider-banner\"\r\n           style={{ background: imagebg, fontSize:40,fontWeight:700,  color:'#495057' }}>\r\n       {universe.name}\r\n           </div>\r\n"
+                },
+                {
+                    "date": 1715588556090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from \"react\";\r\n-import { Container, Row } from \"react-bootstrap\";\r\n+import { Container, Row, Col } from \"react-bootstrap\";\r\n import noImage from \"../../assets/images/noImage.png\";\r\n import { BackStyle, PageBanner } from \"../../assets/styles/frontGlobalStyle\";\r\n import { BackIcon } from \"../../assets/styles/icons\";\r\n import ROUTES from \"../../config/routes\";\r\n"
+                },
+                {
+                    "date": 1715588668615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from \"react\";\r\n-import { Container, Row, Col } from \"react-bootstrap\";\r\n+import { Container, Row, Col} from \"react-bootstrap\";\r\n import noImage from \"../../assets/images/noImage.png\";\r\n import { BackStyle, PageBanner } from \"../../assets/styles/frontGlobalStyle\";\r\n import { BackIcon } from \"../../assets/styles/icons\";\r\n import ROUTES from \"../../config/routes\";\r\n"
+                },
+                {
+                    "date": 1715588730151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,13 +17,11 @@\n     <PageBanner className=\"banner-page-universe\" >\r\n \r\n       <Container >\r\n         <Row className=\"bloc-title-banner\" >\r\n-        <Col style={{ \r\n-      backgroundImage: `url(\"https://test.fingz.fr/media/6613de7e9a3f4_Capture d'écran 2023-12-09 222704.png\")` \r\n-    }}>    {universe.name} </Col>\r\n+       \r\n           <div class=\"item-slider-banner\"\r\n-          style={{ background: imagebg, fontSize:40,fontWeight:700,  color:'#495057' }}>\r\n+          style={{ backgroundImage:  `url(\"https://via.placeholder.com/500\")`, fontSize:40,fontWeight:700,  color:'#495057' }}>\r\n       {universe.name}\r\n           </div>\r\n         </Row>\r\n \r\n"
+                },
+                {
+                    "date": 1715588843019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n       <Container >\r\n         <Row className=\"bloc-title-banner\" >\r\n        \r\n           <div class=\"item-slider-banner\"\r\n-          style={{ backgroundImage:  `url(\"https://via.placeholder.com/500\")`, fontSize:40,fontWeight:700,  color:'#495057' }}>\r\n+          style={{ backgroundImage:  `url(\"${imagebg}\")`, fontSize:40,fontWeight:700,  color:'#495057' }}>\r\n       {universe.name}\r\n           </div>\r\n         </Row>\r\n \r\n"
+                },
+                {
+                    "date": 1715588918741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,13 +15,13 @@\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n \r\n-      <Container >\r\n+      <Container  style={{ backgroundImage:  `url(\"${imagebg}\")`, fontSize:40,fontWeight:700,  color:'#495057' }}>\r\n         <Row className=\"bloc-title-banner\" >\r\n        \r\n           <div class=\"item-slider-banner\"\r\n-          style={{ backgroundImage:  `url(\"${imagebg}\")`, fontSize:40,fontWeight:700,  color:'#495057' }}>\r\n+         >\r\n       {universe.name}\r\n           </div>\r\n         </Row>\r\n \r\n"
+                },
+                {
+                    "date": 1715588959210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,10 @@\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n \r\n-      <Container  style={{ backgroundImage:  `url(\"${imagebg}\")`, fontSize:40,fontWeight:700,  color:'#495057' }}>\r\n-        <Row className=\"bloc-title-banner\" >\r\n+      <Container >\r\n+        <Row className=\"bloc-title-banner\"  style={{ backgroundImage:  `url(\"${imagebg}\")`, fontSize:40,fontWeight:700,  color:'#495057' }} >\r\n        \r\n           <div class=\"item-slider-banner\"\r\n          >\r\n       {universe.name}\r\n"
+                },
+                {
+                    "date": 1715588977324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,10 @@\n \r\n   return (\r\n     <PageBanner className=\"banner-page-universe\" >\r\n \r\n-      <Container >\r\n-        <Row className=\"bloc-title-banner\"  style={{ backgroundImage:  `url(\"${imagebg}\")`, fontSize:40,fontWeight:700,  color:'#495057' }} >\r\n+      <Container  style={{ backgroundImage:  `url(\"${imagebg}\")`, fontSize:40,fontWeight:700,  color:'#495057' }} >\r\n+        <Row className=\"bloc-title-banner\"  >\r\n        \r\n           <div class=\"item-slider-banner\"\r\n          >\r\n       {universe.name}\r\n"
+                },
+                {
+                    "date": 1715589007617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,11 @@\n \r\n \r\n \r\n   return (\r\n-    <PageBanner className=\"banner-page-universe\" >\r\n+    <PageBanner className=\"banner-page-universe\" style={{ backgroundImage:  `url(\"${imagebg}\")`, fontSize:40,fontWeight:700,  color:'#495057' }}  >\r\n \r\n-      <Container  style={{ backgroundImage:  `url(\"${imagebg}\")`, fontSize:40,fontWeight:700,  color:'#495057' }} >\r\n+      <Container >\r\n         <Row className=\"bloc-title-banner\"  >\r\n        \r\n           <div class=\"item-slider-banner\"\r\n          >\r\n"
+                },
+                {
+                    "date": 1715589025170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n \r\n \r\n \r\n   return (\r\n-    <PageBanner className=\"banner-page-universe\" style={{ backgroundImage:  `url(\"${imagebg}\")`, fontSize:40,fontWeight:700,  color:'#495057' }}  >\r\n+    <PageBanner className=\"banner-page-universe\" style={{ backgroundImage:  `url(\"${imagebg}\")`, fontSize:50,fontWeight:700,  color:'#495057' }}  >\r\n \r\n       <Container >\r\n         <Row className=\"bloc-title-banner\"  >\r\n        \r\n"
+                },
+                {
+                    "date": 1715589131469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,14 +13,14 @@\n \r\n \r\n \r\n   return (\r\n-    <PageBanner className=\"banner-page-universe\" style={{ backgroundImage:  `url(\"${imagebg}\")`, fontSize:50,fontWeight:700,  color:'#495057' }}  >\r\n+    <PageBanner className=\"banner-page-universe\" style={{ backgroundImage:  `url(\"${imagebg}\")` }}  >\r\n \r\n       <Container >\r\n         <Row className=\"bloc-title-banner\"  >\r\n        \r\n-          <div class=\"item-slider-banner\"\r\n+          <div class=\"item-slider-banner\" style={{ fontSize:50,fontWeight:700,  color:'#495057' }}\r\n          >\r\n       {universe.name}\r\n           </div>\r\n         </Row>\r\n"
+                },
+                {
+                    "date": 1715589142646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n \r\n       <Container >\r\n         <Row className=\"bloc-title-banner\"  >\r\n        \r\n-          <div class=\"item-slider-banner\" style={{ fontSize:50,fontWeight:700,  color:'#495057' }}\r\n+          <div class=\"item-slider-banner\" style={{ fontSize:40,fontWeight:700,  color:'#495057' }}\r\n          >\r\n       {universe.name}\r\n           </div>\r\n         </Row>\r\n"
+                },
+                {
+                    "date": 1715867124826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,15 +24,15 @@\n       {universe.name}\r\n           </div>\r\n         </Row>\r\n \r\n+        </Container>\r\n \r\n-\r\n         <BackStyle to={ROUTES.HOME.url}>\r\n           <BackIcon />\r\n           <span style={{ color: '#000000' }}>Retour à la page d'accueil</span>\r\n         </BackStyle>\r\n-      </Container>\r\n+      \r\n     </PageBanner>\r\n   \r\n      \r\n   );\r\n"
+                },
+                {
+                    "date": 1715867144519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,16 +24,17 @@\n       {universe.name}\r\n           </div>\r\n         </Row>\r\n \r\n-        </Container>\r\n \r\n-        <BackStyle to={ROUTES.HOME.url}>\r\n-          <BackIcon />\r\n-          <span style={{ color: '#000000' }}>Retour à la page d'accueil</span>\r\n-        </BackStyle>\r\n-      \r\n+\r\n+     \r\n+      </Container>\r\n     </PageBanner>\r\n+       <BackStyle to={ROUTES.HOME.url}>\r\n+       <BackIcon />\r\n+       <span style={{ color: '#000000' }}>Retour à la page d'accueil</span>\r\n+     </BackStyle>\r\n   \r\n      \r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1715867174714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,10 @@\n \r\n \r\n \r\n   return (\r\n-    <PageBanner className=\"banner-page-universe\" style={{ backgroundImage:  `url(\"${imagebg}\")` }}  >\r\n+   <>\r\n+   <PageBanner className=\"banner-page-universe\" style={{ backgroundImage:  `url(\"${imagebg}\")` }}  >\r\n \r\n       <Container >\r\n         <Row className=\"bloc-title-banner\"  >\r\n        \r\n@@ -29,12 +30,13 @@\n \r\n      \r\n       </Container>\r\n     </PageBanner>\r\n+   \r\n        <BackStyle to={ROUTES.HOME.url}>\r\n        <BackIcon />\r\n        <span style={{ color: '#000000' }}>Retour à la page d'accueil</span>\r\n      </BackStyle>\r\n-  \r\n+  </>\r\n      \r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1715867228360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,13 +30,14 @@\n \r\n      \r\n       </Container>\r\n     </PageBanner>\r\n-   \r\n+    <Container >\r\n        <BackStyle to={ROUTES.HOME.url}>\r\n        <BackIcon />\r\n        <span style={{ color: '#000000' }}>Retour à la page d'accueil</span>\r\n      </BackStyle>\r\n+     </Container>\r\n   </>\r\n      \r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1716372127211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,43 @@\n+import React from \"react\";\r\n+import { Container, Row, Col} from \"react-bootstrap\";\r\n+import noImage from \"../../assets/images/noImage.png\";\r\n+import { BackStyle, PageBanner } from \"../../assets/styles/frontGlobalStyle\";\r\n+import { BackIcon } from \"../../assets/styles/icons\";\r\n+import ROUTES from \"../../config/routes\";\r\n+import * as vars from \"../../vars\";\r\n+\r\n+export default function BannerPage({ universe }) {\r\n+  const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n+  let imagebg = getPathImage(universe.image);\r\n+  console.log(\"STEP BP :1:01 \", universe.image, universe.name, imagebg);\r\n+\r\n+\r\n+\r\n+  return (\r\n+   <>\r\n+   <PageBanner className=\"banner-page-universe\" style={{ backgroundImage:  `url(\"${imagebg}\")` }}  >\r\n+\r\n+      <Container >\r\n+        <Row className=\"bloc-title-banner\"  >\r\n+       \r\n+          <div class=\"item-slider-banner\"\r\n+         >\r\n+      {universe.name}\r\n+          </div>\r\n+        </Row>\r\n+\r\n+\r\n+\r\n+     \r\n+      </Container>\r\n+    </PageBanner>\r\n+    <Container >\r\n+       <BackStyle to={ROUTES.HOME.url}>\r\n+       <BackIcon />\r\n+       <span style={{ color: '#000000' }}>Retour à la page d'accueil</span>\r\n+     </BackStyle>\r\n+     </Container>\r\n+  </>\r\n+     \r\n+  );\r\n+}\r\n"
+                },
+                {
+                    "date": 1716372147120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n \r\n       <Container >\r\n         <Row className=\"bloc-title-banner\"  >\r\n        \r\n-          <div class=\"item-slider-banner\"\r\n+          <div class=\"item-slider-banner\" style={{ fontSize:40,fontWeight:700,  color:'white' }}\r\n          >\r\n       {universe.name}\r\n           </div>\r\n         </Row>\r\n@@ -40,47 +40,4 @@\n   </>\r\n      \r\n   );\r\n }\r\n-import React from \"react\";\r\n-import { Container, Row, Col} from \"react-bootstrap\";\r\n-import noImage from \"../../assets/images/noImage.png\";\r\n-import { BackStyle, PageBanner } from \"../../assets/styles/frontGlobalStyle\";\r\n-import { BackIcon } from \"../../assets/styles/icons\";\r\n-import ROUTES from \"../../config/routes\";\r\n-import * as vars from \"../../vars\";\r\n-\r\n-export default function BannerPage({ universe }) {\r\n-  const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n-  let imagebg = getPathImage(universe.image);\r\n-  console.log(\"STEP BP :1:01 \", universe.image, universe.name, imagebg);\r\n-\r\n-\r\n-\r\n-  return (\r\n-   <>\r\n-   <PageBanner className=\"banner-page-universe\" style={{ backgroundImage:  `url(\"${imagebg}\")` }}  >\r\n-\r\n-      <Container >\r\n-        <Row className=\"bloc-title-banner\"  >\r\n-       \r\n-          <div class=\"item-slider-banner\" style={{ fontSize:40,fontWeight:700,  color:'#495057' }}\r\n-         >\r\n-      {universe.name}\r\n-          </div>\r\n-        </Row>\r\n-\r\n-\r\n-\r\n-     \r\n-      </Container>\r\n-    </PageBanner>\r\n-    <Container >\r\n-       <BackStyle to={ROUTES.HOME.url}>\r\n-       <BackIcon />\r\n-       <span style={{ color: '#000000' }}>Retour à la page d'accueil</span>\r\n-     </BackStyle>\r\n-     </Container>\r\n-  </>\r\n-     \r\n-  );\r\n-}\r\n"
+                },
+                {
+                    "date": 1716372169415,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,12 +24,8 @@\n          >\r\n       {universe.name}\r\n           </div>\r\n         </Row>\r\n-\r\n-\r\n-\r\n-     \r\n       </Container>\r\n     </PageBanner>\r\n     <Container >\r\n        <BackStyle to={ROUTES.HOME.url}>\r\n"
+                },
+                {
+                    "date": 1717597697368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \r\n export default function BannerPage({ universe }) {\r\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n   let imagebg = getPathImage(universe.image);\r\n-  console.log(\"STEP BP :1:01 \", universe.image, universe.name, imagebg);\r\n+  //console.log(\"STEP BP :1:01 \", universe.image, universe.name, imagebg);\r\n \r\n \r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1717600217040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,12 +19,13 @@\n \r\n       <Container >\r\n         <Row className=\"bloc-title-banner\"  >\r\n        \r\n-          <div class=\"item-slider-banner\" style={{ fontSize:40,fontWeight:700,  color:'white' }}\r\n+          <div class=\"title-banner-cat\" style={{ fontSize:40,fontWeight:700,  color:'white' }}\r\n          >\r\n       {universe.name}\r\n           </div>\r\n+         \r\n         </Row>\r\n       </Container>\r\n     </PageBanner>\r\n     <Container >\r\n"
+                },
+                {
+                    "date": 1717600265880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,15 +26,16 @@\n           </div>\r\n          \r\n         </Row>\r\n       </Container>\r\n-    </PageBanner>\r\n-    <Container >\r\n+      <Container >\r\n        <BackStyle to={ROUTES.HOME.url}>\r\n        <BackIcon />\r\n        <span style={{ color: '#000000' }}>Retour à la page d'accueil</span>\r\n      </BackStyle>\r\n      </Container>\r\n+    </PageBanner>\r\n+    \r\n   </>\r\n      \r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1717600284135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,15 +25,14 @@\n       {universe.name}\r\n           </div>\r\n          \r\n         </Row>\r\n-      </Container>\r\n-      <Container >\r\n+       \r\n        <BackStyle to={ROUTES.HOME.url}>\r\n        <BackIcon />\r\n        <span style={{ color: '#000000' }}>Retour à la page d'accueil</span>\r\n      </BackStyle>\r\n-     </Container>\r\n+      \r\n     </PageBanner>\r\n     \r\n   </>\r\n      \r\n"
+                },
+                {
+                    "date": 1717600300199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n        <BackStyle to={ROUTES.HOME.url}>\r\n        <BackIcon />\r\n        <span style={{ color: '#000000' }}>Retour à la page d'accueil</span>\r\n      </BackStyle>\r\n-      \r\n+     </Container>\r\n     </PageBanner>\r\n     \r\n   </>\r\n      \r\n"
+                },
+                {
+                    "date": 1718090432773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n         </Row>\r\n        \r\n        <BackStyle to={ROUTES.HOME.url}>\r\n        <BackIcon />\r\n-       <span style={{ color: '#000000' }}>Retour à la page d'accueil</span>\r\n+       <span style={{ color: '#ffffff' }}>Retour à la page d'accueil</span>\r\n      </BackStyle>\r\n      </Container>\r\n     </PageBanner>\r\n     \r\n"
+                }
+            ],
+            "date": 1708340444952,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\r\nimport { Container } from \"react-bootstrap\";\r\nimport noImage from \"../../assets/images/noImage.png\";\r\nimport { BackStyle, PageBanner } from \"../../assets/styles/frontGlobalStyle\";\r\nimport { BackIcon } from \"../../assets/styles/icons\";\r\nimport ROUTES from \"../../config/routes\";\r\nimport * as vars from \"../../vars\";\r\n\r\nexport default function BannerPage({ universe }) {\r\n  const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n\r\n  return (\r\n    <PageBanner className=\"banner-page-universe\"\r\n      style={{ backgroundImage: `url(${getPathImage(universe.image)})` }}\r\n    >\r\n      <Container>\r\n        <div className=\"bloc-title-banner\">\r\n          <h1 className=\"title-banner-cat\">{universe.name}</h1>\r\n        </div>\r\n\r\n        <BackStyle to={ROUTES.HOME.url}>\r\n          <BackIcon />\r\n          <span>Retour à la page d'accueil</span>\r\n        </BackStyle>\r\n      </Container>\r\n    </PageBanner>\r\n  );\r\n}\r\n"
+        }
+    ]
+}

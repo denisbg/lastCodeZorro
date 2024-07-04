@@ -1,0 +1,70 @@
+{
+    "sourceFile": "src/components/front/artisanListePrestations.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1711544495995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711544753491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n import ArtisanPrestationItemBonus from \"./artisanPrestationItemBonus\";\r\n import Loader from \"../loader\";\r\n import { useMediaQuery } from \"react-responsive\";\r\n \r\n-export default function ListProduitsBonus({ data = [], ...props }) {\r\n+export default function ArtisanListePrestations({ data = [], ...props }) {\r\n   const handleClick = () => {\r\n     const data = \"Données importantes\";\r\n     this.props.onEvent(data);\r\n   }\r\n"
+                },
+                {
+                    "date": 1711545538433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n     // Traiter les données du composant enfant\r\n     console.log(data);\r\n     };\r\n   const rowRenderservices = (row) => (\r\n-    <ArtisanPrestationItemBonus   onEvent={handleChildEvent} key={row.id} row={row} slugIdUniverse={slugIdUniverse} slugIdService={slugIdService} />\r\n+    <ArtisanListePrestations   onEvent={handleChildEvent} key={row.id} row={row} slugIdUniverse={slugIdUniverse} slugIdService={slugIdService} />\r\n   );\r\n   const showData = () => {\r\n     if (data === false)\r\n       return (\r\n"
+                },
+                {
+                    "date": 1711545574512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n     // Traiter les données du composant enfant\r\n     console.log(data);\r\n     };\r\n   const rowRenderservices = (row) => (\r\n-    <ArtisanListePrestations   onEvent={handleChildEvent} key={row.id} row={row} slugIdUniverse={slugIdUniverse} slugIdService={slugIdService} />\r\n+    <ArtisanPrestationItemBonus  onEvent={handleChildEvent} key={row.id} row={row} slugIdUniverse={slugIdUniverse} slugIdService={slugIdService} />\r\n   );\r\n   const showData = () => {\r\n     if (data === false)\r\n       return (\r\n"
+                },
+                {
+                    "date": 1711545625900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n     // Traiter les données du composant enfant\r\n     console.log(data);\r\n     };\r\n   const rowRenderservices = (row) => (\r\n-    <ArtisanPrestationItemBonus  onEvent={handleChildEvent} key={row.id} row={row} slugIdUniverse={slugIdUniverse} slugIdService={slugIdService} />\r\n+ \r\n   );\r\n   const showData = () => {\r\n     if (data === false)\r\n       return (\r\n"
+                },
+                {
+                    "date": 1711545773096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n     // Traiter les données du composant enfant\r\n     console.log(data);\r\n     };\r\n   const rowRenderservices = (row) => (\r\n- \r\n+    <ArtisanPrestationItemBonus   onEvent={handleChildEvent} key={row.id} row={row} slugIdUniverse={slugIdUniverse} slugIdService={slugIdService} />\r\n   );\r\n   const showData = () => {\r\n     if (data === false)\r\n       return (\r\n"
+                },
+                {
+                    "date": 1711545797264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n     // Traiter les données du composant enfant\r\n     console.log(data);\r\n     };\r\n   const rowRenderservices = (row) => (\r\n-    <ArtisanPrestationItemBonus   onEvent={handleChildEvent} key={row.id} row={row} slugIdUniverse={slugIdUniverse} slugIdService={slugIdService} />\r\n+    <ArtisanPrestationItemBonus   key={row.id} row={row} slugIdUniverse={slugIdUniverse} slugIdService={slugIdService} />\r\n   );\r\n   const showData = () => {\r\n     if (data === false)\r\n       return (\r\n"
+                },
+                {
+                    "date": 1711545830298,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n     // Traiter les données du composant enfant\r\n     console.log(data);\r\n     };\r\n   const rowRenderservices = (row) => (\r\n-    <ArtisanPrestationItemBonus   key={row.id} row={row} slugIdUniverse={slugIdUniverse} slugIdService={slugIdService} />\r\n+    <ArtisanPrestationItemBonus   onEvent={handleChildEvent} key={row.id} row={row} slugIdUniverse={slugIdUniverse} slugIdService={slugIdService} />\r\n   );\r\n   const showData = () => {\r\n     if (data === false)\r\n       return (\r\n"
+                },
+                {
+                    "date": 1711546375269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n     // Traiter les données du composant enfant\r\n     console.log(data);\r\n     };\r\n   const rowRenderservices = (row) => (\r\n-    <ArtisanPrestationItemBonus   onEvent={handleChildEvent} key={row.id} row={row} slugIdUniverse={slugIdUniverse} slugIdService={slugIdService} />\r\n+    <ArtisanPrestationItemBonus   key={row.id} row={row} slugIdUniverse={slugIdUniverse} slugIdService={slugIdService} />\r\n   );\r\n   const showData = () => {\r\n     if (data === false)\r\n       return (\r\n"
+                },
+                {
+                    "date": 1711546653059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,12 +35,9 @@\n     },\r\n   });\r\n \r\n   \r\n-  const handleChildEvent = (data) => {\r\n-    // Traiter les données du composant enfant\r\n-    console.log(data);\r\n-    };\r\n+\r\n   const rowRenderservices = (row) => (\r\n     <ArtisanPrestationItemBonus   key={row.id} row={row} slugIdUniverse={slugIdUniverse} slugIdService={slugIdService} />\r\n   );\r\n   const showData = () => {\r\n"
+                },
+                {
+                    "date": 1711546726458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n         >\r\n           Aucune donnée\r\n         </h3>\r\n       );\r\n-\r\n+return (<></>);\r\n     return data.map(rowRenderservices);\r\n   };\r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1711547040992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n         >\r\n           Aucune donnée\r\n         </h3>\r\n       );\r\n-return (<></>);\r\n+\r\n     return data.map(rowRenderservices);\r\n   };\r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1711547464238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,12 +8,9 @@\n import Loader from \"../loader\";\r\n import { useMediaQuery } from \"react-responsive\";\r\n \r\n export default function ArtisanListePrestations({ data = [], ...props }) {\r\n-  const handleClick = () => {\r\n-    const data = \"Données importantes\";\r\n-    this.props.onEvent(data);\r\n-  }\r\n+\r\n   const isDesktopOrLaptop = useMediaQuery({\r\n     query: \"(min-width: 994px)\",\r\n   });\r\n   const optionsPages = isDesktopOrLaptop\r\n"
+                },
+                {
+                    "date": 1711551027744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n import ArtisanPrestationItemBonus from \"./artisanPrestationItemBonus\";\r\n import Loader from \"../loader\";\r\n import { useMediaQuery } from \"react-responsive\";\r\n \r\n-export default function ArtisanListePrestations({ data = [], ...props }) {\r\n+export default function ArtisanNavListePrestations({ data = [], ...props }) {\r\n \r\n   const isDesktopOrLaptop = useMediaQuery({\r\n     query: \"(min-width: 994px)\",\r\n   });\r\n"
+                }
+            ],
+            "date": 1711544495995,
+            "name": "Commit-0",
+            "content": "import React, { useState } from \"react\";\r\nimport { Row } from \"react-bootstrap\";\r\nimport ReactPaginate from \"react-paginate\";\r\nimport { useParams } from \"react-router-dom\";\r\nimport { ListProductStyle } from \"../../assets/styles/frontGlobalStyle\";\r\nimport Select from \"../ui-elements/select\";\r\nimport ArtisanPrestationItemBonus from \"./artisanPrestationItemBonus\";\r\nimport Loader from \"../loader\";\r\nimport { useMediaQuery } from \"react-responsive\";\r\n\r\nexport default function ListProduitsBonus({ data = [], ...props }) {\r\n  const handleClick = () => {\r\n    const data = \"Données importantes\";\r\n    this.props.onEvent(data);\r\n  }\r\n  const isDesktopOrLaptop = useMediaQuery({\r\n    query: \"(min-width: 994px)\",\r\n  });\r\n  const optionsPages = isDesktopOrLaptop\r\n    ? [\r\n        { value: 20, label: \"20\" },\r\n        { value: 40, label: \"40\" },\r\n        { value: 80, label: \"80\" },\r\n      ]\r\n    : [{ value: 8, label: \"8\" }];\r\n  const { slugIdUniverse } = useParams();\r\n  const { slugIdService } = useParams();\r\n  \r\n  const [state, setState] = useState({\r\n    pageNbr: {\r\n      label: \"Nombre de résultats par page : \",\r\n      options: optionsPages,\r\n      value: props.perPage ? parseInt(props.perPage) : 20,\r\n      position: \"auto\",\r\n    },\r\n  });\r\n\r\n  \r\n  const handleChildEvent = (data) => {\r\n    // Traiter les données du composant enfant\r\n    console.log(data);\r\n    };\r\n  const rowRenderservices = (row) => (\r\n    <ArtisanPrestationItemBonus   onEvent={handleChildEvent} key={row.id} row={row} slugIdUniverse={slugIdUniverse} slugIdService={slugIdService} />\r\n  );\r\n  const showData = () => {\r\n    if (data === false)\r\n      return (\r\n        <p className=\"loading-table\" style={{ textAlign: \"center\" }}>\r\n          Chargement...\r\n        </p>\r\n      );\r\n    if (data.length === 0)\r\n      return (\r\n        <h3\r\n          style={{\r\n            textAlign: \"center\",\r\n            width: \"100%\",\r\n            fontSize: \"22px\",\r\n            fontWeight: \"600\",\r\n            margin: \"40px 0\",\r\n          }}\r\n        >\r\n          Aucune donnée\r\n        </h3>\r\n      );\r\n\r\n    return data.map(rowRenderservices);\r\n  };\r\n\r\n  return (\r\n    <ListProductStyle>\r\n      {isDesktopOrLaptop && (\r\n        <h1 className=\"title-bloc-products\">\r\n          {props.totalItemsLength} service(s)\r\n        </h1>\r\n      )}\r\n      <Row style={props.isLoading ? { padding: \"50px 0\" } : null}>\r\n        {props.isLoading ? <Loader /> : showData()}\r\n      </Row>\r\n      {!props.isLoading && props.pagination && props.totalItemsLength > 0 ? (\r\n        <div className=\"paginations-bloc\">\r\n          {isDesktopOrLaptop && (\r\n            <div className=\"results-of-page\">\r\n              <Select\r\n                {...state.pageNbr}\r\n                onChange={(e) => {\r\n                  const cpState = { ...state };\r\n                  cpState.pageNbr.value = e.value;\r\n                  setState(cpState);\r\n                  props.setPerPage(e.value);\r\n                }}\r\n              />\r\n            </div>\r\n          )}\r\n\r\n          <ReactPaginate\r\n            previousLabel={\"<\"}\r\n            nextLabel={\">\"}\r\n            breakLabel={\"...\"}\r\n            pageCount={Math.ceil(props.totalItemsLength / props.perPage)}\r\n            marginPagesDisplayed={2}\r\n            pageRangeDisplayed={3}\r\n            onPageChange={(data) => {\r\n              props.setPageIndex(data.selected);\r\n            }}\r\n            containerClassName={\"pagination\"}\r\n            subContainerClassName={\"page-item\"}\r\n            activeLinkClassName={\"active disabled\"}\r\n            pageLinkClassName={\"page-link\"}\r\n            pageClassName={\"page-item\"}\r\n            breakClassName={\"page-item\"}\r\n            breakLinkClassName={\"page-link\"}\r\n            activeClassName={\"active disabled\"}\r\n            previousLinkClassName={\"page-link\"}\r\n            nextLinkClassName={\"page-link\"}\r\n            previousClassName={\"page-item\"}\r\n            nextClassName={\"page-item\"}\r\n            forcePage={props.pageIndex ? props.pageIndex : 0}\r\n          />\r\n        </div>\r\n      ) : null}\r\n    </ListProductStyle>\r\n  );\r\n}\r\n"
+        }
+    ]
+}

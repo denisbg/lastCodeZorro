@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/components/proposition.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1715002107062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1715002113753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n               </span>\r\n             </div>\r\n \r\n             {benefit.precisionQuote && (\r\n-              <div className=\"bloc-precision\" style={{fontHeight:5}}\">\r\n+              <div className=\"bloc-precision\" style={{fontHeight:5}}>\r\n                 <p className=\"titre-precision\">\r\n                   Précision de prise en charge du devis:\r\n                 </p>\r\n                 <p>{benefit.precisionQuote}</p>\r\n"
+                },
+                {
+                    "date": 1715002132803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n               </span>\r\n             </div>\r\n \r\n             {benefit.precisionQuote && (\r\n-              <div className=\"bloc-precision\" style={{fontHeight:5}}>\r\n+              <div className=\"bloc-precision\" style={{fontSize:5}}>\r\n                 <p className=\"titre-precision\">\r\n                   Précision de prise en charge du devis:\r\n                 </p>\r\n                 <p>{benefit.precisionQuote}</p>\r\n"
+                },
+                {
+                    "date": 1715002173910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n               </span>\r\n             </div>\r\n \r\n             {benefit.precisionQuote && (\r\n-              <div className=\"bloc-precision\" style={{fontSize:5}}>\r\n+              <div className=\"bloc-precision\" style={{fontSize:8}}>\r\n                 <p className=\"titre-precision\">\r\n                   Précision de prise en charge du devis:\r\n                 </p>\r\n                 <p>{benefit.precisionQuote}</p>\r\n"
+                },
+                {
+                    "date": 1715002213112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n               </span>\r\n             </div>\r\n \r\n             {benefit.precisionQuote && (\r\n-              <div className=\"bloc-precision\" style={{fontSize:8}}>\r\n+              <div className=\"bloc-precision\">\r\n                 <p className=\"titre-precision\">\r\n                   Précision de prise en charge du devis:\r\n                 </p>\r\n                 <p>{benefit.precisionQuote}</p>\r\n"
+                }
+            ],
+            "date": 1715002107062,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\r\nimport { PropositionStyle } from \"../assets/styles/frontGlobalStyle\";\r\nimport { ButtonDef } from \"../components/ui\";\r\nimport { getPathImage } from \"../helper/functions\";\r\n\r\nexport default function Proposition({\r\n  benefit = {},\r\n  deliveryMode = {},\r\n  command = false,\r\n  checkInfos,\r\n  textButton = null,\r\n  isPending = false,\r\n  ...props\r\n}) {\r\n  return (\r\n    <PropositionStyle className={props.className}>\r\n      <div className=\"content-proposition\">\r\n        <p className=\"titre-proposition\">Nom du service</p>\r\n        <p className=\"sub-titre-proposition\">{benefit?.service?.name}</p>\r\n        <div className=\"info-societe\">\r\n          <div className=\"detail-info-societe\">\r\n            <p className=\"name-societe\">{benefit?.user?.enterprise}</p>\r\n            <p className=\"fonction-societe\">\r\n              {`${benefit?.user?.postalCode} ${benefit?.user?.city}`}\r\n            </p>\r\n          </div>\r\n        </div>\r\n\r\n        {deliveryMode ? (\r\n          <>\r\n            <div className=\"mode-delivrance\">\r\n              <p className=\"title-mode-deflivrance\">Mode de délivrance</p>\r\n              <p className=\"mode-choix\">\r\n                {deliveryMode?.deliveryModeType?.name}\r\n              </p>\r\n            </div>\r\n            <div className=\"bloc-price-devis\">\r\n              <span className=\"titre-price\">Total</span>\r\n              <span className=\"price-devis\">\r\n                {command && command.totalDevisLines ? (\r\n                  `${command.totalDevisLines?.toFixed(2)} € TTC`\r\n                ) : (\r\n                  <>\r\n                    {benefit.typeService === \"forfait\" &&\r\n                      `${deliveryMode.price?.toFixed(2)} € TTC`}\r\n\r\n                    {benefit.typeService === \"devis\" &&\r\n                      (benefit.priceQuote\r\n                        ? `${benefit.priceQuote?.toFixed(2)} € TTC`\r\n                        : \"GRATUIT\")}\r\n                  </>\r\n                )}\r\n              </span>\r\n            </div>\r\n\r\n            {benefit.precisionQuote && (\r\n              <div className=\"bloc-precision\" style={{fontHeight:5}}\">\r\n                <p className=\"titre-precision\">\r\n                  Précision de prise en charge du devis:\r\n                </p>\r\n                <p>{benefit.precisionQuote}</p>\r\n              </div>\r\n            )}\r\n          </>\r\n        ) : null}\r\n\r\n        <ButtonDef\r\n          textButton={textButton ? textButton : \"Etape suivante\"}\r\n          spinner={isPending}\r\n          onClick={() => {\r\n            checkInfos();\r\n          }}\r\n        />\r\n      </div>\r\n    </PropositionStyle>\r\n  );\r\n}\r\n"
+        }
+    ]
+}

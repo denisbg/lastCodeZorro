@@ -1,0 +1,154 @@
+{
+    "sourceFile": "src/components/front/newmapreact.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 34,
+            "patches": [
+                {
+                    "date": 1707496987132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1708012019531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   useEffect(() => {\r\n     // Initialize the map\r\n     const mapOptions = {\r\n       center: { lat: 48.9940649, lng: 2.5229373 }, // Set the initial center of the map\r\n-      zoom: 8, // Set the initial zoom level\r\n+      zoom:8, // Set the initial zoom level\r\n     };\r\n     const map = new window.google.maps.Map(document.getElementById('map'), mapOptions);\r\n \r\n     // Create markers\r\n"
+                },
+                {
+                    "date": 1708014817465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,8 @@\n import { Marker } from '@react-google-maps/api';\r\n import { MarkerClusterer } from \"@googlemaps/markerclusterer\";\r\n \r\n \r\n-\r\n-\r\n export default function NewMap() {\r\n   useEffect(() => {\r\n     // Initialize the map\r\n     const mapOptions = {\r\n"
+                },
+                {
+                    "date": 1708014861778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,10 +47,11 @@\n         position,\r\n         map,\r\n         icon: repairIcon,\r\n       });\r\n-      addInfoWindow(marker, position['city_code'] + \" \" + position['department_name']);\r\n-     \r\n+      //addInfoWindow(marker, position['city_code'] + \" \" + position['department_name']);\r\n+      addInfoWindow(marker, map, `<b>${position['label']}</b><br/>${position['postalcode']} ${position['city_code']}`);\r\n+      \r\n     });\r\n     \r\n  }, []);\r\n \r\n"
+                },
+                {
+                    "date": 1708014961952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n         map,\r\n         icon: repairIcon,\r\n       });\r\n       //addInfoWindow(marker, position['city_code'] + \" \" + position['department_name']);\r\n-      addInfoWindow(marker, map, `<b>${position['label']}</b><br/>${position['postalcode']} ${position['city_code']}`);\r\n+      addInfoWindow(marker, map, position['label']+\"</b><br/>\"+position['postalcode']+\" \"+position['city_code']`);\r\n       \r\n     });\r\n     \r\n  }, []);\r\n"
+                },
+                {
+                    "date": 1708015063846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,8 +50,9 @@\n       });\r\n       //addInfoWindow(marker, position['city_code'] + \" \" + position['department_name']);\r\n       addInfoWindow(marker, map, position['label']+\"</b><br/>\"+position['postalcode']+\" \"+position['city_code']`);\r\n       \r\n+      \r\n     });\r\n     \r\n  }, []);\r\n \r\n"
+                },
+                {
+                    "date": 1708015078758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,12 +47,12 @@\n         position,\r\n         map,\r\n         icon: repairIcon,\r\n       });\r\n-      //addInfoWindow(marker, position['city_code'] + \" \" + position['department_name']);\r\n-      addInfoWindow(marker, map, position['label']+\"</b><br/>\"+position['postalcode']+\" \"+position['city_code']`);\r\n+      addInfoWindow(marker, position['city_code'] + \" \" + position['department_name']);\r\n+      //addInfoWindow(marker, map, position['label']+\"</b><br/>\"+position['postalcode']+\" \"+position['city_code']`);\r\n+\r\n       \r\n-      \r\n     });\r\n     \r\n  }, []);\r\n \r\n"
+                },
+                {
+                    "date": 1708015098858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n         position,\r\n         map,\r\n         icon: repairIcon,\r\n       });\r\n-      addInfoWindow(marker, position['city_code'] + \" \" + position['department_name']);\r\n+      addInfoWindow(marker, position['city_code'] + \" \" + position['label']);\r\n       //addInfoWindow(marker, map, position['label']+\"</b><br/>\"+position['postalcode']+\" \"+position['city_code']`);\r\n \r\n       \r\n     });\r\n"
+                },
+                {
+                    "date": 1708015172383,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n         position,\r\n         map,\r\n         icon: repairIcon,\r\n       });\r\n-      addInfoWindow(marker, position['city_code'] + \" \" + position['label']);\r\n+      addInfoWindow(marker, position['label'] +\"</b><br/>\"+ position['city_code']);\r\n       //addInfoWindow(marker, map, position['label']+\"</b><br/>\"+position['postalcode']+\" \"+position['city_code']`);\r\n \r\n       \r\n     });\r\n"
+                },
+                {
+                    "date": 1708015320991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n         position,\r\n         map,\r\n         icon: repairIcon,\r\n       });\r\n-      addInfoWindow(marker, position['label'] +\"</b><br/>\"+ position['city_code']);\r\n+      addInfoWindow(marker,map,  position['label'] +\"</b><br/>\"+ position['city_code']);\r\n       //addInfoWindow(marker, map, position['label']+\"</b><br/>\"+position['postalcode']+\" \"+position['city_code']`);\r\n \r\n       \r\n     });\r\n"
+                },
+                {
+                    "date": 1708015347185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n         position,\r\n         map,\r\n         icon: repairIcon,\r\n       });\r\n-      addInfoWindow(marker,map,  position['label'] +\"</b><br/>\"+ position['city_code']);\r\n+      addInfoWindow(marker, position['label'] +\"</b><br/>\"+ position['city_code']);\r\n       //addInfoWindow(marker, map, position['label']+\"</b><br/>\"+position['postalcode']+\" \"+position['city_code']`);\r\n \r\n       \r\n     });\r\n"
+                },
+                {
+                    "date": 1708015384093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n         icon: repairIcon,\r\n       });\r\n       addInfoWindow(marker, position['label'] +\"</b><br/>\"+ position['city_code']);\r\n       //addInfoWindow(marker, map, position['label']+\"</b><br/>\"+position['postalcode']+\" \"+position['city_code']`);\r\n-\r\n+      return marker;\r\n       \r\n     });\r\n     \r\n  }, []);\r\n"
+                },
+                {
+                    "date": 1708015446320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n       //addInfoWindow(marker, map, position['label']+\"</b><br/>\"+position['postalcode']+\" \"+position['city_code']`);\r\n       return marker;\r\n       \r\n     });\r\n-    \r\n+    new MarkerClusterer({ map, markers });\r\n  }, []);\r\n \r\n   return <div id='map' style={{ width: '100%', height: '100vh' }}></div>;\r\n }\r\n"
+                },
+                {
+                    "date": 1708015559548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n         position,\r\n         map,\r\n         icon: repairIcon,\r\n       });\r\n-      addInfoWindow(marker, position['label'] +\"</b><br/>\"+ position['city_code']);\r\n+      addInfoWindow(marker, \"<b>\"+position['label'] +\"</b><br/>\"+position['postalcode']+\"</b><br/>\"+ position['city_code']);\r\n       //addInfoWindow(marker, map, position['label']+\"</b><br/>\"+position['postalcode']+\" \"+position['city_code']`);\r\n       return marker;\r\n       \r\n     });\r\n"
+                },
+                {
+                    "date": 1708015624659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,10 @@\n         position,\r\n         map,\r\n         icon: repairIcon,\r\n       });\r\n-      addInfoWindow(marker, \"<b>\"+position['label'] +\"</b><br/>\"+position['postalcode']+\"</b><br/>\"+ position['city_code']);\r\n+      let renderx =  \"<b>\"+position['label'] +\"</b><br/>\"+position['postalcode']+\"</b><br/>\"+ position['city_code']\r\n+      addInfoWindow(marker, renderx);\r\n       //addInfoWindow(marker, map, position['label']+\"</b><br/>\"+position['postalcode']+\" \"+position['city_code']`);\r\n       return marker;\r\n       \r\n     });\r\n"
+                },
+                {
+                    "date": 1708015807891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,8 @@\n import React, { useEffect } from 'react';\r\n import {RepairManlatlng} from './repairManPositions.js'\r\n import { ReparateurIcon } from '../../assets/styles/icons.js';\r\n import imgVector   from \"../../assets/images/icons/mapVector.svg\";\r\n-\r\n-import { Marker } from '@react-google-maps/api';\r\n import { MarkerClusterer } from \"@googlemaps/markerclusterer\";\r\n \r\n \r\n export default function NewMap() {\r\n@@ -49,15 +47,13 @@\n         icon: repairIcon,\r\n       });\r\n       let renderx =  \"<b>\"+position['label'] +\"</b><br/>\"+position['postalcode']+\"</b><br/>\"+ position['city_code']\r\n       addInfoWindow(marker, renderx);\r\n-      //addInfoWindow(marker, map, position['label']+\"</b><br/>\"+position['postalcode']+\" \"+position['city_code']`);\r\n       return marker;\r\n-      \r\n     });\r\n     new MarkerClusterer({ map, markers });\r\n  }, []);\r\n \r\n-  return <div id='map' style={{ width: '100%', height: '100vh' }}></div>;\r\n+  return <div id='map' style={{ width: '100%', height: '100%' }}></div>;\r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1708015821378,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,8 +52,8 @@\n     });\r\n     new MarkerClusterer({ map, markers });\r\n  }, []);\r\n \r\n-  return <div id='map' style={{ width: '100%', height: '100%' }}></div>;\r\n+  return <div id='map' style={{ width: '100%', height: '100vh' }}></div>;\r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1708015852405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,8 +52,8 @@\n     });\r\n     new MarkerClusterer({ map, markers });\r\n  }, []);\r\n \r\n-  return <div id='map' style={{ width: '100%', height: '100vh' }}></div>;\r\n+  return <div id='map' style={{ width: '100%' }}></div>;\r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1708015909667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,8 +52,8 @@\n     });\r\n     new MarkerClusterer({ map, markers });\r\n  }, []);\r\n \r\n-  return <div id='map' style={{ width: '100%' }}></div>;\r\n+  return <div id='map' style={{ width: '100%', height: '100vh' }}></div>;\r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1708016122881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,21 @@\n       let renderx =  \"<b>\"+position['label'] +\"</b><br/>\"+position['postalcode']+\"</b><br/>\"+ position['city_code']\r\n       addInfoWindow(marker, renderx);\r\n       return marker;\r\n     });\r\n-    new MarkerClusterer({ map, markers });\r\n+   \r\n+  \r\n+  };\r\n+  var options = {\r\n+    maxZoom: 15,\r\n+    styles:[{\r\n+        url: 'https://googlemaps.github.io/js-marker-clusterer/images/m1.png',\r\n+        width: 53,\r\n+        height: 53,\r\n+        textColor: '#fff',\r\n+    }]};\r\n+  var mc = new MarkerClusterer(map, markers, options);\r\n+\r\n  }, []);\r\n \r\n   return <div id='map' style={{ width: '100%', height: '100vh' }}></div>;\r\n }\r\n"
+                },
+                {
+                    "date": 1708016141924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,21 +49,9 @@\n       let renderx =  \"<b>\"+position['label'] +\"</b><br/>\"+position['postalcode']+\"</b><br/>\"+ position['city_code']\r\n       addInfoWindow(marker, renderx);\r\n       return marker;\r\n     });\r\n-   \r\n-  \r\n-  };\r\n-  var options = {\r\n-    maxZoom: 15,\r\n-    styles:[{\r\n-        url: 'https://googlemaps.github.io/js-marker-clusterer/images/m1.png',\r\n-        width: 53,\r\n-        height: 53,\r\n-        textColor: '#fff',\r\n-    }]};\r\n-  var mc = new MarkerClusterer(map, markers, options);\r\n-\r\n+    new MarkerClusterer({ map, markers });\r\n  }, []);\r\n \r\n   return <div id='map' style={{ width: '100%', height: '100vh' }}></div>;\r\n }\r\n"
+                },
+                {
+                    "date": 1708016193546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,20 @@\n       let renderx =  \"<b>\"+position['label'] +\"</b><br/>\"+position['postalcode']+\"</b><br/>\"+ position['city_code']\r\n       addInfoWindow(marker, renderx);\r\n       return marker;\r\n     });\r\n-    new MarkerClusterer({ map, markers });\r\n+\r\n+    var options = {\r\n+      maxZoom: 15,\r\n+      styles:[{\r\n+          url: 'https://googlemaps.github.io/js-marker-clusterer/images/m1.png',\r\n+          width: 53,\r\n+          height: 53,\r\n+          textColor: '#fff',\r\n+      }]\r\n+  \r\n+  };\r\n+      new MarkerClusterer({ map, markers, options });\r\n  }, []);\r\n \r\n   return <div id='map' style={{ width: '100%', height: '100vh' }}></div>;\r\n }\r\n"
+                },
+                {
+                    "date": 1708016224734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n           textColor: '#fff',\r\n       }]\r\n   \r\n   };\r\n-      new MarkerClusterer({ map, markers, options });\r\n+      var mc = new MarkerClusterer({ map, markers, options });\r\n  }, []);\r\n \r\n   return <div id='map' style={{ width: '100%', height: '100vh' }}></div>;\r\n }\r\n"
+                },
+                {
+                    "date": 1708016284681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,17 @@\n import React, { useEffect } from 'react';\r\n-import {RepairManlatlng} from './repairManPositions.js'\r\n+import { RepairManlatlng } from './repairManPositions.js'\r\n import { ReparateurIcon } from '../../assets/styles/icons.js';\r\n-import imgVector   from \"../../assets/images/icons/mapVector.svg\";\r\n+import imgVector from \"../../assets/images/icons/mapVector.svg\";\r\n import { MarkerClusterer } from \"@googlemaps/markerclusterer\";\r\n \r\n \r\n export default function NewMap() {\r\n   useEffect(() => {\r\n     // Initialize the map\r\n     const mapOptions = {\r\n       center: { lat: 48.9940649, lng: 2.5229373 }, // Set the initial center of the map\r\n-      zoom:8, // Set the initial zoom level\r\n+      zoom: 8, // Set the initial zoom level\r\n     };\r\n     const map = new window.google.maps.Map(document.getElementById('map'), mapOptions);\r\n \r\n     // Create markers\r\n@@ -38,33 +38,38 @@\n       scaledSize: new window.google.maps.Size(40, 40),\r\n     };\r\n \r\n \r\n-  \r\n-    const markers = RepairManlatlng.map((position,i) => {\r\n+\r\n+    const markers = RepairManlatlng.map((position, i) => {\r\n       const marker = new window.google.maps.Marker({\r\n         position,\r\n         map,\r\n         icon: repairIcon,\r\n       });\r\n-      let renderx =  \"<b>\"+position['label'] +\"</b><br/>\"+position['postalcode']+\"</b><br/>\"+ position['city_code']\r\n+      let renderx = \"<b>\" + position['label'] + \"</b><br/>\" + position['postalcode'] + \"</b><br/>\" + position['city_code']\r\n       addInfoWindow(marker, renderx);\r\n       return marker;\r\n     });\r\n \r\n     var options = {\r\n       maxZoom: 15,\r\n-      styles:[{\r\n-          url: 'https://googlemaps.github.io/js-marker-clusterer/images/m1.png',\r\n-          width: 53,\r\n-          height: 53,\r\n-          textColor: '#fff',\r\n+      styles: [{\r\n+        url: 'https://googlemaps.github.io/js-marker-clusterer/images/m1.png',\r\n+        width: 53,\r\n+        height: 53,\r\n+        textColor: '#fff',\r\n       }]\r\n-  \r\n-  };\r\n-      var mc = new MarkerClusterer({ map, markers, options });\r\n- }, []);\r\n \r\n+    };\r\n+    var mc = new MarkerClusterer({ map, markers, options });\r\n+    mc.setStyles(mc.getStyles().map(function (style) {\r\n+      style.textColor = '#fff';\r\n+      return style;\r\n+    }));\r\n+    mc.addMarkers(markers)\r\n+  }, []);\r\n+\r\n   return <div id='map' style={{ width: '100%', height: '100vh' }}></div>;\r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1708016371759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n         textColor: '#fff',\r\n       }]\r\n \r\n     };\r\n-    var mc = new MarkerClusterer({ map, markers, options });\r\n+    var mc = new MarkerClusterer(map, markers, options );\r\n     mc.setStyles(mc.getStyles().map(function (style) {\r\n       style.textColor = '#fff';\r\n       return style;\r\n     }));\r\n"
+                },
+                {
+                    "date": 1708016405172,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,13 +61,9 @@\n       }]\r\n \r\n     };\r\n     var mc = new MarkerClusterer(map, markers, options );\r\n-    mc.setStyles(mc.getStyles().map(function (style) {\r\n-      style.textColor = '#fff';\r\n-      return style;\r\n-    }));\r\n-    mc.addMarkers(markers)\r\n+\r\n   }, []);\r\n \r\n   return <div id='map' style={{ width: '100%', height: '100vh' }}></div>;\r\n }\r\n"
+                },
+                {
+                    "date": 1708016426557,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n         textColor: '#fff',\r\n       }]\r\n \r\n     };\r\n-    var mc = new MarkerClusterer(map, markers, options );\r\n+    new MarkerClusterer(map, markers, options );\r\n \r\n   }, []);\r\n \r\n   return <div id='map' style={{ width: '100%', height: '100vh' }}></div>;\r\n"
+                },
+                {
+                    "date": 1708016441062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n         textColor: '#fff',\r\n       }]\r\n \r\n     };\r\n-    new MarkerClusterer(map, markers, options );\r\n+    new MarkerClusterer({map, markers, options });\r\n \r\n   }, []);\r\n \r\n   return <div id='map' style={{ width: '100%', height: '100vh' }}></div>;\r\n"
+                },
+                {
+                    "date": 1708016459579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n         textColor: '#fff',\r\n       }]\r\n \r\n     };\r\n-    new MarkerClusterer({map, markers, options });\r\n+    var mc = new MarkerClusterer({map, markers, options });\r\n \r\n   }, []);\r\n \r\n   return <div id='map' style={{ width: '100%', height: '100vh' }}></div>;\r\n"
+                },
+                {
+                    "date": 1708016597117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n       styles: [{\r\n         url: 'https://googlemaps.github.io/js-marker-clusterer/images/m1.png',\r\n         width: 53,\r\n         height: 53,\r\n-        textColor: '#fff',\r\n+        textColor: '#000f',\r\n       }]\r\n \r\n     };\r\n     var mc = new MarkerClusterer({map, markers, options });\r\n"
+                },
+                {
+                    "date": 1708016621381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n         textColor: '#000f',\r\n       }]\r\n \r\n     };\r\n-    var mc = new MarkerClusterer({map, markers, options });\r\n+    new MarkerClusterer({map, markers, options });\r\n \r\n   }, []);\r\n \r\n   return <div id='map' style={{ width: '100%', height: '100vh' }}></div>;\r\n"
+                },
+                {
+                    "date": 1708016744542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n       return marker;\r\n     });\r\n \r\n     var options = {\r\n-      maxZoom: 15,\r\n+      maxZoom: 2,\r\n       styles: [{\r\n         url: 'https://googlemaps.github.io/js-marker-clusterer/images/m1.png',\r\n         width: 53,\r\n         height: 53,\r\n"
+                },
+                {
+                    "date": 1708016785635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   useEffect(() => {\r\n     // Initialize the map\r\n     const mapOptions = {\r\n       center: { lat: 48.9940649, lng: 2.5229373 }, // Set the initial center of the map\r\n-      zoom: 8, // Set the initial zoom level\r\n+      zoom: 18, // Set the initial zoom level\r\n     };\r\n     const map = new window.google.maps.Map(document.getElementById('map'), mapOptions);\r\n \r\n     // Create markers\r\n@@ -50,18 +50,9 @@\n       addInfoWindow(marker, renderx);\r\n       return marker;\r\n     });\r\n \r\n-    var options = {\r\n-      maxZoom: 2,\r\n-      styles: [{\r\n-        url: 'https://googlemaps.github.io/js-marker-clusterer/images/m1.png',\r\n-        width: 53,\r\n-        height: 53,\r\n-        textColor: '#000f',\r\n-      }]\r\n-\r\n-    };\r\n+   \r\n     new MarkerClusterer({map, markers, options });\r\n \r\n   }, []);\r\n \r\n"
+                },
+                {
+                    "date": 1708016830255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   useEffect(() => {\r\n     // Initialize the map\r\n     const mapOptions = {\r\n       center: { lat: 48.9940649, lng: 2.5229373 }, // Set the initial center of the map\r\n-      zoom: 18, // Set the initial zoom level\r\n+      zoom: 8, // Set the initial zoom level\r\n     };\r\n     const map = new window.google.maps.Map(document.getElementById('map'), mapOptions);\r\n \r\n     // Create markers\r\n@@ -50,9 +50,17 @@\n       addInfoWindow(marker, renderx);\r\n       return marker;\r\n     });\r\n \r\n-   \r\n+    var options = {\r\n+      maxZoom: 2,\r\n+      styles: [{\r\n+        width: 153,\r\n+        height: 53,\r\n+        textColor: '#000f',\r\n+      }]\r\n+\r\n+    };\r\n     new MarkerClusterer({map, markers, options });\r\n \r\n   }, []);\r\n \r\n"
+                },
+                {
+                    "date": 1708016839487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n       return marker;\r\n     });\r\n \r\n     var options = {\r\n-      maxZoom: 2,\r\n+      maxZoom: 20,\r\n       styles: [{\r\n         width: 153,\r\n         height: 53,\r\n         textColor: '#000f',\r\n"
+                }
+            ],
+            "date": 1707496987132,
+            "name": "Commit-0",
+            "content": "import React, { useEffect } from 'react';\r\nimport {RepairManlatlng} from './repairManPositions.js'\r\nimport { ReparateurIcon } from '../../assets/styles/icons.js';\r\nimport imgVector   from \"../../assets/images/icons/mapVector.svg\";\r\n\r\nimport { Marker } from '@react-google-maps/api';\r\nimport { MarkerClusterer } from \"@googlemaps/markerclusterer\";\r\n\r\n\r\n\r\n\r\nexport default function NewMap() {\r\n  useEffect(() => {\r\n    // Initialize the map\r\n    const mapOptions = {\r\n      center: { lat: 48.9940649, lng: 2.5229373 }, // Set the initial center of the map\r\n      zoom: 8, // Set the initial zoom level\r\n    };\r\n    const map = new window.google.maps.Map(document.getElementById('map'), mapOptions);\r\n\r\n    // Create markers\r\n\r\n    function addInfoWindow(marker, message) {\r\n      var infoWindow = new window.google.maps.InfoWindow({\r\n        content: message\r\n      });\r\n      window.google.maps.event.addListener(marker, 'click', function () {\r\n        infoWindow.open(map, marker);\r\n      });\r\n      marker.addListener('mouseover', function () {\r\n        // open your popup window\r\n        infoWindow.open(map, marker);\r\n      });\r\n\r\n      marker.addListener('mouseout', function () {\r\n        // close your popup window\r\n        infoWindow.close();\r\n      });\r\n    }\r\n    const repairIcon = {\r\n      url: imgVector,\r\n      scaledSize: new window.google.maps.Size(40, 40),\r\n    };\r\n\r\n\r\n  \r\n    const markers = RepairManlatlng.map((position,i) => {\r\n      const marker = new window.google.maps.Marker({\r\n        position,\r\n        map,\r\n        icon: repairIcon,\r\n      });\r\n      addInfoWindow(marker, position['city_code'] + \" \" + position['department_name']);\r\n     \r\n    });\r\n    \r\n }, []);\r\n\r\n  return <div id='map' style={{ width: '100%', height: '100vh' }}></div>;\r\n}\r\n\r\n\r\n"
+        }
+    ]
+}

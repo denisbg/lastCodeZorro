@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/front/savenewmap.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1707469458057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1707469458057,
+            "name": "Commit-0",
+            "content": "import React, { useEffect } from 'react';\r\nimport { RepairManlatlng } from './repairManPositions.js'\r\nimport { ReparateurIcon } from '../../assets/styles/icons.js';\r\nimport { MarkerClusterer } from '@react-google-maps/api';\r\nimport MapVectorIcon from \"../../assets/images/icons/mapVector.svg\";\r\nexport default function NewMap(mapRepairMen) {\r\n  useEffect(() => {\r\n    // Initialize the map\r\n    const mapOptions = {\r\n//      center: { lat: 48.9940649, lng: 2.5229373 }, // Set the initial center of the map\r\n  //    zoom: 8, // Set the initial zoom level\r\n      zoom: 3,\r\n      center: { lat: -28.024, lng: 140.887 },\r\n  \r\n    };\r\n    const map = new window.google.maps.Map(document.getElementById('map'), mapOptions);\r\n    // Create markers\r\n    function addInfoWindow(marker, message) {\r\n      const infoWindow = new window.google.maps.InfoWindow({\r\n        content: message,\r\n        disableAutoPan: true,\r\n      });\r\n      window.google.maps.event.addListener(marker, 'click', function () {\r\n        infoWindow.open(map, marker);\r\n      });\r\n      marker.addListener('mouseover', function () {\r\n        // open your popup window\r\n\r\n        infoWindow.open(map, marker);\r\n      });\r\n      marker.addListener('mouseout', function () { infoWindow.close(); });\r\n    }\r\n    const repairIcon = {\r\n      url: MapVectorIcon,\r\n      scaledSize: new window.google.maps.Size(40, 40),\r\n    };\r\n\r\n    const labels = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\";\r\n    const markers = RepairManlatlng.map((position, i) => {\r\n      const render = \"<b>\" + position['label'] + '</b>' + \" \" + position['city_code'];\r\n      const label = labels[i % labels.length];\r\n      const marker = new window.google.maps.Marker({\r\n        render,\r\n        label,\r\n        position,\r\n        map\r\n      });\r\n\r\n      addInfoWindow(marker, render);\r\n      return marker;\r\n    });\r\n    // Add a marker clusterer to manage the markers.\r\n    new MarkerClusterer(markers, map);\r\n   \r\n\r\n  }, []);\r\n\r\n \r\n\r\n\r\n  return <div id='map' style={{ width: '80%', height: '100vh' }}></div>;\r\n};\r\n\r\n"
+        }
+    ]
+}

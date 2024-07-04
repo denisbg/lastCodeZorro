@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/components/front/headerDefaultPage.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1715348504643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1715353187485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n       style={{ backgroundImage: `url(${image}` }}\r\n     >\r\n       <Container>\r\n         <div className=\"bloc-title-banner\">\r\n-          <h1 className=\"title-banner-cat\">{title}blibli</h1>\r\n+          <h1 className=\"title-banner-cat\">{title}</h1>\r\n         </div>\r\n       </Container>\r\n     </PageBanner>\r\n   );\r\n"
+                }
+            ],
+            "date": 1715348504643,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\r\nimport { PageBanner } from \"../../assets/styles/frontGlobalStyle\";\r\nimport { Container } from \"react-bootstrap\";\r\n\r\nexport default function HeaderDefaultPage({ image, title }) {\r\n  return (\r\n    <PageBanner\r\n      className=\"default-banner\"\r\n      style={{ backgroundImage: `url(${image}` }}\r\n    >\r\n      <Container>\r\n        <div className=\"bloc-title-banner\">\r\n          <h1 className=\"title-banner-cat\">{title}blibli</h1>\r\n        </div>\r\n      </Container>\r\n    </PageBanner>\r\n  );\r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,206 @@
+{
+    "sourceFile": "src/connector.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 47,
+            "patches": [
+                {
+                    "date": 1706716821350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1706888516617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,9 @@\n };\r\n \r\n const goOn = (params) => {\r\n   console.log(params);\r\n+  console.log(token);\r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n     data: params.data ?? {},\r\n"
+                },
+                {
+                    "date": 1706888560552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n     token !== \"\" &&\r\n     dateExp !== false &&\r\n     dateExp > Date.now()\r\n   ) {\r\n+    console.log(token);\r\n     if(!params.url.startsWith(\"/api/anonymous\")){\r\n       entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n     }\r\n     goOn(params);\r\n@@ -42,9 +43,9 @@\n };\r\n \r\n const goOn = (params) => {\r\n   console.log(params);\r\n-  console.log(token);\r\n+\r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n     data: params.data ?? {},\r\n"
+                },
+                {
+                    "date": 1706889192785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,8 @@\n };\r\n \r\n const goOn = (params) => {\r\n   console.log(params);\r\n-\r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n     data: params.data ?? {},\r\n"
+                },
+                {
+                    "date": 1706889213528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     token !== \"\" &&\r\n     dateExp !== false &&\r\n     dateExp > Date.now()\r\n   ) {\r\n-    console.log(token);\r\n+  \r\n     if(!params.url.startsWith(\"/api/anonymous\")){\r\n       entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n     }\r\n     goOn(params);\r\n"
+                },
+                {
+                    "date": 1706889226550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     token !== \"\" &&\r\n     dateExp !== false &&\r\n     dateExp > Date.now()\r\n   ) {\r\n-  \r\n+    console.log(token);\r\n     if(!params.url.startsWith(\"/api/anonymous\")){\r\n       entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n     }\r\n     goOn(params);\r\n"
+                },
+                {
+                    "date": 1706892831726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     token !== \"\" &&\r\n     dateExp !== false &&\r\n     dateExp > Date.now()\r\n   ) {\r\n-    console.log(token);\r\n+    //console.log(token);\r\n     if(!params.url.startsWith(\"/api/anonymous\")){\r\n       entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n     }\r\n     goOn(params);\r\n@@ -42,9 +42,9 @@\n   } else goOn(params);\r\n };\r\n \r\n const goOn = (params) => {\r\n-  console.log(params);\r\n+  //onsole.log(params);\r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n     data: params.data ?? {},\r\n"
+                },
+                {
+                    "date": 1706975426359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n   } else goOn(params);\r\n };\r\n \r\n const goOn = (params) => {\r\n-  //onsole.log(params);\r\n+  console.log(\"#\"+params);\r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n     data: params.data ?? {},\r\n"
+                },
+                {
+                    "date": 1706975570446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n   } else goOn(params);\r\n };\r\n \r\n const goOn = (params) => {\r\n-  console.log(\"#\"+params);\r\n+  console.log(params);\r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n     data: params.data ?? {},\r\n"
+                },
+                {
+                    "date": 1706976618612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     token !== \"\" &&\r\n     dateExp !== false &&\r\n     dateExp > Date.now()\r\n   ) {\r\n-    //console.log(token);\r\n+    console.log(token);\r\n     if(!params.url.startsWith(\"/api/anonymous\")){\r\n       entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n     }\r\n     goOn(params);\r\n"
+                },
+                {
+                    "date": 1707797926143,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     token !== \"\" &&\r\n     dateExp !== false &&\r\n     dateExp > Date.now()\r\n   ) {\r\n-    console.log(token);\r\n+    //console.log(token);\r\n     if(!params.url.startsWith(\"/api/anonymous\")){\r\n       entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n     }\r\n     goOn(params);\r\n@@ -42,9 +42,9 @@\n   } else goOn(params);\r\n };\r\n \r\n const goOn = (params) => {\r\n-  console.log(params);\r\n+  //console.log(params);\r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n     data: params.data ?? {},\r\n"
+                },
+                {
+                    "date": 1707901344219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     token !== \"\" &&\r\n     dateExp !== false &&\r\n     dateExp > Date.now()\r\n   ) {\r\n-    //console.log(token);\r\n+    console.log(token);\r\n     if(!params.url.startsWith(\"/api/anonymous\")){\r\n       entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n     }\r\n     goOn(params);\r\n"
+                },
+                {
+                    "date": 1708507660262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     token !== \"\" &&\r\n     dateExp !== false &&\r\n     dateExp > Date.now()\r\n   ) {\r\n-    console.log(token);\r\n+    //console.log(token);\r\n     if(!params.url.startsWith(\"/api/anonymous\")){\r\n       entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n     }\r\n     goOn(params);\r\n@@ -42,9 +42,9 @@\n   } else goOn(params);\r\n };\r\n \r\n const goOn = (params) => {\r\n-  //console.log(params);\r\n+  console.log(params);\r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n     data: params.data ?? {},\r\n"
+                },
+                {
+                    "date": 1708507704393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n   } else goOn(params);\r\n };\r\n \r\n const goOn = (params) => {\r\n-  console.log(params);\r\n+  console.log(\"CONNECT\",params);\r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n     data: params.data ?? {},\r\n"
+                },
+                {
+                    "date": 1708508446483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     token !== \"\" &&\r\n     dateExp !== false &&\r\n     dateExp > Date.now()\r\n   ) {\r\n-    //console.log(token);\r\n+    console.log(\"CONNECT\",token);\r\n     if(!params.url.startsWith(\"/api/anonymous\")){\r\n       entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n     }\r\n     goOn(params);\r\n"
+                },
+                {
+                    "date": 1708704744838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     token !== \"\" &&\r\n     dateExp !== false &&\r\n     dateExp > Date.now()\r\n   ) {\r\n-    console.log(\"CONNECT\",token);\r\n+    //console.log(\"CONNECT\",tkn);\r\n     if(!params.url.startsWith(\"/api/anonymous\")){\r\n       entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n     }\r\n     goOn(params);\r\n"
+                },
+                {
+                    "date": 1708704921180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     dateExp !== false &&\r\n     dateExp > Date.now()\r\n   ) {\r\n     //console.log(\"CONNECT\",tkn);\r\n-    if(!params.url.startsWith(\"/api/anonymous\")){\r\n+    if (!params.url.startsWith(\"/api/anonymous\")) {\r\n       entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n     }\r\n     goOn(params);\r\n   } else if (refresh_token !== null) {\r\n@@ -42,9 +42,9 @@\n   } else goOn(params);\r\n };\r\n \r\n const goOn = (params) => {\r\n-  console.log(\"CONNECT\",params);\r\n+  console.log(\"CONNECT\", params);\r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n     data: params.data ?? {},\r\n"
+                },
+                {
+                    "date": 1708947850159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n   } else goOn(params);\r\n };\r\n \r\n const goOn = (params) => {\r\n-  console.log(\"CONNECT\", params);\r\n+  console.log(\"CONNECT before Get\", params);\r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n     data: params.data ?? {},\r\n"
+                },
+                {
+                    "date": 1708971279628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n   } else goOn(params);\r\n };\r\n \r\n const goOn = (params) => {\r\n-  console.log(\"CONNECT before Get\", params);\r\n+  console.log(\"CONNECT Go on\", params);\r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n     data: params.data ?? {},\r\n"
+                },
+                {
+                    "date": 1709302897234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,11 @@\n   } else goOn(params);\r\n };\r\n \r\n const goOn = (params) => {\r\n-  console.log(\"CONNECT Go on\", params);\r\n+  console.log(\"GO ON CONNECT for a \", params.methods);\r\n+  console.log(\"CONNECT details \", params.methods);\r\n+  \r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n     data: params.data ?? {},\r\n"
+                },
+                {
+                    "date": 1709302911614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n };\r\n \r\n const goOn = (params) => {\r\n   console.log(\"GO ON CONNECT for a \", params.methods);\r\n-  console.log(\"CONNECT details \", params.methods);\r\n+  console.log(\"CONNECT details \", params.data);\r\n   \r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n"
+                },
+                {
+                    "date": 1709303184606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,10 +42,10 @@\n   } else goOn(params);\r\n };\r\n \r\n const goOn = (params) => {\r\n-  console.log(\"GO ON CONNECT for a \", params.methods);\r\n-  console.log(\"CONNECT details \", params.data);\r\n+  console.log(\"GO ON CONNECT for a \", params.methods); // Todo\r\n+  console.log(\"CONNECT details \", params.data);// Todo\r\n   \r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n"
+                },
+                {
+                    "date": 1711097886222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     token !== \"\" &&\r\n     dateExp !== false &&\r\n     dateExp > Date.now()\r\n   ) {\r\n-    //console.log(\"CONNECT\",tkn);\r\n+    console.log(\"CONNECT\",tkn);\r\n     if (!params.url.startsWith(\"/api/anonymous\")) {\r\n       entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n     }\r\n     goOn(params);\r\n"
+                },
+                {
+                    "date": 1711097909792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     token !== \"\" &&\r\n     dateExp !== false &&\r\n     dateExp > Date.now()\r\n   ) {\r\n-    console.log(\"CONNECT\",tkn);\r\n+    console.log(\"CONNECT\",token);\r\n     if (!params.url.startsWith(\"/api/anonymous\")) {\r\n       entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n     }\r\n     goOn(params);\r\n"
+                },
+                {
+                    "date": 1711439627228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,10 +42,9 @@\n   } else goOn(params);\r\n };\r\n \r\n const goOn = (params) => {\r\n-  console.log(\"GO ON CONNECT for a \", params.methods); // Todo\r\n-  console.log(\"CONNECT details \", params.data);// Todo\r\n+  console.log(\"CONNECT details \", params);// Todo\r\n   \r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n"
+                },
+                {
+                    "date": 1711464147662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     token !== \"\" &&\r\n     dateExp !== false &&\r\n     dateExp > Date.now()\r\n   ) {\r\n-    console.log(\"CONNECT\",token);\r\n+   // console.log(\"CONNECT\",token);\r\n     if (!params.url.startsWith(\"/api/anonymous\")) {\r\n       entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n     }\r\n     goOn(params);\r\n"
+                },
+                {
+                    "date": 1712610052449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n   })\r\n     .then(params.success)\r\n     .catch((error) => {\r\n       params.catch(error);\r\n-      console.log(error.response);\r\n+      console.log(\"erreur connector\",error.response);\r\n       if (error.response !== undefined && error.response.status === 403) {\r\n         NotificationManager.error(\r\n           \"Mauvaise Demande\",\r\n           \"Une mauvaise demande a été envoyée, veuillez réessayer plus tard.\"\r\n"
+                },
+                {
+                    "date": 1712610284843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n   })\r\n     .then(params.success)\r\n     .catch((error) => {\r\n       params.catch(error);\r\n-      console.log(\"erreur connector\",error.response);\r\n+      console.log(\"erreur connector\",error);\r\n       if (error.response !== undefined && error.response.status === 403) {\r\n         NotificationManager.error(\r\n           \"Mauvaise Demande\",\r\n           \"Une mauvaise demande a été envoyée, veuillez réessayer plus tard.\"\r\n"
+                },
+                {
+                    "date": 1712665795795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n   } else goOn(params);\r\n };\r\n \r\n const goOn = (params) => {\r\n-  console.log(\"CONNECT details \", params);// Todo\r\n+  //console.log(\"CONNECT details \", params);// Todo\r\n   \r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n"
+                },
+                {
+                    "date": 1712666156628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n   })\r\n     .then(params.success)\r\n     .catch((error) => {\r\n       params.catch(error);\r\n-      console.log(\"erreur connector\",error);\r\n+      //console.log(\"erreur connector\",error);\r\n       if (error.response !== undefined && error.response.status === 403) {\r\n         NotificationManager.error(\r\n           \"Mauvaise Demande\",\r\n           \"Une mauvaise demande a été envoyée, veuillez réessayer plus tard.\"\r\n"
+                },
+                {
+                    "date": 1712781412933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n   } else goOn(params);\r\n };\r\n \r\n const goOn = (params) => {\r\n-  //console.log(\"CONNECT details \", params);// Todo\r\n+  console.log(\"CONNECT details \", params);// Todo\r\n   \r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n"
+                },
+                {
+                    "date": 1712782573553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,9 +74,9 @@\n         NotificationManager.error(\r\n           \"Erreur 500\",\r\n           \"Une erreur de serveur inconnue s'est produite.\"\r\n         );\r\n-        console.log(\"Une erreur de serveur inconnue s'est produite.\");\r\n+        console.log(\"Une erreur de serveur inconnue s'est produite.\",error,params.url,params.data);\r\n       }\r\n       if (\r\n         endPoints.LOGIN !== params.url &&\r\n         error.response !== undefined &&\r\n"
+                },
+                {
+                    "date": 1713853470092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     token !== \"\" &&\r\n     dateExp !== false &&\r\n     dateExp > Date.now()\r\n   ) {\r\n-   // console.log(\"CONNECT\",token);\r\n+    console.log(\"CONNECT\",token);\r\n     if (!params.url.startsWith(\"/api/anonymous\")) {\r\n       entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n     }\r\n     goOn(params);\r\n"
+                },
+                {
+                    "date": 1714783668758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     token !== \"\" &&\r\n     dateExp !== false &&\r\n     dateExp > Date.now()\r\n   ) {\r\n-    console.log(\"CONNECT\",token);\r\n+    //console.log(\"CONNECT\",token);\r\n     if (!params.url.startsWith(\"/api/anonymous\")) {\r\n       entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n     }\r\n     goOn(params);\r\n@@ -42,9 +42,9 @@\n   } else goOn(params);\r\n };\r\n \r\n const goOn = (params) => {\r\n-  console.log(\"CONNECT details \", params);// Todo\r\n+  //console.log(\"CONNECT details \", params);// Todo\r\n   \r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n"
+                },
+                {
+                    "date": 1716818142106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     token !== \"\" &&\r\n     dateExp !== false &&\r\n     dateExp > Date.now()\r\n   ) {\r\n-    //console.log(\"CONNECT\",token);\r\n+    console.log(\"CONNECT\",token);\r\n     if (!params.url.startsWith(\"/api/anonymous\")) {\r\n       entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n     }\r\n     goOn(params);\r\n"
+                },
+                {
+                    "date": 1716818260485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     token !== \"\" &&\r\n     dateExp !== false &&\r\n     dateExp > Date.now()\r\n   ) {\r\n-    console.log(\"CONNECT\",token);\r\n+    //console.log(\"CONNECT\",token);\r\n     if (!params.url.startsWith(\"/api/anonymous\")) {\r\n       entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n     }\r\n     goOn(params);\r\n@@ -42,9 +42,9 @@\n   } else goOn(params);\r\n };\r\n \r\n const goOn = (params) => {\r\n-  //console.log(\"CONNECT details \", params);// Todo\r\n+  console.log(\"CONNECT details \", params);// Todo\r\n   \r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n"
+                },
+                {
+                    "date": 1716818505321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     token !== \"\" &&\r\n     dateExp !== false &&\r\n     dateExp > Date.now()\r\n   ) {\r\n-    //console.log(\"CONNECT\",token);\r\n+   console.log(\"CONNECT\",token);\r\n     if (!params.url.startsWith(\"/api/anonymous\")) {\r\n       entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n     }\r\n     goOn(params);\r\n"
+                },
+                {
+                    "date": 1716819088990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     token !== \"\" &&\r\n     dateExp !== false &&\r\n     dateExp > Date.now()\r\n   ) {\r\n-   console.log(\"CONNECT\",token);\r\n+   //console.log(\"CONNECT\",token);\r\n     if (!params.url.startsWith(\"/api/anonymous\")) {\r\n       entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n     }\r\n     goOn(params);\r\n@@ -42,9 +42,9 @@\n   } else goOn(params);\r\n };\r\n \r\n const goOn = (params) => {\r\n-  console.log(\"CONNECT details \", params);// Todo\r\n+  //console.log(\"CONNECT details \", params);// Todo\r\n   \r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n"
+                },
+                {
+                    "date": 1716819120367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n   } else goOn(params);\r\n };\r\n \r\n const goOn = (params) => {\r\n-  //console.log(\"CONNECT details \", params);// Todo\r\n+  console.log(\"CONNECT details \", params);// Todo\r\n   \r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n"
+                },
+                {
+                    "date": 1716981555871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     token !== \"\" &&\r\n     dateExp !== false &&\r\n     dateExp > Date.now()\r\n   ) {\r\n-   //console.log(\"CONNECT\",token);\r\n+   console.log(\"CONNECT\",token);\r\n     if (!params.url.startsWith(\"/api/anonymous\")) {\r\n       entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n     }\r\n     goOn(params);\r\n"
+                },
+                {
+                    "date": 1717050042990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     token !== \"\" &&\r\n     dateExp !== false &&\r\n     dateExp > Date.now()\r\n   ) {\r\n-   console.log(\"CONNECT\",token);\r\n+   //console.log(\"CONNECT\",token);\r\n     if (!params.url.startsWith(\"/api/anonymous\")) {\r\n       entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n     }\r\n     goOn(params);\r\n"
+                },
+                {
+                    "date": 1717050152045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n   } else goOn(params);\r\n };\r\n \r\n const goOn = (params) => {\r\n-  console.log(\"CONNECT details \", params);// Todo\r\n+  console.log(\"CP CONNECT details \", params);// Todo\r\n   \r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n"
+                },
+                {
+                    "date": 1717657064867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n   } else goOn(params);\r\n };\r\n \r\n const goOn = (params) => {\r\n-  console.log(\"CP CONNECT details \", params);// Todo\r\n+  //console.log(\"CP CONNECT details \", params);// Todo\r\n   \r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n"
+                },
+                {
+                    "date": 1717657709658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,10 +42,12 @@\n   } else goOn(params);\r\n };\r\n \r\n const goOn = (params) => {\r\n-  //console.log(\"CP CONNECT details \", params);// Todo\r\n   \r\n+  //console.log(\"CP CONNECT details \", params);\r\n+  // Todo\r\n+  \r\n   entryPoint({\r\n     method: params.method ?? \"GET\",\r\n     url: params.url,\r\n     data: params.data ?? {},\r\n"
+                },
+                {
+                    "date": 1717752605079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,15 @@\n import jwtDecode from \"jwt-decode\";\r\n import { NotificationManager } from \"react-notifications\";\r\n import { entryPoint } from \"./config/entryPoint\";\r\n import endPoints from \"./config/endPoints\";\r\n-\r\n+// Add a response interceptor\r\n+axios.interceptors.response.use(function(response) {\r\n+  if (response.headers['x-version'] > process.env.VERSION) { // if server version newer\r\n+    window.localStorage.setItem('version-update-needed', 'true'); // set version update item so can refresh app later\r\n+  };\r\n+  return response; // continue with response\r\n+});\r\n const connector = (params) => {\r\n   const token = localStorage.getItem(\"token\");\r\n   const refresh_token = localStorage.getItem(\"refresh_token\");\r\n   entryPoint.defaults.headers.common[\"Authorization\"] = \"\";\r\n"
+                },
+                {
+                    "date": 1717752627031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import jwtDecode from \"jwt-decode\";\r\n import { NotificationManager } from \"react-notifications\";\r\n import { entryPoint } from \"./config/entryPoint\";\r\n import endPoints from \"./config/endPoints\";\r\n+import axios from \"axios\";\r\n // Add a response interceptor\r\n axios.interceptors.response.use(function(response) {\r\n   if (response.headers['x-version'] > process.env.VERSION) { // if server version newer\r\n     window.localStorage.setItem('version-update-needed', 'true'); // set version update item so can refresh app later\r\n"
+                },
+                {
+                    "date": 1717752732501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,12 @@\n // Add a response interceptor\r\n axios.interceptors.response.use(function(response) {\r\n   if (response.headers['x-version'] > process.env.VERSION) { // if server version newer\r\n     window.localStorage.setItem('version-update-needed', 'true'); // set version update item so can refresh app later\r\n-  };\r\n+    console.log( \"STEP -1  version-update-needed\",response.headers['x-version'], process.env.VERSION)\r\n+  }\r\n+  else\r\n+     console.log( \"STEP -1  version-update not needed\",response.headers['x-version'], process.env.VERSION)\r\n   return response; // continue with response\r\n });\r\n const connector = (params) => {\r\n   const token = localStorage.getItem(\"token\");\r\n"
+                },
+                {
+                    "date": 1717753226437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,107 @@\n+import jwtDecode from \"jwt-decode\";\r\n+import { NotificationManager } from \"react-notifications\";\r\n+import { entryPoint } from \"./config/entryPoint\";\r\n+import endPoints from \"./config/endPoints\";\r\n+ \r\n+ \r\n+const connector = (params) => {\r\n+  const token = localStorage.getItem(\"token\");\r\n+  const refresh_token = localStorage.getItem(\"refresh_token\");\r\n+  entryPoint.defaults.headers.common[\"Authorization\"] = \"\";\r\n+  let dateExp = false;\r\n+  if (token !== null) dateExp = new Date(jwtDecode(token).exp * 1000);\r\n+\r\n+  if (\r\n+    token !== null &&\r\n+    token !== undefined &&\r\n+    token !== \"\" &&\r\n+    dateExp !== false &&\r\n+    dateExp > Date.now()\r\n+  ) {\r\n+   //console.log(\"CONNECT\",token);\r\n+    if (!params.url.startsWith(\"/api/anonymous\")) {\r\n+      entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n+    }\r\n+    goOn(params);\r\n+  } else if (refresh_token !== null) {\r\n+    entryPoint\r\n+      .post(endPoints.REFRESH_TOKEN, {\r\n+        refresh_token: refresh_token,\r\n+      })\r\n+      .then((response) => {\r\n+        entryPoint.defaults.headers.common[\r\n+          \"Authorization\"\r\n+        ] = `Bearer ${response.data.token}`;\r\n+        localStorage.setItem(\"token\", response.data.token);\r\n+        goOn(params);\r\n+      })\r\n+      .catch((error) => {\r\n+        localStorage.removeItem(\"token\");\r\n+        localStorage.removeItem(\"refresh_token\");\r\n+        window.location.reload();\r\n+      });\r\n+  } else goOn(params);\r\n+};\r\n+\r\n+const goOn = (params) => {\r\n+  \r\n+  //console.log(\"CP CONNECT details \", params);\r\n+  // Todo\r\n+  \r\n+  entryPoint({\r\n+    method: params.method ?? \"GET\",\r\n+    url: params.url,\r\n+    data: params.data ?? {},\r\n+    responseType: params.responseType ?? \"json\",\r\n+    dataType: params.dataType ?? \"json\",\r\n+    headers: params.headers ?? {},\r\n+  })\r\n+    .then(params.success)\r\n+    .catch((error) => {\r\n+      params.catch(error);\r\n+      //console.log(\"erreur connector\",error);\r\n+      if (error.response !== undefined && error.response.status === 403) {\r\n+        NotificationManager.error(\r\n+          \"Mauvaise Demande\",\r\n+          \"Une mauvaise demande a été envoyée, veuillez réessayer plus tard.\"\r\n+        );\r\n+      }\r\n+      if (error.response !== undefined && error.response.status === 422) {\r\n+        NotificationManager.error(\r\n+          \"Erreur 422\",\r\n+          \"Veuillez renseigner les champs obligatoires.\"\r\n+        );\r\n+      }\r\n+      if (error.response !== undefined && error.response.status === 500) {\r\n+        //TODO décommente notification after install mercure in dev\r\n+        NotificationManager.error(\r\n+          \"Erreur 500\",\r\n+          \"Une erreur de serveur inconnue s'est produite.\"\r\n+        );\r\n+        console.log(\"Une erreur de serveur inconnue s'est produite.\",error,params.url,params.data);\r\n+      }\r\n+      if (\r\n+        endPoints.LOGIN !== params.url &&\r\n+        error.response !== undefined &&\r\n+        error.response.status === 401\r\n+      ) {\r\n+        NotificationManager.error(\r\n+          \"Accès refusé\",\r\n+          \"Vous n'êtes pas autorisé à accéder à cette ressource.\"\r\n+        );\r\n+      }\r\n+\r\n+      if (\r\n+        error.response?.data?.code !== undefined &&\r\n+        error.response.data.message !== undefined &&\r\n+        error.response.data.code === 401 &&\r\n+        (error.response.data.message === \"Invalid credentials.\" || error.response.data.message === \"Invalid JWT Token\")\r\n+      ) {\r\n+        localStorage.removeItem(\"refresh_token\");\r\n+        localStorage.removeItem(\"token\");\r\n+        window.location.reload();\r\n+      }\r\n+    });\r\n+};\r\n+\r\n+export default connector;\r\n"
+                }
+            ],
+            "date": 1706716821350,
+            "name": "Commit-0",
+            "content": "import jwtDecode from \"jwt-decode\";\r\nimport { NotificationManager } from \"react-notifications\";\r\nimport { entryPoint } from \"./config/entryPoint\";\r\nimport endPoints from \"./config/endPoints\";\r\n\r\nconst connector = (params) => {\r\n  const token = localStorage.getItem(\"token\");\r\n  const refresh_token = localStorage.getItem(\"refresh_token\");\r\n  entryPoint.defaults.headers.common[\"Authorization\"] = \"\";\r\n  let dateExp = false;\r\n  if (token !== null) dateExp = new Date(jwtDecode(token).exp * 1000);\r\n\r\n  if (\r\n    token !== null &&\r\n    token !== undefined &&\r\n    token !== \"\" &&\r\n    dateExp !== false &&\r\n    dateExp > Date.now()\r\n  ) {\r\n    if(!params.url.startsWith(\"/api/anonymous\")){\r\n      entryPoint.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\r\n    }\r\n    goOn(params);\r\n  } else if (refresh_token !== null) {\r\n    entryPoint\r\n      .post(endPoints.REFRESH_TOKEN, {\r\n        refresh_token: refresh_token,\r\n      })\r\n      .then((response) => {\r\n        entryPoint.defaults.headers.common[\r\n          \"Authorization\"\r\n        ] = `Bearer ${response.data.token}`;\r\n        localStorage.setItem(\"token\", response.data.token);\r\n        goOn(params);\r\n      })\r\n      .catch((error) => {\r\n        localStorage.removeItem(\"token\");\r\n        localStorage.removeItem(\"refresh_token\");\r\n        window.location.reload();\r\n      });\r\n  } else goOn(params);\r\n};\r\n\r\nconst goOn = (params) => {\r\n  console.log(params);\r\n  entryPoint({\r\n    method: params.method ?? \"GET\",\r\n    url: params.url,\r\n    data: params.data ?? {},\r\n    responseType: params.responseType ?? \"json\",\r\n    dataType: params.dataType ?? \"json\",\r\n    headers: params.headers ?? {},\r\n  })\r\n    .then(params.success)\r\n    .catch((error) => {\r\n      params.catch(error);\r\n      console.log(error.response);\r\n      if (error.response !== undefined && error.response.status === 403) {\r\n        NotificationManager.error(\r\n          \"Mauvaise Demande\",\r\n          \"Une mauvaise demande a été envoyée, veuillez réessayer plus tard.\"\r\n        );\r\n      }\r\n      if (error.response !== undefined && error.response.status === 422) {\r\n        NotificationManager.error(\r\n          \"Erreur 422\",\r\n          \"Veuillez renseigner les champs obligatoires.\"\r\n        );\r\n      }\r\n      if (error.response !== undefined && error.response.status === 500) {\r\n        //TODO décommente notification after install mercure in dev\r\n        NotificationManager.error(\r\n          \"Erreur 500\",\r\n          \"Une erreur de serveur inconnue s'est produite.\"\r\n        );\r\n        console.log(\"Une erreur de serveur inconnue s'est produite.\");\r\n      }\r\n      if (\r\n        endPoints.LOGIN !== params.url &&\r\n        error.response !== undefined &&\r\n        error.response.status === 401\r\n      ) {\r\n        NotificationManager.error(\r\n          \"Accès refusé\",\r\n          \"Vous n'êtes pas autorisé à accéder à cette ressource.\"\r\n        );\r\n      }\r\n\r\n      if (\r\n        error.response?.data?.code !== undefined &&\r\n        error.response.data.message !== undefined &&\r\n        error.response.data.code === 401 &&\r\n        (error.response.data.message === \"Invalid credentials.\" || error.response.data.message === \"Invalid JWT Token\")\r\n      ) {\r\n        localStorage.removeItem(\"refresh_token\");\r\n        localStorage.removeItem(\"token\");\r\n        window.location.reload();\r\n      }\r\n    });\r\n};\r\n\r\nexport default connector;\r\n"
+        }
+    ]
+}

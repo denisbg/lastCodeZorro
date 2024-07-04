@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/views/front/bongratuit.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1704459420085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1704459440238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     CordStyle\r\n } from \"../../assets/styles/frontUniverseStyles\";\r\n \r\n \r\n-export default function Bongratuit (\r\n+export default function BonusReparation (\r\n ) {\r\n     const { slugIdUniverse, slugIdService, slugIdBenefit, idDeliveryMode } =\r\n         useParams();\r\n     console.log(\"-#\" + slugIdUniverse);\r\n"
+                }
+            ],
+            "date": 1704459420085,
+            "name": "Commit-0",
+            "content": "import React, { useEffect, useState } from \"react\";\r\nimport anatomieCord from '../../assets/images/zanatCord.png';\r\nimport { useSelector } from \"react-redux\";\r\nimport { useHistory, useLocation, useParams } from \"react-router-dom\";\r\nimport {\r\n    CordStyle\r\n} from \"../../assets/styles/frontUniverseStyles\";\r\n\r\n\r\nexport default function Bongratuit (\r\n) {\r\n    const { slugIdUniverse, slugIdService, slugIdBenefit, idDeliveryMode } =\r\n        useParams();\r\n    console.log(\"-#\" + slugIdUniverse);\r\n    const anatomies = [\r\n        { id: 'cordonnerie-30', title: 'Anatomie d\\'une chaussure', file: anatomieCord },\r\n\r\n    ];\r\n\r\n    let result = anatomies.find(el => el.id === slugIdUniverse);\r\n    if (result) {\r\n        console.log(`-#result${result}`)\r\n        return (\r\n            result && (\r\n                <>\r\n                    <CordStyle>\r\n                        <div  className=\"cordtitle\">{result.title} </div>\r\n                    </CordStyle>\r\n                    <div class=\"container\">\r\n                        <div class=\"row\">\r\n                            <div class=\"col-3\">\r\n                                <table class=\"table table-image\">\r\n\r\n                                    <tbody>\r\n                                        <tr>\r\n                                            <td>\r\n                                            </td>\r\n                                            <td>\r\n                                                <div style={{ width: 320, textAlign: 'center', color: '#5D5D5D', fontSize: 15, fontFamily: 'Helvetica Neue LT Std', fontWeight: '500', lineHeight: 1, wordWrap: 'break-word' }}>\r\n                                                    <img className=\"z3imgbottom\" src={result.file} /></div>\r\n                                            </td>\r\n                                            <td>\r\n\r\n                                            </td>\r\n                                        </tr>\r\n                                    </tbody>\r\n                                </table>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </>\r\n            )\r\n        )\r\n    }\r\n    return (\r\n        <div></div>\r\n    )\r\n}\r\n"
+        }
+    ]
+}

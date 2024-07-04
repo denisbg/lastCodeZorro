@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/views/front/tunnel/universeStep/markersRegroupeStyles.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1706622597436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1706637234278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n   // it's on you to set object origin to 0,0 coordinates\r\n   position: \"absolute\",\r\n   width: K_SIZE,\r\n   height: 40,\r\n-  left: -K_SIZE / 2,\r\n-  top: -K_SIZE / 2,\r\n+  left: -K_SIZE / 3,\r\n+  top: -K_SIZE / 3,\r\n \r\n   borderRadius: 24,\r\n   backgroundColor: \"white\",\r\n   textAlign: \"center\",\r\n"
+                },
+                {
+                    "date": 1706637245162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n   // it's on you to set object origin to 0,0 coordinates\r\n   position: \"absolute\",\r\n   width: K_SIZE,\r\n   height: 40,\r\n-  left: -K_SIZE / 3,\r\n-  top: -K_SIZE / 3,\r\n+  left: -K_SIZE / 4,\r\n+  top: -K_SIZE / 4,\r\n \r\n   borderRadius: 24,\r\n   backgroundColor: \"white\",\r\n   textAlign: \"center\",\r\n"
+                },
+                {
+                    "date": 1706637260068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n   // it's on you to set object origin to 0,0 coordinates\r\n   position: \"absolute\",\r\n   width: K_SIZE,\r\n   height: 40,\r\n-  left: -K_SIZE / 4,\r\n-  top: -K_SIZE / 4,\r\n+  left: -K_SIZE / 8,\r\n+  top: -K_SIZE / 8,\r\n \r\n   borderRadius: 24,\r\n   backgroundColor: \"white\",\r\n   textAlign: \"center\",\r\n"
+                },
+                {
+                    "date": 1706637286926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   left: -K_SIZE / 8,\r\n   top: -K_SIZE / 8,\r\n \r\n   borderRadius: 24,\r\n-  backgroundColor: \"white\",\r\n+  backgroundColor: \"red\",\r\n   textAlign: \"center\",\r\n   color: \"#000\",\r\n   cursor: \"pointer\",\r\n   display: \"flex\",\r\n"
+                },
+                {
+                    "date": 1706637296897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   left: -K_SIZE / 8,\r\n   top: -K_SIZE / 8,\r\n \r\n   borderRadius: 24,\r\n-  backgroundColor: \"red\",\r\n+  backgroundColor: \"white\",\r\n   textAlign: \"center\",\r\n   color: \"#000\",\r\n   cursor: \"pointer\",\r\n   display: \"flex\",\r\n"
+                },
+                {
+                    "date": 1706637309153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-const K_SIZE = 100;\r\n+const K_SIZE = 50;\r\n \r\n const greatPlaceStyle = {\r\n   // initially any map object has left top corner at lat lng coordinates\r\n   // it's on you to set object origin to 0,0 coordinates\r\n"
+                }
+            ],
+            "date": 1706622597436,
+            "name": "Commit-0",
+            "content": "const K_SIZE = 100;\r\n\r\nconst greatPlaceStyle = {\r\n  // initially any map object has left top corner at lat lng coordinates\r\n  // it's on you to set object origin to 0,0 coordinates\r\n  position: \"absolute\",\r\n  width: K_SIZE,\r\n  height: 40,\r\n  left: -K_SIZE / 2,\r\n  top: -K_SIZE / 2,\r\n\r\n  borderRadius: 24,\r\n  backgroundColor: \"white\",\r\n  textAlign: \"center\",\r\n  color: \"#000\",\r\n  cursor: \"pointer\",\r\n  display: \"flex\",\r\n  alignItems: \"center\",\r\n  justifyContent: \"center\",\r\n  boxShadow: \"0 0 5px #3f51b5\",\r\n  fontSize: \"22px\",\r\n  fontWeight: 700,\r\n  padding: \"8px 15px\",\r\n};\r\n\r\nconst greatPlaceStyleHover = {\r\n  ...greatPlaceStyle,\r\n  border: \"5px solid #3f51b5\",\r\n  color: \"#f44336\",\r\n};\r\n\r\nexport { greatPlaceStyle, greatPlaceStyleHover, K_SIZE };\r\n"
+        }
+    ]
+}

@@ -1,0 +1,310 @@
+{
+    "sourceFile": "src/components/front/produitItem.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 73,
+            "patches": [
+                {
+                    "date": 1709031118648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1709031182941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,8 +43,9 @@\n                 : {}\r\n             }\r\n           >\r\n             {row.description}\r\n+            labla\r\n             {row.bonusReparation}\r\n             {row.description.length > 90 && (\r\n               <span\r\n                 style={{\r\n"
+                },
+                {
+                    "date": 1709031190519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n             }\r\n           >\r\n             {row.description}\r\n             labla\r\n-            {row.bonusReparation}\r\n+            {row.bonusreparation}\r\n             {row.description.length > 90 && (\r\n               <span\r\n                 style={{\r\n                   color: \"#7A7C7F\",\r\n"
+                },
+                {
+                    "date": 1709031364940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,10 +43,14 @@\n                 : {}\r\n             }\r\n           >\r\n             {row.description}\r\n-            labla\r\n-            {row.bonusreparation}\r\n+            \r\n+            {row.bonusreparation = 1 && (\r\n+\r\n+            BLOBLO\r\n+            )}\r\n+\r\n             {row.description.length > 90 && (\r\n               <span\r\n                 style={{\r\n                   color: \"#7A7C7F\",\r\n"
+                },
+                {
+                    "date": 1709031396177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n             {row.description}\r\n             \r\n             {row.bonusreparation = 1 && (\r\n \r\n-            BLOBLO\r\n+            { BLOBLO}\r\n             )}\r\n \r\n             {row.description.length > 90 && (\r\n               <span\r\n"
+                },
+                {
+                    "date": 1709031412079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n             {row.description}\r\n             \r\n             {row.bonusreparation = 1 && (\r\n \r\n-            { BLOBLO}\r\n+            { \"BLOBLO\"}\r\n             )}\r\n \r\n             {row.description.length > 90 && (\r\n               <span\r\n"
+                },
+                {
+                    "date": 1709031481023,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,10 +45,12 @@\n           >\r\n             {row.description}\r\n             \r\n             {row.bonusreparation = 1 && (\r\n-\r\n-            { \"BLOBLO\"}\r\n+<span>\r\n+{\"BLOBLO\"}\r\n+  \r\n+</span>\r\n             )}\r\n \r\n             {row.description.length > 90 && (\r\n               <span\r\n"
+                },
+                {
+                    "date": 1709031500489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n             }\r\n           >\r\n             {row.description}\r\n             \r\n-            {row.bonusreparation = 1 && (\r\n+            {row.bonusreparation == 1 && (\r\n <span>\r\n {\"BLOBLO\"}\r\n   \r\n </span>\r\n"
+                },
+                {
+                    "date": 1709031512751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n             }\r\n           >\r\n             {row.description}\r\n             \r\n-            {row.bonusreparation == 1 && (\r\n+            {row.bonusreparation == '1' && (\r\n <span>\r\n {\"BLOBLO\"}\r\n   \r\n </span>\r\n"
+                },
+                {
+                    "date": 1709031525408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n             }\r\n           >\r\n             {row.description}\r\n             \r\n-            {row.bonusreparation == '1' && (\r\n+            {row.bonusreparation == '0' && (\r\n <span>\r\n {\"BLOBLO\"}\r\n   \r\n </span>\r\n"
+                },
+                {
+                    "date": 1709031604106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n             {row.description}\r\n             \r\n             {row.bonusreparation == '0' && (\r\n <span>\r\n-{\"BLOBLO\"}\r\n+LOBLO\r\n   \r\n </span>\r\n             )}\r\n \r\n"
+                },
+                {
+                    "date": 1709031615869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n             }\r\n           >\r\n             {row.description}\r\n             \r\n-            {row.bonusreparation == '0' && (\r\n+            {row.bonusreparation = '0' && (\r\n <span>\r\n LOBLO\r\n   \r\n </span>\r\n"
+                },
+                {
+                    "date": 1709031628918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n             }\r\n           >\r\n             {row.description}\r\n             \r\n-            {row.bonusreparation = '0' && (\r\n+            {row.bonusreparation == '0' && (\r\n <span>\r\n LOBLO\r\n   \r\n </span>\r\n"
+                },
+                {
+                    "date": 1709031641274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n             }\r\n           >\r\n             {row.description}\r\n             \r\n-            {row.bonusreparation == '0' && (\r\n+            {row.bonusreparation = '1' && (\r\n <span>\r\n LOBLO\r\n   \r\n </span>\r\n"
+                },
+                {
+                    "date": 1709031684566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,8 +50,9 @@\n LOBLO\r\n   \r\n </span>\r\n             )}\r\n+           lili {row.bonusreparation}\r\n \r\n             {row.description.length > 90 && (\r\n               <span\r\n                 style={{\r\n"
+                },
+                {
+                    "date": 1709031910005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,17 +43,8 @@\n                 : {}\r\n             }\r\n           >\r\n             {row.description}\r\n-            \r\n-            {row.bonusreparation = '1' && (\r\n-<span>\r\n-LOBLO\r\n-  \r\n-</span>\r\n-            )}\r\n-           lili {row.bonusreparation}\r\n-\r\n             {row.description.length > 90 && (\r\n               <span\r\n                 style={{\r\n                   color: \"#7A7C7F\",\r\n"
+                },
+                {
+                    "date": 1709031939317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,8 +43,9 @@\n                 : {}\r\n             }\r\n           >\r\n             {row.description}\r\n+            {row.bonusreparation}\r\n             {row.description.length > 90 && (\r\n               <span\r\n                 style={{\r\n                   color: \"#7A7C7F\",\r\n"
+                },
+                {
+                    "date": 1709031980022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,8 +44,14 @@\n             }\r\n           >\r\n             {row.description}\r\n             {row.bonusreparation}\r\n+            {row.bonusreparation = '1' && (\r\n+<span>\r\n+LOBLO\r\n+  \r\n+</span>\r\n+            )}\r\n             {row.description.length > 90 && (\r\n               <span\r\n                 style={{\r\n                   color: \"#7A7C7F\",\r\n"
+                },
+                {
+                    "date": 1709031994346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n             }\r\n           >\r\n             {row.description}\r\n             {row.bonusreparation}\r\n-            {row.bonusreparation = '1' && (\r\n+            {row.bonusreparation == '1' && (\r\n <span>\r\n LOBLO\r\n   \r\n </span>\r\n"
+                },
+                {
+                    "date": 1709032006812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n             }\r\n           >\r\n             {row.description}\r\n             {row.bonusreparation}\r\n-            {row.bonusreparation == '1' && (\r\n+            {row.bonusreparation == 1 && (\r\n <span>\r\n LOBLO\r\n   \r\n </span>\r\n"
+                },
+                {
+                    "date": 1709032150125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,14 +44,13 @@\n             }\r\n           >\r\n             {row.description}\r\n             {row.bonusreparation}\r\n-            {row.bonusreparation == 1 && (\r\n-<span>\r\n-LOBLO\r\n-  \r\n-</span>\r\n-            )}\r\n+       \r\n+           \r\n+             {row.bonusreparation\r\n+                ? 1\r\n+                : null}\r\n             {row.description.length > 90 && (\r\n               <span\r\n                 style={{\r\n                   color: \"#7A7C7F\",\r\n"
+                },
+                {
+                    "date": 1709032225672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,13 +43,12 @@\n                 : {}\r\n             }\r\n           >\r\n             {row.description}\r\n-            {row.bonusreparation}\r\n-       \r\n            \r\n+           \r\n              {row.bonusreparation\r\n-                ? 1\r\n+                ? <span>BONUS RE</span>\r\n                 : null}\r\n             {row.description.length > 90 && (\r\n               <span\r\n                 style={{\r\n"
+                },
+                {
+                    "date": 1709032279868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n           >\r\n             {row.description}\r\n            \r\n            \r\n-             {row.bonusreparation\r\n+             {row.bonusreparation = 1\r\n                 ? <span>BONUS RE</span>\r\n                 : null}\r\n             {row.description.length > 90 && (\r\n               <span\r\n"
+                },
+                {
+                    "date": 1709032294134,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n           >\r\n             {row.description}\r\n            \r\n            \r\n-             {row.bonusreparation = 1\r\n+             {row.bonusreparation \r\n                 ? <span>BONUS RE</span>\r\n                 : null}\r\n             {row.description.length > 90 && (\r\n               <span\r\n"
+                },
+                {
+                    "date": 1709032482103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,11 +45,13 @@\n           >\r\n             {row.description}\r\n            \r\n            \r\n-             {row.bonusreparation \r\n-                ? <span>BONUS RE</span>\r\n-                : null}\r\n+             {row.bonusreparation = 1 && (\r\n+                 <span>\r\n+                  BONUS RE\r\n+                  </span>\r\n+                )}\r\n             {row.description.length > 90 && (\r\n               <span\r\n                 style={{\r\n                   color: \"#7A7C7F\",\r\n"
+                },
+                {
+                    "date": 1709032513816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,13 +43,13 @@\n                 : {}\r\n             }\r\n           >\r\n             {row.description}\r\n+            {row.bonusreparation}\r\n            \r\n-           \r\n              {row.bonusreparation = 1 && (\r\n                  <span>\r\n-                  BONUS RE\r\n+                  BONUS REP\r\n                   </span>\r\n                 )}\r\n             {row.description.length > 90 && (\r\n               <span\r\n"
+                },
+                {
+                    "date": 1709032591853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n           >\r\n             {row.description}\r\n             {row.bonusreparation}\r\n            \r\n-             {row.bonusreparation = 1 && (\r\n+             {row.bonusreparation == 1 && (\r\n                  <span>\r\n                   BONUS REP\r\n                   </span>\r\n                 )}\r\n"
+                },
+                {
+                    "date": 1709032613163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n           >\r\n             {row.description}\r\n             {row.bonusreparation}\r\n            \r\n-             {row.bonusreparation == 1 && (\r\n+             {(row.bonusreparation = 1) && (\r\n                  <span>\r\n                   BONUS REP\r\n                   </span>\r\n                 )}\r\n"
+                },
+                {
+                    "date": 1709032625472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n           >\r\n             {row.description}\r\n             {row.bonusreparation}\r\n            \r\n-             {(row.bonusreparation = 1) && (\r\n+             {(row.bonusreparation == 1) && (\r\n                  <span>\r\n                   BONUS REP\r\n                   </span>\r\n                 )}\r\n"
+                },
+                {
+                    "date": 1709032662633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n           >\r\n             {row.description}\r\n             {row.bonusreparation}\r\n            \r\n-             {(row.bonusreparation == 1) && (\r\n+             {(row.bonusreparation) && (\r\n                  <span>\r\n                   BONUS REP\r\n                   </span>\r\n                 )}\r\n"
+                },
+                {
+                    "date": 1709032813375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,13 +45,17 @@\n           >\r\n             {row.description}\r\n             {row.bonusreparation}\r\n            \r\n-             {(row.bonusreparation) && (\r\n-                 <span>\r\n+             {row.bonusreparation\r\n+             ?       <span>\r\n                   BONUS REP\r\n                   </span>\r\n-                )}\r\n+             :\r\n+             <span>\r\n+             BONUS pas REP\r\n+             </span>\r\n+}\r\n             {row.description.length > 90 && (\r\n               <span\r\n                 style={{\r\n                   color: \"#7A7C7F\",\r\n"
+                },
+                {
+                    "date": 1709032879953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,15 +46,16 @@\n             {row.description}\r\n             {row.bonusreparation}\r\n            \r\n              {row.bonusreparation\r\n-             ?       <span>\r\n+             ?     (  <span>\r\n                   BONUS REP\r\n-                  </span>\r\n+                  </span>)\r\n              :\r\n+             (\r\n              <span>\r\n              BONUS pas REP\r\n-             </span>\r\n+             </span>)\r\n }\r\n             {row.description.length > 90 && (\r\n               <span\r\n                 style={{\r\n"
+                },
+                {
+                    "date": 1709032927396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n           >\r\n             {row.description}\r\n             {row.bonusreparation}\r\n            \r\n-             {row.bonusreparation\r\n+             {row.bonusreparation = 1\r\n              ?     (  <span>\r\n                   BONUS REP\r\n                   </span>)\r\n              :\r\n"
+                },
+                {
+                    "date": 1709033070853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,18 +45,15 @@\n           >\r\n             {row.description}\r\n             {row.bonusreparation}\r\n            \r\n-             {row.bonusreparation = 1\r\n-             ?     (  <span>\r\n-                  BONUS REP\r\n+             {  (row.bonusreparation = 1) &&\r\n+                 (  <span>\r\n+                  BONUS x REP\r\n                   </span>)\r\n-             :\r\n-             (\r\n-             <span>\r\n-             BONUS pas REP\r\n-             </span>)\r\n }\r\n+            \r\n+\r\n             {row.description.length > 90 && (\r\n               <span\r\n                 style={{\r\n                   color: \"#7A7C7F\",\r\n"
+                },
+                {
+                    "date": 1709033092195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n           >\r\n             {row.description}\r\n             {row.bonusreparation}\r\n            \r\n-             {  (row.bonusreparation = 1) &&\r\n+             {  (row.bonusreparation == 1) &&\r\n                  (  <span>\r\n                   BONUS x REP\r\n                   </span>)\r\n }\r\n"
+                },
+                {
+                    "date": 1709033112197,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n           >\r\n             {row.description}\r\n             {row.bonusreparation}\r\n            \r\n-             {  (row.bonusreparation == 1) &&\r\n+             {  (row.bonusreparation === 1) &&\r\n                  (  <span>\r\n                   BONUS x REP\r\n                   </span>)\r\n }\r\n"
+                },
+                {
+                    "date": 1709033137717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n           >\r\n             {row.description}\r\n             {row.bonusreparation}\r\n            \r\n-             {  (row.bonusreparation === 1) &&\r\n+             {  (row.bonusreparation === '1') &&\r\n                  (  <span>\r\n                   BONUS x REP\r\n                   </span>)\r\n }\r\n"
+                },
+                {
+                    "date": 1709033283301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n import { ProduititemStyle } from \"../../assets/styles/frontGlobalStyle\";\r\n import { parentCategories } from \"../../helper/functions\";\r\n import * as vars from \"../../vars\";\r\n import ButtonDef from \"../ui-elements/buttonDef\";\r\n+import imgBonusreparation from \"../../assets/images/icons/bonusreparation.png\";\r\n \r\n export default function ProduitItem({ row, slugIdUniverse, ...props }) {\r\n   const [showMore, setShowMore] = useState(false);\r\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n@@ -46,11 +47,11 @@\n             {row.description}\r\n             {row.bonusreparation}\r\n            \r\n              {  (row.bonusreparation === '1') &&\r\n-                 (  <span>\r\n-                  BONUS x REP\r\n-                  </span>)\r\n+                 (  <span style=  {{ paddingLeft:\"78%\", paddingBottom:\"5%\"}}>\r\n+                 <img style={{width: 56, height: 30.73}} src={imgBonusreparation} />\r\n+                 </span>)\r\n }\r\n             \r\n \r\n             {row.description.length > 90 && (\r\n"
+                },
+                {
+                    "date": 1709033371761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,13 @@\n \r\n   return (\r\n     <ProduititemStyle xl={3} lg={4} sm={6}>\r\n       <div className=\"content-item-produit\">\r\n+      {  (row.bonusreparation === '1') &&\r\n+                 (  <span style=  {{ paddingLeft:\"78%\", paddingBottom:\"5%\"}}>\r\n+                 <img style={{width: 56, height: 30.73}} src={imgBonusreparation} />\r\n+                 </span>)\r\n+}\r\n         <div className=\"img-produit\">\r\n           <Link to={getUrl()} className={row.totalBenefits ? '':'disabled-link'}>\r\n             <img\r\n               className=\"img-fluid\"\r\n@@ -44,16 +49,9 @@\n                 : {}\r\n             }\r\n           >\r\n             {row.description}\r\n-            {row.bonusreparation}\r\n-           \r\n-             {  (row.bonusreparation === '1') &&\r\n-                 (  <span style=  {{ paddingLeft:\"78%\", paddingBottom:\"5%\"}}>\r\n-                 <img style={{width: 56, height: 30.73}} src={imgBonusreparation} />\r\n-                 </span>)\r\n-}\r\n-            \r\n+                      \r\n \r\n             {row.description.length > 90 && (\r\n               <span\r\n                 style={{\r\n"
+                },
+                {
+                    "date": 1709033400269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   return (\r\n     <ProduititemStyle xl={3} lg={4} sm={6}>\r\n       <div className=\"content-item-produit\">\r\n       {  (row.bonusreparation === '1') &&\r\n-                 (  <span style=  {{ paddingLeft:\"78%\", paddingBottom:\"5%\"}}>\r\n+                 (  <span style=  {{ paddingLeft:\"80%\", paddingBottom:\"15%\"}}>\r\n                  <img style={{width: 56, height: 30.73}} src={imgBonusreparation} />\r\n                  </span>)\r\n }\r\n         <div className=\"img-produit\">\r\n"
+                },
+                {
+                    "date": 1709033429051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   return (\r\n     <ProduititemStyle xl={3} lg={4} sm={6}>\r\n       <div className=\"content-item-produit\">\r\n       {  (row.bonusreparation === '1') &&\r\n-                 (  <span style=  {{ paddingLeft:\"80%\", paddingBottom:\"15%\"}}>\r\n+                 (  <span style=  {{ paddingLeft:\"70%\", paddingBottom:\"15%\"}}>\r\n                  <img style={{width: 56, height: 30.73}} src={imgBonusreparation} />\r\n                  </span>)\r\n }\r\n         <div className=\"img-produit\">\r\n"
+                },
+                {
+                    "date": 1709033444234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   return (\r\n     <ProduititemStyle xl={3} lg={4} sm={6}>\r\n       <div className=\"content-item-produit\">\r\n       {  (row.bonusreparation === '1') &&\r\n-                 (  <span style=  {{ paddingLeft:\"70%\", paddingBottom:\"15%\"}}>\r\n+                 (  <span style=  {{ paddingLeft:\"70%\", paddingTopO:\"15%\"}}>\r\n                  <img style={{width: 56, height: 30.73}} src={imgBonusreparation} />\r\n                  </span>)\r\n }\r\n         <div className=\"img-produit\">\r\n"
+                },
+                {
+                    "date": 1709033459583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   return (\r\n     <ProduititemStyle xl={3} lg={4} sm={6}>\r\n       <div className=\"content-item-produit\">\r\n       {  (row.bonusreparation === '1') &&\r\n-                 (  <span style=  {{ paddingLeft:\"70%\", paddingTopO:\"15%\"}}>\r\n+                 (  <span style=  {{ paddingLeft:\"80%\", paddingTop:\"15%\"}}>\r\n                  <img style={{width: 56, height: 30.73}} src={imgBonusreparation} />\r\n                  </span>)\r\n }\r\n         <div className=\"img-produit\">\r\n"
+                },
+                {
+                    "date": 1709033482408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   return (\r\n     <ProduititemStyle xl={3} lg={4} sm={6}>\r\n       <div className=\"content-item-produit\">\r\n       {  (row.bonusreparation === '1') &&\r\n-                 (  <span style=  {{ paddingLeft:\"80%\", paddingTop:\"15%\"}}>\r\n+                 (  <span style=  {{ paddingLeft:\"80%\", paddingTop:\"20%\"}}>\r\n                  <img style={{width: 56, height: 30.73}} src={imgBonusreparation} />\r\n                  </span>)\r\n }\r\n         <div className=\"img-produit\">\r\n"
+                },
+                {
+                    "date": 1709033514362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   return (\r\n     <ProduititemStyle xl={3} lg={4} sm={6}>\r\n       <div className=\"content-item-produit\">\r\n       {  (row.bonusreparation === '1') &&\r\n-                 (  <span style=  {{ paddingLeft:\"80%\", paddingTop:\"20%\"}}>\r\n+                 (  <span style=  {{ paddingRight:\"10%\", paddingTop:\"20%\"}}>\r\n                  <img style={{width: 56, height: 30.73}} src={imgBonusreparation} />\r\n                  </span>)\r\n }\r\n         <div className=\"img-produit\">\r\n"
+                },
+                {
+                    "date": 1709033566246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   return (\r\n     <ProduititemStyle xl={3} lg={4} sm={6}>\r\n       <div className=\"content-item-produit\">\r\n       {  (row.bonusreparation === '1') &&\r\n-                 (  <span style=  {{ paddingRight:\"10%\", paddingTop:\"20%\"}}>\r\n+                 (  <span style=  {{  paddingLeft:\"10%\", paddingRight:\"10%\", paddingTop:\"20%\"}}>\r\n                  <img style={{width: 56, height: 30.73}} src={imgBonusreparation} />\r\n                  </span>)\r\n }\r\n         <div className=\"img-produit\">\r\n"
+                },
+                {
+                    "date": 1709033574841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   return (\r\n     <ProduititemStyle xl={3} lg={4} sm={6}>\r\n       <div className=\"content-item-produit\">\r\n       {  (row.bonusreparation === '1') &&\r\n-                 (  <span style=  {{  paddingLeft:\"10%\", paddingRight:\"10%\", paddingTop:\"20%\"}}>\r\n+                 (  <span style=  {{  paddingLeft:\"80%\", paddingRight:\"10%\", paddingTop:\"20%\"}}>\r\n                  <img style={{width: 56, height: 30.73}} src={imgBonusreparation} />\r\n                  </span>)\r\n }\r\n         <div className=\"img-produit\">\r\n"
+                },
+                {
+                    "date": 1709033586802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   return (\r\n     <ProduititemStyle xl={3} lg={4} sm={6}>\r\n       <div className=\"content-item-produit\">\r\n       {  (row.bonusreparation === '1') &&\r\n-                 (  <span style=  {{  paddingLeft:\"80%\", paddingRight:\"10%\", paddingTop:\"20%\"}}>\r\n+                 (  <span style=  {{  paddingLeft:\"80%\", paddingRight:\"20%\", paddingTop:\"20%\"}}>\r\n                  <img style={{width: 56, height: 30.73}} src={imgBonusreparation} />\r\n                  </span>)\r\n }\r\n         <div className=\"img-produit\">\r\n"
+                },
+                {
+                    "date": 1709033604586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   return (\r\n     <ProduititemStyle xl={3} lg={4} sm={6}>\r\n       <div className=\"content-item-produit\">\r\n       {  (row.bonusreparation === '1') &&\r\n-                 (  <span style=  {{  paddingLeft:\"80%\", paddingRight:\"20%\", paddingTop:\"20%\"}}>\r\n+                 (  <span style=  {{  paddingLeft:\"80%\", paddingTop:\"20%\"}}>\r\n                  <img style={{width: 56, height: 30.73}} src={imgBonusreparation} />\r\n                  </span>)\r\n }\r\n         <div className=\"img-produit\">\r\n"
+                },
+                {
+                    "date": 1709033612038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   return (\r\n     <ProduititemStyle xl={3} lg={4} sm={6}>\r\n       <div className=\"content-item-produit\">\r\n       {  (row.bonusreparation === '1') &&\r\n-                 (  <span style=  {{  paddingLeft:\"80%\", paddingTop:\"20%\"}}>\r\n+                 (  <span style=  {{  paddingLeft:\"75%\", paddingTop:\"20%\"}}>\r\n                  <img style={{width: 56, height: 30.73}} src={imgBonusreparation} />\r\n                  </span>)\r\n }\r\n         <div className=\"img-produit\">\r\n"
+                },
+                {
+                    "date": 1709033623986,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   return (\r\n     <ProduititemStyle xl={3} lg={4} sm={6}>\r\n       <div className=\"content-item-produit\">\r\n       {  (row.bonusreparation === '1') &&\r\n-                 (  <span style=  {{  paddingLeft:\"75%\", paddingTop:\"20%\"}}>\r\n+                 (  <span style=  {{  paddingLeft:\"75%\", paddingTop:\"25%\"}}>\r\n                  <img style={{width: 56, height: 30.73}} src={imgBonusreparation} />\r\n                  </span>)\r\n }\r\n         <div className=\"img-produit\">\r\n"
+                },
+                {
+                    "date": 1709033687936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   return (\r\n     <ProduititemStyle xl={3} lg={4} sm={6}>\r\n       <div className=\"content-item-produit\">\r\n       {  (row.bonusreparation === '1') &&\r\n-                 (  <span style=  {{  paddingLeft:\"75%\", paddingTop:\"25%\"}}>\r\n+                 (  <span style=  {{  paddingLeft:\"75%\", paddingTop:\"0%\"}}>\r\n                  <img style={{width: 56, height: 30.73}} src={imgBonusreparation} />\r\n                  </span>)\r\n }\r\n         <div className=\"img-produit\">\r\n"
+                },
+                {
+                    "date": 1709033735523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,14 +18,15 @@\n \r\n   return (\r\n     <ProduititemStyle xl={3} lg={4} sm={6}>\r\n       <div className=\"content-item-produit\">\r\n-      {  (row.bonusreparation === '1') &&\r\n+\r\n+        <div className=\"img-produit\">\r\n+        {  (row.bonusreparation === '1') &&\r\n                  (  <span style=  {{  paddingLeft:\"75%\", paddingTop:\"0%\"}}>\r\n                  <img style={{width: 56, height: 30.73}} src={imgBonusreparation} />\r\n                  </span>)\r\n }\r\n-        <div className=\"img-produit\">\r\n           <Link to={getUrl()} className={row.totalBenefits ? '':'disabled-link'}>\r\n             <img\r\n               className=\"img-fluid\"\r\n               src={getPathImage(row.picture)}\r\n"
+                },
+                {
+                    "date": 1715345939203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n }\r\n           <Link to={getUrl()} className={row.totalBenefits ? '':'disabled-link'}>\r\n             <img\r\n               className=\"img-fluid\"\r\n-              src={getPathImage(row.picture)}\r\n+              src={#}\r\n               alt={row.name}\r\n             />\r\n           </Link>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1715345958128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n }\r\n           <Link to={getUrl()} className={row.totalBenefits ? '':'disabled-link'}>\r\n             <img\r\n               className=\"img-fluid\"\r\n-              src={#}\r\n+              src={\"./#\"}\r\n               alt={row.name}\r\n             />\r\n           </Link>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1715766045684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,12 +25,12 @@\n                  (  <span style=  {{  paddingLeft:\"75%\", paddingTop:\"0%\"}}>\r\n                  <img style={{width: 56, height: 30.73}} src={imgBonusreparation} />\r\n                  </span>)\r\n }\r\n-          <Link to={getUrl()} className={row.totalBenefits ? '':'disabled-link'}>\r\n+          <Link to={\"./#\"} className={row.totalBenefits ? '':'disabled-link'}>\r\n             <img\r\n               className=\"img-fluid\"\r\n-              src={\"./#\"}\r\n+              src={getPathImage(row.picture)}\r\n               alt={row.name}\r\n             />\r\n           </Link>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1715766075761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n                  (  <span style=  {{  paddingLeft:\"75%\", paddingTop:\"0%\"}}>\r\n                  <img style={{width: 56, height: 30.73}} src={imgBonusreparation} />\r\n                  </span>)\r\n }\r\n-          <Link to={\"./#\"} className={row.totalBenefits ? '':'disabled-link'}>\r\n+          <Link to={\"#\"} className={row.totalBenefits ? '':'disabled-link'}>\r\n             <img\r\n               className=\"img-fluid\"\r\n               src={getPathImage(row.picture)}\r\n               alt={row.name}\r\n"
+                },
+                {
+                    "date": 1715771341083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,11 +17,11 @@\n   };\r\n \r\n   return (\r\n     <ProduititemStyle xl={3} lg={4} sm={6}>\r\n-      <div className=\"content-item-produit\">\r\n+      <Col className=\"content-item-produit\">\r\n \r\n-        <div className=\"img-produit\">\r\n+        <Col className=\"img-produit\">\r\n         {  (row.bonusreparation === '1') &&\r\n                  (  <span style=  {{  paddingLeft:\"75%\", paddingTop:\"0%\"}}>\r\n                  <img style={{width: 56, height: 30.73}} src={imgBonusreparation} />\r\n                  </span>)\r\n@@ -32,9 +32,9 @@\n               src={getPathImage(row.picture)}\r\n               alt={row.name}\r\n             />\r\n           </Link>\r\n-        </div>\r\n+        </Col>\r\n         <div className=\"detail-produit\">\r\n           <p className=\"name-produit\">\r\n             <Link to={getUrl()} className={row.totalBenefits ? '':'disabled-link'}>{row.name}</Link>\r\n           </p>\r\n"
+                },
+                {
+                    "date": 1715771365571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,8 +94,9 @@\n               <ButtonDef textButton={`0 réparateur(s)`} disabled={true} />\r\n             )}\r\n           </Link>\r\n         </div>\r\n-      </div>\r\n+      \r\n+      </Col>\r\n     </ProduititemStyle>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1715771423638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n import { parentCategories } from \"../../helper/functions\";\r\n import * as vars from \"../../vars\";\r\n import ButtonDef from \"../ui-elements/buttonDef\";\r\n import imgBonusreparation from \"../../assets/images/icons/bonusreparation.png\";\r\n+import { Col, Container, Row } from \"react-bootstrap\";\r\n \r\n export default function ProduitItem({ row, slugIdUniverse, ...props }) {\r\n   const [showMore, setShowMore] = useState(false);\r\n   const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n"
+                },
+                {
+                    "date": 1715771456221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n               alt={row.name}\r\n             />\r\n           </Link>\r\n         </Col>\r\n-        <div className=\"detail-produit\">\r\n+        <Col className=\"detail-produit\">\r\n           <p className=\"name-produit\">\r\n             <Link to={getUrl()} className={row.totalBenefits ? '':'disabled-link'}>{row.name}</Link>\r\n           </p>\r\n           <div\r\n@@ -94,9 +94,9 @@\n             ) : (\r\n               <ButtonDef textButton={`0 réparateur(s)`} disabled={true} />\r\n             )}\r\n           </Link>\r\n-        </div>\r\n+        </Col>\r\n       \r\n       </Col>\r\n     </ProduititemStyle>\r\n   );\r\n"
+                },
+                {
+                    "date": 1715771480830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n         <Col className=\"detail-produit\">\r\n           <p className=\"name-produit\">\r\n             <Link to={getUrl()} className={row.totalBenefits ? '':'disabled-link'}>{row.name}</Link>\r\n           </p>\r\n-          <div\r\n+          <Col\r\n             className=\"desc-produit\"\r\n             style={\r\n               row.description.length > 90\r\n                 ? {\r\n"
+                },
+                {
+                    "date": 1715771493182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,9 @@\n               >\r\n                 {showMore ? \"moins\" : \"plus\"}\r\n               </span>\r\n             )}\r\n-          </div>\r\n+          </Col>\r\n           <div className=\"cats-prestation\">\r\n             <span>Catégories :</span>\r\n             <div className=\"item-cats-prestation\">\r\n               {row.categories\r\n"
+                },
+                {
+                    "date": 1715771621336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,20 +72,20 @@\n                 {showMore ? \"moins\" : \"plus\"}\r\n               </span>\r\n             )}\r\n           </Col>\r\n-          <div className=\"cats-prestation\">\r\n+          <Col className=\"cats-prestation\">\r\n             <span>Catégories :</span>\r\n-            <div className=\"item-cats-prestation\">\r\n+            <Col className=\"item-cats-prestation\">\r\n               {row.categories\r\n                 ? parentCategories(row.categories).map((cat) => (\r\n                     <p key={cat.id}>\r\n                       <span>{cat.name}</span>\r\n                     </p>\r\n                   ))\r\n                 : null}\r\n-            </div>\r\n-          </div>\r\n+            </Colv>\r\n+          </Col>\r\n \r\n           <Link to={getUrl()} className=\"url-btn-produit\">\r\n             {row.totalBenefits ? (\r\n               <ButtonDef\r\n"
+                },
+                {
+                    "date": 1715771710981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n       : \"#\";\r\n   };\r\n \r\n   return (\r\n-    <ProduititemStyle xl={3} lg={4} sm={6}>\r\n+    <ProduititemStyle xl={4} lg={4} sm={6}>\r\n       <Col className=\"content-item-produit\">\r\n \r\n         <Col className=\"img-produit\">\r\n         {  (row.bonusreparation === '1') &&\r\n@@ -82,9 +82,9 @@\n                       <span>{cat.name}</span>\r\n                     </p>\r\n                   ))\r\n                 : null}\r\n-            </Colv>\r\n+            </Col>\r\n           </Col>\r\n \r\n           <Link to={getUrl()} className=\"url-btn-produit\">\r\n             {row.totalBenefits ? (\r\n"
+                },
+                {
+                    "date": 1715771797870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n       : \"#\";\r\n   };\r\n \r\n   return (\r\n-    <ProduititemStyle xl={4} lg={4} sm={6}>\r\n+    <ProduititemStyle xl={3} lg={4} sm={6}>\r\n       <Col className=\"content-item-produit\">\r\n \r\n         <Col className=\"img-produit\">\r\n         {  (row.bonusreparation === '1') &&\r\n"
+                },
+                {
+                    "date": 1715771916929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n       : \"#\";\r\n   };\r\n \r\n   return (\r\n-    <ProduititemStyle xl={3} lg={4} sm={6}>\r\n+    <ProduititemStyle xs={3} lg={4} sm={6}>\r\n       <Col className=\"content-item-produit\">\r\n \r\n         <Col className=\"img-produit\">\r\n         {  (row.bonusreparation === '1') &&\r\n"
+                },
+                {
+                    "date": 1715771960086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n       : \"#\";\r\n   };\r\n \r\n   return (\r\n-    <ProduititemStyle xs={3} lg={4} sm={6}>\r\n+    <ProduititemStyle xs={4} lg={4} sm={6}>\r\n       <Col className=\"content-item-produit\">\r\n \r\n         <Col className=\"img-produit\">\r\n         {  (row.bonusreparation === '1') &&\r\n"
+                },
+                {
+                    "date": 1715771979580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n       : \"#\";\r\n   };\r\n \r\n   return (\r\n-    <ProduititemStyle xs={4} lg={4} sm={6}>\r\n+    <ProduititemStyle xs={4} lg={5} sm={6}>\r\n       <Col className=\"content-item-produit\">\r\n \r\n         <Col className=\"img-produit\">\r\n         {  (row.bonusreparation === '1') &&\r\n"
+                },
+                {
+                    "date": 1715772205481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   };\r\n \r\n   return (\r\n     <ProduititemStyle xs={4} lg={5} sm={6}>\r\n-      <Col className=\"content-item-produit\">\r\n+      <Col className=\"content-item-produit\" style={{width:900}}>\r\n \r\n         <Col className=\"img-produit\">\r\n         {  (row.bonusreparation === '1') &&\r\n                  (  <span style=  {{  paddingLeft:\"75%\", paddingTop:\"0%\"}}>\r\n"
+                },
+                {
+                    "date": 1715772224616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   };\r\n \r\n   return (\r\n     <ProduititemStyle xs={4} lg={5} sm={6}>\r\n-      <Col className=\"content-item-produit\" style={{width:900}}>\r\n+      <Col className=\"content-item-produit\" style={{width:1000}}>\r\n \r\n         <Col className=\"img-produit\">\r\n         {  (row.bonusreparation === '1') &&\r\n                  (  <span style=  {{  paddingLeft:\"75%\", paddingTop:\"0%\"}}>\r\n"
+                },
+                {
+                    "date": 1715772246220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   };\r\n \r\n   return (\r\n     <ProduititemStyle xs={4} lg={5} sm={6}>\r\n-      <Col className=\"content-item-produit\" style={{width:1000}}>\r\n+      <Col className=\"content-item-produit\">\r\n \r\n         <Col className=\"img-produit\">\r\n         {  (row.bonusreparation === '1') &&\r\n                  (  <span style=  {{  paddingLeft:\"75%\", paddingTop:\"0%\"}}>\r\n"
+                },
+                {
+                    "date": 1715772581075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n       : \"#\";\r\n   };\r\n \r\n   return (\r\n-    <ProduititemStyle xs={4} lg={5} sm={6}>\r\n+    <ProduititemStyle xs={3} lg={5} sm={6}>\r\n       <Col className=\"content-item-produit\">\r\n \r\n         <Col className=\"img-produit\">\r\n         {  (row.bonusreparation === '1') &&\r\n"
+                },
+                {
+                    "date": 1715772632530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n       : \"#\";\r\n   };\r\n \r\n   return (\r\n-    <ProduititemStyle xs={3} lg={5} sm={6}>\r\n+    <ProduititemStyle xl={3} lg={4} sm={6}>\r\n       <Col className=\"content-item-produit\">\r\n \r\n         <Col className=\"img-produit\">\r\n         {  (row.bonusreparation === '1') &&\r\n"
+                }
+            ],
+            "date": 1709031118648,
+            "name": "Commit-0",
+            "content": "import React, { useState } from \"react\";\r\nimport { Link } from \"react-router-dom\";\r\nimport noImage from \"../../assets/images/noImage.png\";\r\nimport { ProduititemStyle } from \"../../assets/styles/frontGlobalStyle\";\r\nimport { parentCategories } from \"../../helper/functions\";\r\nimport * as vars from \"../../vars\";\r\nimport ButtonDef from \"../ui-elements/buttonDef\";\r\n\r\nexport default function ProduitItem({ row, slugIdUniverse, ...props }) {\r\n  const [showMore, setShowMore] = useState(false);\r\n  const getPathImage = (image) => (image ? vars.pathImage + image : noImage);\r\n  const getUrl = () => {\r\n    return row.totalBenefits\r\n      ? `/univers/${slugIdUniverse}/${row.slug}-${row.id}`\r\n      : \"#\";\r\n  };\r\n\r\n  return (\r\n    <ProduititemStyle xl={3} lg={4} sm={6}>\r\n      <div className=\"content-item-produit\">\r\n        <div className=\"img-produit\">\r\n          <Link to={getUrl()} className={row.totalBenefits ? '':'disabled-link'}>\r\n            <img\r\n              className=\"img-fluid\"\r\n              src={getPathImage(row.picture)}\r\n              alt={row.name}\r\n            />\r\n          </Link>\r\n        </div>\r\n        <div className=\"detail-produit\">\r\n          <p className=\"name-produit\">\r\n            <Link to={getUrl()} className={row.totalBenefits ? '':'disabled-link'}>{row.name}</Link>\r\n          </p>\r\n          <div\r\n            className=\"desc-produit\"\r\n            style={\r\n              row.description.length > 90\r\n                ? {\r\n                    maxHeight: showMore ? \"initial\" : \"63px\",\r\n                    overflow: \"hidden\",\r\n                    position: \"relative\",\r\n                  }\r\n                : {}\r\n            }\r\n          >\r\n            {row.description}\r\n            {row.bonusReparation}\r\n            {row.description.length > 90 && (\r\n              <span\r\n                style={{\r\n                  color: \"#7A7C7F\",\r\n                  position: \"absolute\",\r\n                  right: \"2px\",\r\n                  background: \"#fff\",\r\n                  bottom: \"0px\",\r\n                  padding: \"2px 2px\",\r\n                  paddingLeft: \"6px\",\r\n                  textDecoration: \"underline\",\r\n                  cursor: \"pointer\",\r\n                }}\r\n                onClick={() => setShowMore(!showMore)}\r\n              >\r\n                {showMore ? \"moins\" : \"plus\"}\r\n              </span>\r\n            )}\r\n          </div>\r\n          <div className=\"cats-prestation\">\r\n            <span>Catégories :</span>\r\n            <div className=\"item-cats-prestation\">\r\n              {row.categories\r\n                ? parentCategories(row.categories).map((cat) => (\r\n                    <p key={cat.id}>\r\n                      <span>{cat.name}</span>\r\n                    </p>\r\n                  ))\r\n                : null}\r\n            </div>\r\n          </div>\r\n\r\n          <Link to={getUrl()} className=\"url-btn-produit\">\r\n            {row.totalBenefits ? (\r\n              <ButtonDef\r\n                textButton={`Voir les ${row.totalBenefits} réparateur(s)`}\r\n              />\r\n            ) : (\r\n              <ButtonDef textButton={`0 réparateur(s)`} disabled={true} />\r\n            )}\r\n          </Link>\r\n        </div>\r\n      </div>\r\n    </ProduititemStyle>\r\n  );\r\n}\r\n"
+        }
+    ]
+}

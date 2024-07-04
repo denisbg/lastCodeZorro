@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/components/front/prestationFicheMap.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1714993985141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1714994020803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n           style={style}\r\n         >\r\n           <div>{props.text}\r\n           {props.latitude}\r\n+          toto\r\n           \r\n           \r\n           </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1714994090601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n           }`}\r\n           style={style}\r\n         >\r\n           <div>{props.text}\r\n-          {props.latitude}\r\n+          {props.postalCode}\r\n           toto\r\n           \r\n           \r\n           </div>\r\n"
+                },
+                {
+                    "date": 1714994203205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n           style={style}\r\n         >\r\n           <div>{props.text}\r\n           {props.postalCode}\r\n+          {props.city}\r\n           toto\r\n           \r\n           \r\n           </div>\r\n"
+                },
+                {
+                    "date": 1714994279695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         >\r\n           <div>{props.text}\r\n           {props.postalCode}\r\n           {props.city}\r\n-          toto\r\n+      \r\n           \r\n           \r\n           </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1714994414859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,12 @@\n           }`}\r\n           style={style}\r\n         >\r\n           <div>{props.text}\r\n+          {props.enterprise}\r\n           {props.postalCode}\r\n           {props.city}\r\n-      \r\n+           \r\n           \r\n           \r\n           </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1714997972218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,12 +13,8 @@\n           }`}\r\n           style={style}\r\n         >\r\n           <div>{props.text}\r\n-          {props.enterprise}\r\n-          {props.postalCode}\r\n-          {props.city}\r\n-           \r\n           \r\n           \r\n           </div>\r\n         </div>\r\n"
+                }
+            ],
+            "date": 1714993985141,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\r\nimport { greatPlaceStyleHover, greatPlaceStyle } from \"./markerStyle\";\r\nexport default function PrestationFicheMap({ ...props }) {\r\n  const style = props.hover ? greatPlaceStyleHover : greatPlaceStyle;\r\n  return (\r\n    <>\r\n      {props.text ? (\r\n        <div\r\n          className={`item-map-prestation ${\r\n            parseInt(props.activeBenefit.id) === parseInt(props.id)\r\n              ? \"active\"\r\n              : \"\"\r\n          }`}\r\n          style={style}\r\n        >\r\n          <div>{props.text}\r\n          {props.latitude}\r\n          \r\n          \r\n          </div>\r\n        </div>\r\n      ) : null}\r\n    </>\r\n  );\r\n}\r\n"
+        }
+    ]
+}

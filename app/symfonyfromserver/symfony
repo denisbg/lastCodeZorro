@@ -1,0 +1,13 @@
+DATABASE_URL=mysql://fingzusr:sQTcDyHcPmygV4g3_r7mkPPKaPPA@sql1.preprod.fingz.fr:3306/fingz_preprod?serverVersion=mariadb-10.3.32
+ELASTICSEARCH_URL=es1.preprod.fingz.fr:9200/
+CORS_ALLOW_ORIGIN=*
+MAILER_DSN=smtp://473a797b5fa160f5bd4010f8986dcf1b:304a011a83b470a237232d93859f6156@in-v3.mailjet.com:587
+MAILER_NAME=Fingz
+MAILER_FROM=contact.site@fingz.fr
+MAILER_TO=contact.site@fingz.fr
+MAILER_DOMAIN=https://preprod.fingz.fr/
+MAILER_STRIP=stripe@fingz.fr
+MERCURE_PUBLISH_URL=http://127.0.0.1:3967/.well-known/mercure
+MERCURE_PUBLIC_URL=https://preprod.fingz.fr
+MERCURE_JWT_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZXJjdXJlIjp7InB1Ymxpc2giOlsiKiJdLCJzdWJzY3JpYmUiOlsiKiJdfX0.ZNxOYvLKZp_eyPFzO2_6d5N4mfLOlLNaBX9FO2PvWPw
+WKHTMLTOPDF_PATH=/usr/local/bin/wkhtmltopdf

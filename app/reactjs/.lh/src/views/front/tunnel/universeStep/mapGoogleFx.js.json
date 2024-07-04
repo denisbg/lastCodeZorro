@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/views/front/tunnel/universeStep/mapGoogleFx.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1706636542867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1706636664868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React, { useState, useEffect, useRef } from \"react\";\r\n import Select from \"../../../../components/ui-elements/select\"\r\n import { Col, Row } from \"react-bootstrap\";\r\n-\r\n+import GoogleMap from \"google-map-react\";\r\n import { K_SIZE } from \"./markersRegroupeStyles\";\r\n import * as vars from \"../../../../vars\";\r\n import { useMediaQuery } from \"react-responsive\";\r\n import Slider from \"react-slick\";\r\n"
+                }
+            ],
+            "date": 1706636542867,
+            "name": "Commit-0",
+            "content": "import React, { useState, useEffect, useRef } from \"react\";\r\nimport Select from \"../../../../components/ui-elements/select\"\r\nimport { Col, Row } from \"react-bootstrap\";\r\n\r\nimport { K_SIZE } from \"./markersRegroupeStyles\";\r\nimport * as vars from \"../../../../vars\";\r\nimport { useMediaQuery } from \"react-responsive\";\r\nimport Slider from \"react-slick\";\r\n\r\n\r\nimport { ListFichePrestation } from \"../../../../assets/styles/frontGlobalStyle\";\r\n//import PrestationFiche from \"./prestationFiche\";\r\n//import PrestationFicheMap from \"./prestationFicheMap\";\r\nexport default function mapGoogleFx() {\r\n    \r\n}\r\n"
+        }
+    ]
+}

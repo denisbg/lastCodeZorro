@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/Entity/test.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1707238847207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1707238863765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,6 @@\n \r\n <?php\r\n-\r\n-declare(strict_types=1);\r\n-\r\n namespace App\\Entity;\r\n use App\\Entity\\User;\r\n $enterprise =  $user->getenterprise();\r\n             $postalCode =  $user->getPostalCode();\r\n"
+                },
+                {
+                    "date": 1707238939464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,13 @@\n+<?php\r\n \r\n-<?php\r\n-namespace App\\Entity;\r\n+\r\n+namespace App\\Controller\\Api;\r\n+\r\n use App\\Entity\\User;\r\n+use Symfony\\Component\\DependencyInjection\\ParameterBag\\ContainerBagInterface;\r\n+use Symfony\\Component\\HttpClient\\NativeHttpClient;\r\n+use App\\Entity\\User;\r\n $enterprise =  $user->getenterprise();\r\n             $postalCode =  $user->getPostalCode();\r\n             $city       =  $user->getCity();\r\n             $lastname   =  $user->getLastName();\r\n"
+                }
+            ],
+            "date": 1707238847207,
+            "name": "Commit-0",
+            "content": "\r\n<?php\r\n\r\ndeclare(strict_types=1);\r\n\r\nnamespace App\\Entity;\r\nuse App\\Entity\\User;\r\n$enterprise =  $user->getenterprise();\r\n            $postalCode =  $user->getPostalCode();\r\n            $city       =  $user->getCity();\r\n            $lastname   =  $user->getLastName();\r\n            $latitude   =  $user->getLatitude();\r\n            $longitude  =  $user->getLongitude();\r\n            \r\n             /******************/\r\n\r\n$filename = '/tmp/people.txt';\r\n// { lat: 48.9940649, lng: 2.5229373 }\r\n//$somecontent = \"Notice:\".$user->getenterprise().\"ETS \".$user->getLastName().\" :GetUsersRepairManAction:Latitude \".$user->getLatitude().\":\".\"\\n\";\r\n$somecontent = \"{ \".\r\n                \"entreprise:\".$enterprise.\r\n                \", postalcode:\".$postalCode.\r\n                \", city:\".$city.\r\n                \", lastname:\".$lastname.\r\n                \", latitude:\".$latitude.\r\n                \", longitude:\".$longitude.\r\n                \"},\";"
+        }
+    ]
+}

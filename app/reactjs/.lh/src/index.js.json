@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1706970964547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1706970979867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,12 +9,9 @@\n import AuthReducer from \"./store/reducers/auth\";\r\n import UniverseReducer from \"./store/reducers/universe\";\r\n import ThreadReducer from \"./store/reducers/thread\";\r\n import \"moment/locale/fr\";\r\n-<script\r\n-src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly\"\r\n-defer\r\n-></script>\r\n+\r\n const REACT_VERSION = React.version;\r\n console.log(\"[React Version] \", REACT_VERSION);\r\n \r\n const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;\r\n"
+                }
+            ],
+            "date": 1706970964547,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\r\nimport ReactDOM from \"react-dom\";\r\nimport { createStore, applyMiddleware, compose, combineReducers } from \"redux\";\r\nimport { Provider } from \"react-redux\";\r\nimport thunk from \"redux-thunk\";\r\nimport \"react-notifications/lib/notifications.css\";\r\nimport logger from \"./store/middlewares/logger\";\r\nimport App from \"./app\";\r\nimport AuthReducer from \"./store/reducers/auth\";\r\nimport UniverseReducer from \"./store/reducers/universe\";\r\nimport ThreadReducer from \"./store/reducers/thread\";\r\nimport \"moment/locale/fr\";\r\n<script\r\nsrc=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly\"\r\ndefer\r\n></script>\r\nconst REACT_VERSION = React.version;\r\nconsole.log(\"[React Version] \", REACT_VERSION);\r\n\r\nconst composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;\r\nconst rootReducer = combineReducers({\r\n  auth: AuthReducer,\r\n  universe: UniverseReducer,\r\n  thread: ThreadReducer,\r\n});\r\nconst store = createStore(\r\n  rootReducer,\r\n  composeEnhancers(applyMiddleware(logger, thunk))\r\n);\r\n\r\nReactDOM.render(\r\n  <Provider store={store}>\r\n    <App />\r\n  </Provider>,\r\n  document.getElementById(\"root\")\r\n);\r\n"
+        }
+    ]
+}

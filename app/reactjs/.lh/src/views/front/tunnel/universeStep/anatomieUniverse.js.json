@@ -1,0 +1,150 @@
+{
+    "sourceFile": "src/views/front/tunnel/universeStep/anatomieUniverse.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 33,
+            "patches": [
+                {
+                    "date": 1707382265530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1707382389151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-export default function AnatomieUniverse() {\r\n+export default function AnatomieUniverse( anatomieCord) {\r\n     return (\r\n         <Container>\r\n             <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>Anatomie d’une chaussure</div>\r\n             <div class=\"container\">\r\n@@ -23,5 +23,7 @@\n                         </table>\r\n                     </div>\r\n                 </div>\r\n             </div>\r\n-        </Container>\n\\ No newline at end of file\n+        </Container>\r\n+    )\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1707382417116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-export default function AnatomieUniverse( anatomieCord) {\r\n+export default function AnatomieUniverse( anatomieCord ) {\r\n     return (\r\n         <Container>\r\n             <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>Anatomie d’une chaussure</div>\r\n             <div class=\"container\">\r\n"
+                },
+                {
+                    "date": 1707382463966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-export default function AnatomieUniverse( anatomieCord ) {\r\n+export default function AnatomieUniverse(anatomieCord) {\r\n     return (\r\n         <Container>\r\n             <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>Anatomie d’une chaussure</div>\r\n             <div class=\"container\">\r\n@@ -24,6 +24,6 @@\n                     </div>\r\n                 </div>\r\n             </div>\r\n         </Container>\r\n-    )\r\n+    );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1707382489155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n                                     <td>\r\n                                     </td>\r\n                                     <td>\r\n                                         <div style={{ width: 1000, textAlign: 'center', color: '#5D5D5D', fontSize: 15, fontFamily: 'Helvetica Neue LT Std', fontWeight: '500', lineHeight: 1, wordWrap: 'break-word' }}>\r\n-                                            <img width='480' className=\"z3imgbottom\" src={anatomieCord} /></div>\r\n+                                            <img width='480' className=\"z3imgbottom\" src={{anatomieCord}} /></div>\r\n                                     </td>\r\n                                     <td>\r\n \r\n                                     </td>\r\n"
+                },
+                {
+                    "date": 1707382656667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-export default function AnatomieUniverse(anatomieCord) {\r\n+export default function AnatomieUniverse( anatomieCord ) {\r\n     return (\r\n         <Container>\r\n             <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>Anatomie d’une chaussure</div>\r\n             <div class=\"container\">\r\n@@ -12,9 +12,9 @@\n                                     <td>\r\n                                     </td>\r\n                                     <td>\r\n                                         <div style={{ width: 1000, textAlign: 'center', color: '#5D5D5D', fontSize: 15, fontFamily: 'Helvetica Neue LT Std', fontWeight: '500', lineHeight: 1, wordWrap: 'break-word' }}>\r\n-                                            <img width='480' className=\"z3imgbottom\" src={{anatomieCord}} /></div>\r\n+                                            <img width='480' className=\"z3imgbottom\" src={anatomieCord} /></div>\r\n                                     </td>\r\n                                     <td>\r\n \r\n                                     </td>\r\n@@ -25,5 +25,5 @@\n                 </div>\r\n             </div>\r\n         </Container>\r\n     );\r\n-}\n\\ No newline at end of file\n+}\r\n"
+                },
+                {
+                    "date": 1707382682031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import { Col, Container, Row } from \"react-bootstrap\";\r\n export default function AnatomieUniverse( anatomieCord ) {\r\n     return (\r\n         <Container>\r\n             <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>Anatomie d’une chaussure</div>\r\n"
+                },
+                {
+                    "date": 1707382914522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,30 +1,14 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n export default function AnatomieUniverse( anatomieCord ) {\r\n     return (\r\n         <Container>\r\n-            <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>Anatomie d’une chaussure</div>\r\n-            <div class=\"container\">\r\n-                <div class=\"row\">\r\n-                    <div class=\"col-3\">\r\n-                        <table class=\"table table-image\">\r\n-\r\n-                            <tbody>\r\n-                                <tr>\r\n-                                    <td>\r\n-                                    </td>\r\n-                                    <td>\r\n-                                        <div style={{ width: 1000, textAlign: 'center', color: '#5D5D5D', fontSize: 15, fontFamily: 'Helvetica Neue LT Std', fontWeight: '500', lineHeight: 1, wordWrap: 'break-word' }}>\r\n-                                            <img width='480' className=\"z3imgbottom\" src={anatomieCord} /></div>\r\n-                                    </td>\r\n-                                    <td>\r\n-\r\n-                                    </td>\r\n-                                </tr>\r\n-                            </tbody>\r\n-                        </table>\r\n-                    </div>\r\n-                </div>\r\n-            </div>\r\n-        </Container>\r\n-    );\r\n+        <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>Anatomie d’une chaussure</div>\r\n+        <Row>\r\n+            <Col>\r\n+             \r\n+            <img width='100%' className=\"z3imgbottom\" src={anatomieCord} />\r\n+            </Col>\r\n+        </Row>\r\n+       </Container>  )\r\n+     \r\n }\r\n"
+                },
+                {
+                    "date": 1707383224525,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import { Col, Container, Row } from \"react-bootstrap\";\r\n+import anatomieCord from '../../../assets/images/zanatCord.png';\r\n+export default function AnatomieUniverse( anatomieCord ) {\r\n+    return (\r\n+        <Container>\r\n+        <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>Anatomie d’une chaussure</div>\r\n+        <Row>\r\n+            <Col>\r\n+             \r\n+            <img width='100%' className=\"z3imgbottom\" src={anatomieCord} />\r\n+            </Col>\r\n+        </Row>\r\n+       </Container>  )\r\n+     \r\n+}\r\n"
+                },
+                {
+                    "date": 1707383251008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,29 +1,15 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n import anatomieCord from '../../../assets/images/zanatCord.png';\r\n-export default function AnatomieUniverse( anatomieCord ) {\r\n+export default function AnatomieUniverse( ) {\r\n     return (\r\n         <Container>\r\n         <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>Anatomie d’une chaussure</div>\r\n         <Row>\r\n             <Col>\r\n              \r\n-            <img width='100%' className=\"z3imgbottom\" src={anatomieCord} />\r\n+            <img width='100%' className=\"z3imgbottom\" src={{anatomieCord}} />\r\n             </Col>\r\n         </Row>\r\n        </Container>  )\r\n      \r\n }\r\n-import { Col, Container, Row } from \"react-bootstrap\";\r\n-export default function AnatomieUniverse( anatomieCord ) {\r\n-    return (\r\n-        <Container>\r\n-        <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>Anatomie d’une chaussure</div>\r\n-        <Row>\r\n-            <Col>\r\n-             \r\n-            <img width='100%' className=\"z3imgbottom\" src={anatomieCord} />\r\n-            </Col>\r\n-        </Row>\r\n-       </Container>  )\r\n-     \r\n-}\r\n"
+                },
+                {
+                    "date": 1707383259068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n-import anatomieCord from '../../../assets/images/zanatCord.png';\r\n+import anatomieCord from '../../assets/images/zanatCord.png';\r\n export default function AnatomieUniverse( ) {\r\n     return (\r\n         <Container>\r\n         <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>Anatomie d’une chaussure</div>\r\n"
+                },
+                {
+                    "date": 1707383294243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n-import anatomieCord from '../../assets/images/zanatCord.png';\r\n+import anatomieCord from '../../../../assets/images/zanatCord.png';\r\n export default function AnatomieUniverse( ) {\r\n     return (\r\n         <Container>\r\n         <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>Anatomie d’une chaussure</div>\r\n"
+                },
+                {
+                    "date": 1707383351548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>Anatomie d’une chaussure</div>\r\n         <Row>\r\n             <Col>\r\n              \r\n-            <img width='100%' className=\"z3imgbottom\" src={{anatomieCord}} />\r\n+            <img width='100%' className=\"z3imgbottom\" src={anatomieCord} />\r\n             </Col>\r\n         </Row>\r\n        </Container>  )\r\n      \r\n"
+                },
+                {
+                    "date": 1707383456865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,12 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n import anatomieCord from '../../../../assets/images/zanatCord.png';\r\n export default function AnatomieUniverse( ) {\r\n+    let descriptif ='Anatomie d’une chaussure';\r\n     return (\r\n         <Container>\r\n-        <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>Anatomie d’une chaussure</div>\r\n+        <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std',\r\n+        fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>{descriptif}</div>\r\n         <Row>\r\n             <Col>\r\n              \r\n             <img width='100%' className=\"z3imgbottom\" src={anatomieCord} />\r\n"
+                },
+                {
+                    "date": 1707383494599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n import anatomieCord from '../../../../assets/images/zanatCord.png';\r\n-export default function AnatomieUniverse( ) {\r\n-    let descriptif ='Anatomie d’une chaussure';\r\n+export default function AnatomieUniverse( descriptif ) {\r\n+   \r\n     return (\r\n         <Container>\r\n         <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std',\r\n         fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>{descriptif}</div>\r\n"
+                },
+                {
+                    "date": 1707383734386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n import anatomieCord from '../../../../assets/images/zanatCord.png';\r\n-export default function AnatomieUniverse( descriptif ) {\r\n+export default function AnatomieUniverse( descriptif  ) {\r\n    \r\n     return (\r\n         <Container>\r\n         <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std',\r\n"
+                },
+                {
+                    "date": 1707384022208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n    \r\n     return (\r\n         <Container>\r\n         <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std',\r\n-        fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>{descriptif}</div>\r\n+        fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>{{descriptif}}</div>\r\n         <Row>\r\n             <Col>\r\n              \r\n             <img width='100%' className=\"z3imgbottom\" src={anatomieCord} />\r\n"
+                },
+                {
+                    "date": 1707384051789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n import anatomieCord from '../../../../assets/images/zanatCord.png';\r\n-export default function AnatomieUniverse( descriptif  ) {\r\n+export default function AnatomieUniverse( ) {\r\n    \r\n     return (\r\n         <Container>\r\n         <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std',\r\n"
+                },
+                {
+                    "date": 1707384096758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n import anatomieCord from '../../../../assets/images/zanatCord.png';\r\n-export default function AnatomieUniverse( ) {\r\n+export default function AnatomieUniverse( descriptif  ) {\r\n+    const d = descriptif;\r\n    \r\n     return (\r\n         <Container>\r\n         <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std',\r\n-        fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>{{descriptif}}</div>\r\n+        fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>{{d}}</div>\r\n         <Row>\r\n             <Col>\r\n              \r\n             <img width='100%' className=\"z3imgbottom\" src={anatomieCord} />\r\n"
+                },
+                {
+                    "date": 1707384115648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n import anatomieCord from '../../../../assets/images/zanatCord.png';\r\n export default function AnatomieUniverse( descriptif  ) {\r\n-    const d = descriptif;\r\n+    let d = descriptif;\r\n    \r\n     return (\r\n         <Container>\r\n         <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std',\r\n"
+                },
+                {
+                    "date": 1707384138520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n    \r\n     return (\r\n         <Container>\r\n         <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std',\r\n-        fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>{{d}}</div>\r\n+        fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>{d}</div>\r\n         <Row>\r\n             <Col>\r\n              \r\n             <img width='100%' className=\"z3imgbottom\" src={anatomieCord} />\r\n"
+                },
+                {
+                    "date": 1707384235341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n import anatomieCord from '../../../../assets/images/zanatCord.png';\r\n-export default function AnatomieUniverse( descriptif  ) {\r\n+export default function AnatomieUniverse(   ) {\r\n     let d = descriptif;\r\n    \r\n     return (\r\n         <Container>\r\n"
+                },
+                {
+                    "date": 1707384248126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n import anatomieCord from '../../../../assets/images/zanatCord.png';\r\n export default function AnatomieUniverse(   ) {\r\n-    let d = descriptif;\r\n+    let d = \"Anatomie\";\r\n    \r\n     return (\r\n         <Container>\r\n         <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std',\r\n"
+                },
+                {
+                    "date": 1707384912037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n import anatomieCord from '../../../../assets/images/zanatCord.png';\r\n-export default function AnatomieUniverse(   ) {\r\n-    let d = \"Anatomie\";\r\n+export default function AnatomieUniverse(  ...props ) {\r\n+    const {title, image} = props;\r\n    \r\n     return (\r\n         <Container>\r\n         <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std',\r\n"
+                },
+                {
+                    "date": 1707384956456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,13 +5,13 @@\n    \r\n     return (\r\n         <Container>\r\n         <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std',\r\n-        fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>{d}</div>\r\n+        fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>{title}</div>\r\n         <Row>\r\n             <Col>\r\n              \r\n-            <img width='100%' className=\"z3imgbottom\" src={anatomieCord} />\r\n+            <img width='100%' className=\"z3imgbottom\" src={image} />\r\n             </Col>\r\n         </Row>\r\n        </Container>  )\r\n      \r\n"
+                },
+                {
+                    "date": 1707385058647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n-import anatomieCord from '../../../../assets/images/zanatCord.png';\r\n+\r\n export default function AnatomieUniverse(  ...props ) {\r\n     const {title, image} = props;\r\n    \r\n     return (\r\n"
+                },
+                {
+                    "date": 1707385226902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>{title}</div>\r\n         <Row>\r\n             <Col>\r\n              \r\n-            <img width='100%' className=\"z3imgbottom\" src={image} />\r\n+          \r\n             </Col>\r\n         </Row>\r\n        </Container>  )\r\n      \r\n"
+                },
+                {
+                    "date": 1707385281287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n \r\n export default function AnatomieUniverse(  ...props ) {\r\n-    const {title, image} = props;\r\n    \r\n+   \r\n     return (\r\n         <Container>\r\n         <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std',\r\n-        fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>{title}</div>\r\n+        fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>title</div>\r\n         <Row>\r\n             <Col>\r\n              \r\n           \r\n"
+                },
+                {
+                    "date": 1707385293370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n \r\n export default function AnatomieUniverse(  ...props ) {\r\n+    const {title, image} = props;\r\n    \r\n-   \r\n     return (\r\n         <Container>\r\n         <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std',\r\n-        fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>title</div>\r\n+        fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>{title}</div>\r\n         <Row>\r\n             <Col>\r\n              \r\n           \r\n"
+                },
+                {
+                    "date": 1707385364411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n \r\n-export default function AnatomieUniverse(  ...props ) {\r\n-    const {title, image} = props;\r\n-   \r\n+export default function AnatomieUniverse( title ) {\r\n+       \r\n     return (\r\n         <Container>\r\n         <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std',\r\n         fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>{title}</div>\r\n"
+                },
+                {
+                    "date": 1707385470994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n \r\n-export default function AnatomieUniverse( title ) {\r\n-       \r\n+export default function AnatomieUniverse( props ) {\r\n+       const {title, image} = props\r\n     return (\r\n         <Container>\r\n         <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std',\r\n         fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>{title}</div>\r\n"
+                },
+                {
+                    "date": 1707385649410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,17 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n-\r\n-export default function AnatomieUniverse( props ) {\r\n-       const {title, image} = props\r\n+import anatomieCord from '../../../../assets/images/zanatCord.png';\r\n+export default function AnatomieUniverse(  props ) {\r\n+    const {title, image} = props;\r\n+   \r\n     return (\r\n         <Container>\r\n         <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std',\r\n         fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>{title}</div>\r\n         <Row>\r\n             <Col>\r\n              \r\n-          \r\n+            <img width='100%' className=\"z3imgbottom\" src={image} />\r\n             </Col>\r\n         </Row>\r\n        </Container>  )\r\n      \r\n"
+                },
+                {
+                    "date": 1707385743456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n-import anatomieCord from '../../../../assets/images/zanatCord.png';\r\n-export default function AnatomieUniverse(  props ) {\r\n+export default function AnatomieUniverse( props ) {\r\n     const {title, image} = props;\r\n    \r\n     return (\r\n         <Container>\r\n"
+                },
+                {
+                    "date": 1707387880129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,11 @@\n         <Container>\r\n         <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std',\r\n         fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>{title}</div>\r\n         <Row>\r\n-            <Col>\r\n+            <Col >\r\n              \r\n-            <img width='100%' className=\"z3imgbottom\" src={image} />\r\n+            <img width='80%' className=\"z3imgbottom\" src={image} />\r\n             </Col>\r\n         </Row>\r\n        </Container>  )\r\n      \r\n"
+                }
+            ],
+            "date": 1707382265530,
+            "name": "Commit-0",
+            "content": "export default function AnatomieUniverse() {\r\n    return (\r\n        <Container>\r\n            <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>Anatomie d’une chaussure</div>\r\n            <div class=\"container\">\r\n                <div class=\"row\">\r\n                    <div class=\"col-3\">\r\n                        <table class=\"table table-image\">\r\n\r\n                            <tbody>\r\n                                <tr>\r\n                                    <td>\r\n                                    </td>\r\n                                    <td>\r\n                                        <div style={{ width: 1000, textAlign: 'center', color: '#5D5D5D', fontSize: 15, fontFamily: 'Helvetica Neue LT Std', fontWeight: '500', lineHeight: 1, wordWrap: 'break-word' }}>\r\n                                            <img width='480' className=\"z3imgbottom\" src={anatomieCord} /></div>\r\n                                    </td>\r\n                                    <td>\r\n\r\n                                    </td>\r\n                                </tr>\r\n                            </tbody>\r\n                        </table>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </Container>"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/views/front/ficheUniversParts/anatomieUniverse.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1707930454802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1707931845819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>{title}</div>\r\n         <Row>\r\n             <Col >\r\n              \r\n-            <img className=\"z3imgbottom\" src={image} />\r\n+            <img style={{width:\"80%\",  marginLeft:\"10%\"}}  className=\"z3imgbottom\" src={image} />\r\n             </Col>\r\n         </Row>\r\n        </Container>  )\r\n      \r\n"
+                },
+                {
+                    "date": 1708006212286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,22 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n-export default function AnatomieUniverse( props ) {\r\n-    const {title, image} = props;\r\n-   \r\n+export default function AnatomieUniverse(props) {\r\n+    const { title, image } = props;\r\n+\r\n     return (\r\n         <Container>\r\n-        <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std',\r\n-        fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>{title}</div>\r\n-        <Row>\r\n-            <Col >\r\n-             \r\n-            <img style={{width:\"80%\",  marginLeft:\"10%\"}}  className=\"z3imgbottom\" src={image} />\r\n-            </Col>\r\n-        </Row>\r\n-       </Container>  )\r\n-     \r\n+            <Row\r\n+                style={{\r\n+                    marginBottom: '2%', marginTop: '2%', width: '100%', height: '100%', color: '#465A61', fontSize: 40,\r\n+                    fontFamily: 'Helvetica Neue LT Std', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word'\r\n+                }}>\r\n+                {title}\r\n+            </Row>\r\n+            <Row>\r\n+                <Col >\r\n+\r\n+                    <img style={{ width: \"80%\", marginLeft: \"10%\" }} className=\"z3imgbottom\" src={image} />\r\n+                </Col>\r\n+            </Row>\r\n+        </Container>)\r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1710254609220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,21 +2,9 @@\n export default function AnatomieUniverse(props) {\r\n     const { title, image } = props;\r\n \r\n     return (\r\n-        <Container>\r\n-            <Row\r\n-                style={{\r\n-                    marginBottom: '2%', marginTop: '2%', width: '100%', height: '100%', color: '#465A61', fontSize: 40,\r\n-                    fontFamily: 'Helvetica Neue LT Std', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word'\r\n-                }}>\r\n-                {title}\r\n-            </Row>\r\n-            <Row>\r\n-                <Col >\r\n+        <>\r\n+           \r\n+        </>)\r\n \r\n-                    <img style={{ width: \"80%\", marginLeft: \"10%\" }} className=\"z3imgbottom\" src={image} />\r\n-                </Col>\r\n-            </Row>\r\n-        </Container>)\r\n-\r\n }\r\n"
+                }
+            ],
+            "date": 1707930454802,
+            "name": "Commit-0",
+            "content": "import { Col, Container, Row } from \"react-bootstrap\";\r\nexport default function AnatomieUniverse( props ) {\r\n    const {title, image} = props;\r\n   \r\n    return (\r\n        <Container>\r\n        <div style={{ color: '#465A61', fontSize: 48, fontFamily: 'Helvetica Neue LT Std',\r\n        fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>{title}</div>\r\n        <Row>\r\n            <Col >\r\n             \r\n            <img className=\"z3imgbottom\" src={image} />\r\n            </Col>\r\n        </Row>\r\n       </Container>  )\r\n     \r\n}\r\n"
+        }
+    ]
+}

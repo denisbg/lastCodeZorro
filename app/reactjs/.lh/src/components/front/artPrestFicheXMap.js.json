@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/components/front/artPrestFicheXMap.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1706967614838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1706967634226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from \"react\";\r\n import { greatPlaceStyleHover, greatPlaceStyle } from \"./markerStyle\";\r\n-export default function ArtPrestationFicheMap({ ...props }) {\r\n+export default function ArtPrestFicheXMap({ ...props }) {\r\n   const style = props.hover ? greatPlaceStyleHover : greatPlaceStyle;\r\n   return (\r\n     <>\r\n       {props.text ? (\r\n"
+                },
+                {
+                    "date": 1706967697646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,13 +5,9 @@\n   return (\r\n     <>\r\n       {props.text ? (\r\n         <div\r\n-          className={`item-map-prestation ${\r\n-            parseInt(props.activeBenefit.id) === parseInt(props.id)\r\n-              ? \"active\"\r\n-              : \"\"\r\n-          }`}\r\n+          className={`item-map-prestation`}\r\n           style={style}\r\n         >\r\n           <div>{props.text}</div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1706967731485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,17 @@\n import React from \"react\";\r\n import { greatPlaceStyleHover, greatPlaceStyle } from \"./markerStyle\";\r\n export default function ArtPrestFicheXMap({ ...props }) {\r\n-  const style = props.hover ? greatPlaceStyleHover : greatPlaceStyle;\r\n-  return (\r\n-    <>\r\n-      {props.text ? (\r\n-        <div\r\n-          className={`item-map-prestation`}\r\n-          style={style}\r\n-        >\r\n-          <div>{props.text}</div>\r\n-        </div>\r\n-      ) : null}\r\n-    </>\r\n-  );\r\n+    const style = props.hover ? greatPlaceStyleHover : greatPlaceStyle;\r\n+    return (\r\n+        <>\r\n+            {props.text ? (\r\n+                <div\r\n+                    className={`item-map-prestation`}\r\n+                    style={style}\r\n+                >\r\n+                    <div>{props.text}</div>\r\n+                </div>\r\n+            ) : null}\r\n+        </>\r\n+    );\r\n }\r\n"
+                }
+            ],
+            "date": 1706967614838,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\r\nimport { greatPlaceStyleHover, greatPlaceStyle } from \"./markerStyle\";\r\nexport default function ArtPrestationFicheMap({ ...props }) {\r\n  const style = props.hover ? greatPlaceStyleHover : greatPlaceStyle;\r\n  return (\r\n    <>\r\n      {props.text ? (\r\n        <div\r\n          className={`item-map-prestation ${\r\n            parseInt(props.activeBenefit.id) === parseInt(props.id)\r\n              ? \"active\"\r\n              : \"\"\r\n          }`}\r\n          style={style}\r\n        >\r\n          <div>{props.text}</div>\r\n        </div>\r\n      ) : null}\r\n    </>\r\n  );\r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/views/front/universeStep/prestationsFavorites.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1707745813695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1707746162615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n-import imgbonusreparation from '../../../assets/images/bonusreparation.png';\r\n+import imgbonusreparation from '../../assets/images/bonusreparation.png';\r\n export default function PrestationsFavorites() {\r\n     return (\r\n           <Container>\r\n   \r\n"
+                },
+                {
+                    "date": 1707746323723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { Col, Container, Row } from \"react-bootstrap\";\r\n-import imgbonusreparation from '../../assets/images/bonusreparation.png';\r\n+import imgbonusreparation from '../../../assets/images/bonusreparation.png';\r\n export default function PrestationsFavorites() {\r\n     return (\r\n           <Container>\r\n   \r\n"
+                }
+            ],
+            "date": 1707745813695,
+            "name": "Commit-0",
+            "content": "import { Col, Container, Row } from \"react-bootstrap\";\r\nimport imgbonusreparation from '../../../assets/images/bonusreparation.png';\r\nexport default function PrestationsFavorites() {\r\n    return (\r\n          <Container>\r\n  \r\n            <Row >\r\n                <Col >\r\n                    <img  alt=\"Lançé en Novembre 2023, ce bonus vous permet de bénéficier de réductions sur la réparation de vos chaussures et vêtements auprès des réparateurs labellisés Refashion. Cette réduction s’applique directement au moment du paiement. Pour plus d’informations sur les prestations éligibles, veuillez cliquer  ici.\r\n                                                           Réparer c’est faire durer et c’est bon pour votre porte-monnaie !\" src={imgbonusreparation} />\r\n                </Col>\r\n            </Row> </Container >\r\n    )\r\n};\r\n"
+        }
+    ]
+}

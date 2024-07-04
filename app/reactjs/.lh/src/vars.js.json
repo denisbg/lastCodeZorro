@@ -1,0 +1,98 @@
+{
+    "sourceFile": "src/vars.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 20,
+            "patches": [
+                {
+                    "date": 1708350780828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1710149379462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,10 @@\n export const LINK_SUFFIX_UNIVERSES = \"/univers\";\r\n \r\n export const LINK_EXTERNAL_WhoAreWe = \"https://www.fingzreparation.fr\";\r\n \r\n+export const LINK_EXTERNAL_how_its_working = \"https://reparation.fingz.fr/comment-ca-marche/\";\r\n+\r\n export const LINK_EXTERNAL_Forum = \"https://www.fingzforum.fr\";\r\n \r\n export const reCaptchaKey = \"6LcgZjceAAAAAHyPCWkLBZ416xCdoLGJACLZW_Rp\";\r\n \r\n"
+                },
+                {
+                    "date": 1710149632601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,10 @@\n export const LINK_SUFFIX_UNIVERSES = \"/univers\";\r\n \r\n export const LINK_EXTERNAL_WhoAreWe = \"https://www.fingzreparation.fr\";\r\n \r\n+export const LINK_EXTERNAL_blog = \"https://reparation.fingz.fr/reparation/\";\r\n+\r\n export const LINK_EXTERNAL_how_its_working = \"https://reparation.fingz.fr/comment-ca-marche/\";\r\n \r\n export const LINK_EXTERNAL_Forum = \"https://www.fingzforum.fr\";\r\n \r\n"
+                },
+                {
+                    "date": 1710149963276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,11 @@\n export const LINK_EXTERNAL_WhoAreWe = \"https://www.fingzreparation.fr\";\r\n \r\n export const LINK_EXTERNAL_blog = \"https://reparation.fingz.fr/reparation/\";\r\n \r\n+export const LINK_EXTERNAL_they_speak_about_us = \"https://reparation.fingz.fr/#ancre1\";\r\n+\r\n+\r\n export const LINK_EXTERNAL_how_its_working = \"https://reparation.fingz.fr/comment-ca-marche/\";\r\n \r\n export const LINK_EXTERNAL_Forum = \"https://www.fingzforum.fr\";\r\n \r\n"
+                },
+                {
+                    "date": 1712663000833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,10 @@\n };\r\n \r\n export const pathImage = `${process.env.REACT_APP_API_URI}`;\r\n \r\n+export const consoleActivated = `${process.env.REACT_APP_CONSOLE}`;\r\n+\r\n export const mapsApiKey = \"AIzaSyBCbskw_xe-kkAIjFqR1ghCLtAZt9DAFP8\";\r\n \r\n export const PREFIX_BACKEND = \"/dashboard\";\r\n \r\n"
+                },
+                {
+                    "date": 1712664181108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n };\r\n \r\n export const pathImage = `${process.env.REACT_APP_API_URI}`;\r\n \r\n-export const consoleActivated = `${process.env.REACT_APP_CONSOLE}`;\r\n+export const consoleActivated = `${process.env.REACT_APP_API_URI}`;\r\n \r\n export const mapsApiKey = \"AIzaSyBCbskw_xe-kkAIjFqR1ghCLtAZt9DAFP8\";\r\n \r\n export const PREFIX_BACKEND = \"/dashboard\";\r\n"
+                },
+                {
+                    "date": 1712664266790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n };\r\n \r\n export const pathImage = `${process.env.REACT_APP_API_URI}`;\r\n \r\n-export const consoleActivated = `${process.env.REACT_APP_API_URI}`;\r\n+export const consoleActivated = `${process.env.REACT_APP_CONSOLE}`;\r\n \r\n export const mapsApiKey = \"AIzaSyBCbskw_xe-kkAIjFqR1ghCLtAZt9DAFP8\";\r\n \r\n export const PREFIX_BACKEND = \"/dashboard\";\r\n"
+                },
+                {
+                    "date": 1712664406721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n };\r\n \r\n export const pathImage = `${process.env.REACT_APP_API_URI}`;\r\n \r\n-export const consoleActivated = `${process.env.REACT_APP_CONSOLE}`;\r\n+export const consoleActivated = `${process.env}`;\r\n \r\n export const mapsApiKey = \"AIzaSyBCbskw_xe-kkAIjFqR1ghCLtAZt9DAFP8\";\r\n \r\n export const PREFIX_BACKEND = \"/dashboard\";\r\n"
+                },
+                {
+                    "date": 1712664438174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n };\r\n \r\n export const pathImage = `${process.env.REACT_APP_API_URI}`;\r\n \r\n-export const consoleActivated = `${process.env}`;\r\n+export const consoleActivated = process.env;\r\n \r\n export const mapsApiKey = \"AIzaSyBCbskw_xe-kkAIjFqR1ghCLtAZt9DAFP8\";\r\n \r\n export const PREFIX_BACKEND = \"/dashboard\";\r\n"
+                },
+                {
+                    "date": 1712665029107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n };\r\n \r\n export const pathImage = `${process.env.REACT_APP_API_URI}`;\r\n \r\n-export const consoleActivated = process.env;\r\n+export const consoleActivated = `${process.env.REACT_APP_API_URI}`;;\r\n \r\n export const mapsApiKey = \"AIzaSyBCbskw_xe-kkAIjFqR1ghCLtAZt9DAFP8\";\r\n \r\n export const PREFIX_BACKEND = \"/dashboard\";\r\n"
+                },
+                {
+                    "date": 1712665276093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n };\r\n \r\n export const pathImage = `${process.env.REACT_APP_API_URI}`;\r\n \r\n-export const consoleActivated = `${process.env.REACT_APP_API_URI}`;;\r\n+export const consoleActivated = `${process.env.REACT_APP_CONSOLE}`;;\r\n \r\n export const mapsApiKey = \"AIzaSyBCbskw_xe-kkAIjFqR1ghCLtAZt9DAFP8\";\r\n \r\n export const PREFIX_BACKEND = \"/dashboard\";\r\n"
+                },
+                {
+                    "date": 1717592348723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,11 @@\n export const LINK_EXTERNAL_blog = \"https://reparation.fingz.fr/reparation/\";\r\n \r\n export const LINK_EXTERNAL_they_speak_about_us = \"https://reparation.fingz.fr/#ancre1\";\r\n \r\n+export const LINK_EXTERNAL_nousreparons = \"/#nousreparons\";\r\n \r\n+\r\n export const LINK_EXTERNAL_how_its_working = \"https://reparation.fingz.fr/comment-ca-marche/\";\r\n \r\n export const LINK_EXTERNAL_Forum = \"https://www.fingzforum.fr\";\r\n \r\n"
+                },
+                {
+                    "date": 1717592597129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n export const LINK_EXTERNAL_blog = \"https://reparation.fingz.fr/reparation/\";\r\n \r\n export const LINK_EXTERNAL_they_speak_about_us = \"https://reparation.fingz.fr/#ancre1\";\r\n \r\n-export const LINK_EXTERNAL_nousreparons = \"/#nousreparons\";\r\n+export const LINK_EXTERNAL_nousreparons = \"/nousreparons\";\r\n \r\n \r\n export const LINK_EXTERNAL_how_its_working = \"https://reparation.fingz.fr/comment-ca-marche/\";\r\n \r\n"
+                },
+                {
+                    "date": 1717592609517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n export const LINK_EXTERNAL_blog = \"https://reparation.fingz.fr/reparation/\";\r\n \r\n export const LINK_EXTERNAL_they_speak_about_us = \"https://reparation.fingz.fr/#ancre1\";\r\n \r\n-export const LINK_EXTERNAL_nousreparons = \"/nousreparons\";\r\n+export const LINK_EXTERNAL_nousreparons = \"/#nousreparons\";\r\n \r\n \r\n export const LINK_EXTERNAL_how_its_working = \"https://reparation.fingz.fr/comment-ca-marche/\";\r\n \r\n"
+                },
+                {
+                    "date": 1717592727806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n export const LINK_EXTERNAL_blog = \"https://reparation.fingz.fr/reparation/\";\r\n \r\n export const LINK_EXTERNAL_they_speak_about_us = \"https://reparation.fingz.fr/#ancre1\";\r\n \r\n-export const LINK_EXTERNAL_nousreparons = \"/#nousreparons\";\r\n+export const LINK_EXTERNAL_nousreparons = \"/\";\r\n \r\n \r\n export const LINK_EXTERNAL_how_its_working = \"https://reparation.fingz.fr/comment-ca-marche/\";\r\n \r\n"
+                },
+                {
+                    "date": 1717754666120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,10 @@\n };\r\n \r\n export const pathImage = `${process.env.REACT_APP_API_URI}`;\r\n \r\n+export const versionApp = `${process.env.VERSION_APP}`;\r\n+\r\n export const consoleActivated = `${process.env.REACT_APP_CONSOLE}`;;\r\n \r\n export const mapsApiKey = \"AIzaSyBCbskw_xe-kkAIjFqR1ghCLtAZt9DAFP8\";\r\n \r\n"
+                },
+                {
+                    "date": 1717757373435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,8 @@\n };\r\n \r\n export const pathImage = `${process.env.REACT_APP_API_URI}`;\r\n \r\n-export const versionApp = `${process.env.VERSION_APP}`;\r\n-\r\n export const consoleActivated = `${process.env.REACT_APP_CONSOLE}`;;\r\n \r\n export const mapsApiKey = \"AIzaSyBCbskw_xe-kkAIjFqR1ghCLtAZt9DAFP8\";\r\n \r\n"
+                },
+                {
+                    "date": 1717762795945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,10 @@\n };\r\n \r\n export const pathImage = `${process.env.REACT_APP_API_URI}`;\r\n \r\n+export const version_app = `${process.env.VERSION_APP}`;\r\n+\r\n export const consoleActivated = `${process.env.REACT_APP_CONSOLE}`;;\r\n \r\n export const mapsApiKey = \"AIzaSyBCbskw_xe-kkAIjFqR1ghCLtAZt9DAFP8\";\r\n \r\n"
+                },
+                {
+                    "date": 1717763515035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n };\r\n \r\n export const pathImage = `${process.env.REACT_APP_API_URI}`;\r\n \r\n-export const version_app = `${process.env.VERSION_APP}`;\r\n+export const VERSION_APP = `${process.env.VERSION_APP}`;\r\n \r\n export const consoleActivated = `${process.env.REACT_APP_CONSOLE}`;;\r\n \r\n export const mapsApiKey = \"AIzaSyBCbskw_xe-kkAIjFqR1ghCLtAZt9DAFP8\";\r\n"
+                },
+                {
+                    "date": 1717763962509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n };\r\n \r\n export const pathImage = `${process.env.REACT_APP_API_URI}`;\r\n \r\n-export const VERSION_APP = `${process.env.VERSION_APP}`;\r\n+export const versionApp = `${process.env.VERSION_APP}`;\r\n \r\n export const consoleActivated = `${process.env.REACT_APP_CONSOLE}`;;\r\n \r\n export const mapsApiKey = \"AIzaSyBCbskw_xe-kkAIjFqR1ghCLtAZt9DAFP8\";\r\n"
+                },
+                {
+                    "date": 1717764673004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n };\r\n \r\n export const pathImage = `${process.env.REACT_APP_API_URI}`;\r\n \r\n-export const versionApp = `${process.env.VERSION_APP}`;\r\n+export const versionApp = `${process.env.REACT_APP_VERSION}`;\r\n \r\n export const consoleActivated = `${process.env.REACT_APP_CONSOLE}`;;\r\n \r\n export const mapsApiKey = \"AIzaSyBCbskw_xe-kkAIjFqR1ghCLtAZt9DAFP8\";\r\n"
+                }
+            ],
+            "date": 1708350780828,
+            "name": "Commit-0",
+            "content": "export const ROLES = {\r\n    ROLE_USER: \"ROLE_USER\",\r\n    ROLE_CLIENT: \"ROLE_CLIENT\",\r\n    ROLE_REPAIRMAN: \"ROLE_REPAIRMAN\",\r\n    ROLE_ADMIN: \"ROLE_ADMIN\",\r\n    ROLE_SUPER_ADMIN: \"ROLE_SUPER_ADMIN\",\r\n};\r\n\r\nexport const pathImage = `${process.env.REACT_APP_API_URI}`;\r\n\r\nexport const mapsApiKey = \"AIzaSyBCbskw_xe-kkAIjFqR1ghCLtAZt9DAFP8\";\r\n\r\nexport const PREFIX_BACKEND = \"/dashboard\";\r\n\r\nexport const LINK_SUFFIX_CONNEXION = \"/connexion\";\r\n\r\nexport const LINK_REPAIRMAN = \"/repairman\";\r\n\r\nexport const LINK_SUFFIX_UNIVERSES = \"/univers\";\r\n\r\nexport const LINK_EXTERNAL_WhoAreWe = \"https://www.fingzreparation.fr\";\r\n\r\nexport const LINK_EXTERNAL_Forum = \"https://www.fingzforum.fr\";\r\n\r\nexport const reCaptchaKey = \"6LcgZjceAAAAAHyPCWkLBZ416xCdoLGJACLZW_Rp\";\r\n\r\nexport const LINK_FeelAndClic = \"https://www.feelandclic.com/\";\r\n\r\nexport const LINK_Artnum  = \"https://www.artnum.com/\";\r\n\r\n//export const GOOGLE_ANALYTICS_ID = \"G-N3NB9HTBR9\";\r\nexport const GOOGLE_ANALYTICS_ID = \"\";\r\n\r\nexport const FACEBOOK_ID = \"2484117685057486\";\r\n\r\nexport const STRIPE_PUBLIC_KEY = \"pk_test_51IdVqkA5jJQp1EENmjewMpsO7AdOm1PGGCqd4XrLygqYHKACt4jYztgyhLNsiDz855l8AlADamKkGPwnE8WusDkN00G7Tl0kyJ\";\r\n\r\nexport const LINK_EXTERNAL_LandingPage = \"https://partenaires.fingz.fr/atterissage-reparateurs/\";\r\n\r\nexport default {};"
+        }
+    ]
+}
